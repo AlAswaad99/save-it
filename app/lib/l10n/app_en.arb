@@ -1,0 +1,41 @@
+{
+  "@@locale": "en",
+  "appTitle": "Save it",
+  "@appTitle": {
+    "description": "Application title shown by the operating system."
+  },
+  "tabExplore": "Explore",
+  "@tabExplore": {
+    "description": "Explore tab label."
+  },
+  "tabOrders": "Orders",
+  "@tabOrders": {
+    "description": "Orders tab label."
+  },
+  "tabProfile": "Profile",
+  "@tabProfile": {
+    "description": "Profile tab label."
+  },
+  "explorePlaceholder": "Nearby surplus will show up here.",
+  "@explorePlaceholder": {
+    "description": "Empty Explore tab while discovery is not built yet."
+  },
+  "ordersPlaceholder": "Your reservations will show up here.",
+  "@ordersPlaceholder": {
+    "description": "Empty Orders tab while orders are not built yet."
+  },
+  "profilePlaceholder": "Sign in to manage your account.",
+  "@profilePlaceholder": {
+    "description": "Empty Profile tab while the account screens are not built yet."
+  },
+  "errorUnknown": "Something went wrong ({code}).",
+  "@errorUnknown": {
+    "description": "Fallback when an RPC returns a code the app does not recognise yet.",
+    "placeholders": {
+      "code": {
+        "type": "String",
+        "example": "SI001"
+      }
+    }
+  }
+}
