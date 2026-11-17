@@ -1,0 +1,17 @@
+# Secrets and local env
+app/env/dev.json
+app/env/prod.json
+admin/.env
+admin/.env*.local
+
+# Android upload key
+app/android/key.properties
+app/android/app/*.jks
+
+# Supabase local scratch
+supabase/.temp/
+supabase/.branches/
+
+# OS
+.DS_Store
+Thumbs.db
