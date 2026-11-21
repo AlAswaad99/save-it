@@ -90,6 +90,7 @@ Screens never call Supabase directly.
 | `/orders` (tab) | C-20 (guest variant shows the sign-in prompt) | — | CA-14 |
 | `/orders/:id` | C-19 (reserved) or C-21 | customer | CA-13, CA-14 |
 | `/profile` (tab) `/profile/edit` | C-22 (with guest variant), C-23, C-24 (with active-order state) | — | CA-05 |
+| `/dev/gallery` | — | dev flavor only. Profile links here. Not registered in prod | NF-09 |
 | `/business/login` `/business/terms` | B-01, B-02 | — | BM-01 |
 | `/business/today` | B-03 (with window-not-set and suspended states), B-04 | restaurant | BM-02, BM-12 |
 | `/business/listings` `/business/listings/new` `/:id` `/business/listings/repeat` | B-05–B-08 | restaurant | BM-03–BM-06 |
@@ -145,7 +146,7 @@ Screens never call Supabase directly.
 - **Accessibility (NF-09):**
   - Text follows the system text size, limited to 1.3× only where the layout would break.
   - All buttons have semantics labels.
-  - Colour contrast meets AA (checked in T11.3).
+  - Colour contrast meets AA (checked in T11.3). Primary and accent fills stay `#5B7B3A` and `#B5543A` with white text. Text on the off-white background uses `#587738` and `#B15239`, because the brand hexes sit just under 4.5:1 there. Secondary text is `#6B635C`. Type is Titillium Web (regular, semibold, bold). The logo is `La Logo.png`.
 - **Permissions strings:**
   - iOS needs `NSLocationWhenInUseUsageDescription`, `NSCameraUsageDescription` and `NSPhotoLibraryUsageDescription`.
   - Android 13+ needs `POST_NOTIFICATIONS` (requested at runtime).
