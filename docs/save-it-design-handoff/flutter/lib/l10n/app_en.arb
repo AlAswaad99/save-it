@@ -1,0 +1,1743 @@
+{
+  "@@locale": "en",
+  "appName": "Save It",
+  "@appName": {
+    "description": "Common"
+  },
+  "actionContinue": "Continue",
+  "@actionContinue": {
+    "description": "Common"
+  },
+  "actionCancel": "Cancel",
+  "@actionCancel": {
+    "description": "Common"
+  },
+  "actionClose": "Close",
+  "@actionClose": {
+    "description": "Common"
+  },
+  "actionSave": "Save",
+  "@actionSave": {
+    "description": "Common"
+  },
+  "actionEdit": "Edit",
+  "@actionEdit": {
+    "description": "Common"
+  },
+  "actionTryAgain": "Try again",
+  "@actionTryAgain": {
+    "description": "Common"
+  },
+  "actionClear": "Clear",
+  "@actionClear": {
+    "description": "Common"
+  },
+  "actionConfirm": "Confirm",
+  "@actionConfirm": {
+    "description": "Common"
+  },
+  "actionDone": "Done",
+  "@actionDone": {
+    "description": "Common"
+  },
+  "actionDirections": "Directions",
+  "@actionDirections": {
+    "description": "Common"
+  },
+  "actionGetDirections": "Get directions",
+  "@actionGetDirections": {
+    "description": "Common"
+  },
+  "errorTitle": "Something went wrong",
+  "@errorTitle": {
+    "description": "Common"
+  },
+  "errorBody": "We couldn't load this page.",
+  "@errorBody": {
+    "description": "Common"
+  },
+  "offlineLead": "No internet connection.",
+  "@offlineLead": {
+    "description": "Common"
+  },
+  "offlineBody": "Showing what was last loaded.",
+  "@offlineBody": {
+    "description": "Common"
+  },
+  "inclVat": "incl. VAT",
+  "@inclVat": {
+    "description": "Common"
+  },
+  "priceAed": "AED {amount}",
+  "@priceAed": {
+    "description": "Common",
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "itemCount": "{count, plural, =1{1 item} other{{count} items}}",
+  "@itemCount": {
+    "description": "Common",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "timeRange": "{start} to {end}",
+  "@timeRange": {
+    "description": "Common",
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+  "distanceKm": "{km} km",
+  "@distanceKm": {
+    "description": "Common",
+    "placeholders": {
+      "km": {
+        "type": "String"
+      }
+    }
+  },
+  "newDotLabel": "New",
+  "@newDotLabel": {
+    "description": "Common"
+  },
+  "termsLink": "Terms and Conditions",
+  "@termsLink": {
+    "description": "Common"
+  },
+  "privacyLink": "Privacy Policy",
+  "@privacyLink": {
+    "description": "Common"
+  },
+  "support": "Support",
+  "@support": {
+    "description": "Common"
+  },
+  "supportEmail": "contact@arisehub.org",
+  "@supportEmail": {
+    "description": "Common"
+  },
+  "walkthrough1Title": "Save food, Save money!",
+  "@walkthrough1Title": {
+    "description": "C-29 Walkthrough"
+  },
+  "walkthrough1Body": "Join many others in reducing food waste as food venues around Abu Dhabi share their surplus food every evening at a discounted rate! Why let good food go to waste?",
+  "@walkthrough1Body": {
+    "description": "C-29 Walkthrough"
+  },
+  "walkthrough2Title": "Make your reservation",
+  "@walkthrough2Title": {
+    "description": "C-29 Walkthrough"
+  },
+  "walkthrough2Body": "Select what you want and get a unique pick up code, in just a few taps!",
+  "@walkthrough2Body": {
+    "description": "C-29 Walkthrough"
+  },
+  "walkthrough3Title": "Collect and pay at location",
+  "@walkthrough3Title": {
+    "description": "C-29 Walkthrough"
+  },
+  "walkthrough3Body": "Simply go to your selected food venue, show your unique code between the pick up time & collect your order!",
+  "@walkthrough3Body": {
+    "description": "C-29 Walkthrough"
+  },
+  "actionSkip": "Skip",
+  "@actionSkip": {
+    "description": "C-29 Walkthrough"
+  },
+  "actionNext": "Next",
+  "@actionNext": {
+    "description": "C-29 Walkthrough"
+  },
+  "actionGetStarted": "Get started",
+  "@actionGetStarted": {
+    "description": "C-29 Walkthrough"
+  },
+  "locationSheetTitle": "See food venues near you.",
+  "@locationSheetTitle": {
+    "description": "C-02, C-03 Location"
+  },
+  "locationSheetBody": "Allow location to see all the food venues with discounts available today!",
+  "@locationSheetBody": {
+    "description": "C-02, C-03 Location"
+  },
+  "actionAllowLocation": "Allow location",
+  "@actionAllowLocation": {
+    "description": "C-02, C-03 Location"
+  },
+  "actionChooseAreaInstead": "Choose area instead",
+  "@actionChooseAreaInstead": {
+    "description": "C-02, C-03 Location"
+  },
+  "chooseAreaTitle": "Choose your area",
+  "@chooseAreaTitle": {
+    "description": "C-02, C-03 Location"
+  },
+  "searchAreasHint": "Search areas",
+  "@searchAreasHint": {
+    "description": "C-02, C-03 Location"
+  },
+  "areasHeader": "Abu Dhabi areas",
+  "@areasHeader": {
+    "description": "C-02, C-03 Location"
+  },
+  "actionShowRestaurants": "Show restaurants",
+  "@actionShowRestaurants": {
+    "description": "C-02, C-03 Location"
+  },
+  "signUpGateTitle": "Log in or sign up to reserve.",
+  "@signUpGateTitle": {
+    "description": "C-12 to C-15 Log in or sign up"
+  },
+  "signUpGateBody": "You can keep browsing as a guest. Enter your email to reserve; there's no password.",
+  "@signUpGateBody": {
+    "description": "C-12 to C-15 Log in or sign up"
+  },
+  "actionContinueWithEmail": "Continue with email",
+  "@actionContinueWithEmail": {
+    "description": "C-12 to C-15 Log in or sign up"
+  },
+  "emailAppBar": "Log in or sign up",
+  "@emailAppBar": {
+    "description": "C-12 to C-15 Log in or sign up"
+  },
+  "emailHeading": "What's your email?",
+  "@emailHeading": {
+    "description": "C-12 to C-15 Log in or sign up"
+  },
+  "emailBody": "We'll send a 6-digit code. New to Save It? You'll add your details next.",
+  "@emailBody": {
+    "description": "C-12 to C-15 Log in or sign up"
+  },
+  "fieldEmail": "Email",
+  "@fieldEmail": {
+    "description": "C-12 to C-15 Log in or sign up"
+  },
+  "actionSendCode": "Send code",
+  "@actionSendCode": {
+    "description": "C-12 to C-15 Log in or sign up"
+  },
+  "codeAppBar": "Enter code",
+  "@codeAppBar": {
+    "description": "C-12 to C-15 Log in or sign up"
+  },
+  "codeHeading": "Check your email.",
+  "@codeHeading": {
+    "description": "C-12 to C-15 Log in or sign up"
+  },
+  "codeSentTo": "Code sent to {maskedEmail}.",
+  "@codeSentTo": {
+    "description": "C-12 to C-15 Log in or sign up",
+    "placeholders": {
+      "maskedEmail": {
+        "type": "String"
+      }
+    }
+  },
+  "codeExpiresIn": "Code expires in {time}",
+  "@codeExpiresIn": {
+    "description": "C-12 to C-15 Log in or sign up",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "codeDidntGetIt": "Didn't get it?",
+  "@codeDidntGetIt": {
+    "description": "C-12 to C-15 Log in or sign up"
+  },
+  "actionResendCode": "Resend code",
+  "@actionResendCode": {
+    "description": "C-12 to C-15 Log in or sign up"
+  },
+  "codeErrorTitle": "Incorrect or expired code",
+  "@codeErrorTitle": {
+    "description": "C-12 to C-15 Log in or sign up"
+  },
+  "codeErrorBody": "Check the code or request a new one.",
+  "@codeErrorBody": {
+    "description": "C-12 to C-15 Log in or sign up"
+  },
+  "codeResendWait": "Try again in {minutes} min",
+  "@codeResendWait": {
+    "description": "C-12 to C-15 Log in or sign up",
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "codeResendLimit": "You can request up to 3 codes per hour.",
+  "@codeResendLimit": {
+    "description": "C-12 to C-15 Log in or sign up"
+  },
+  "profileSetupAppBar": "Create your account",
+  "@profileSetupAppBar": {
+    "description": "C-13 Complete your profile"
+  },
+  "profileSetupHeading": "Almost done.",
+  "@profileSetupHeading": {
+    "description": "C-13 Complete your profile"
+  },
+  "profileSetupBody": "Tell us who's collecting the food.",
+  "@profileSetupBody": {
+    "description": "C-13 Complete your profile"
+  },
+  "verified": "Verified",
+  "@verified": {
+    "description": "C-13 Complete your profile"
+  },
+  "fieldFullName": "Full name",
+  "@fieldFullName": {
+    "description": "C-13 Complete your profile"
+  },
+  "fieldPhone": "Phone",
+  "@fieldPhone": {
+    "description": "C-13 Complete your profile"
+  },
+  "phonePrefix": "+971",
+  "@phonePrefix": {
+    "description": "C-13 Complete your profile"
+  },
+  "termsAgreePrefix": "I agree to the",
+  "@termsAgreePrefix": {
+    "description": "C-13 Complete your profile"
+  },
+  "termsAgreeJoin": "and",
+  "@termsAgreeJoin": {
+    "description": "C-13 Complete your profile"
+  },
+  "profileTitle": "Profile",
+  "@profileTitle": {
+    "description": "C-22 to C-24 Profile"
+  },
+  "guestTitle": "You're browsing as a guest.",
+  "@guestTitle": {
+    "description": "C-22 to C-24 Profile"
+  },
+  "guestBody": "Log in or sign up to reserve food and see your orders.",
+  "@guestBody": {
+    "description": "C-22 to C-24 Profile"
+  },
+  "businessModeEntry": "Restaurant? Log in to Business mode.",
+  "@businessModeEntry": {
+    "description": "C-22 to C-24 Profile"
+  },
+  "actionLogOut": "Log out",
+  "@actionLogOut": {
+    "description": "C-22 to C-24 Profile"
+  },
+  "actionDeleteAccount": "Delete account",
+  "@actionDeleteAccount": {
+    "description": "C-22 to C-24 Profile"
+  },
+  "editProfileTitle": "Edit profile",
+  "@editProfileTitle": {
+    "description": "C-22 to C-24 Profile"
+  },
+  "emailLocked": "Your email is your login and can't be changed.",
+  "@emailLocked": {
+    "description": "C-22 to C-24 Profile"
+  },
+  "actionSaveChanges": "Save changes",
+  "@actionSaveChanges": {
+    "description": "C-22 to C-24 Profile"
+  },
+  "deleteAccountTitle": "Delete your account?",
+  "@deleteAccountTitle": {
+    "description": "C-22 to C-24 Profile"
+  },
+  "deleteAccountBody": "This permanently removes your name, email and phone number. Past orders are kept without your details for restaurant reports. This can't be undone.",
+  "@deleteAccountBody": {
+    "description": "C-22 to C-24 Profile"
+  },
+  "deleteBlockedTitle": "You have an active order.",
+  "@deleteBlockedTitle": {
+    "description": "C-22 to C-24 Profile"
+  },
+  "deleteBlockedBody": "You can delete your account after it's collected or the pickup window ends.",
+  "@deleteBlockedBody": {
+    "description": "C-22 to C-24 Profile"
+  },
+  "actionViewOrder": "View order",
+  "@actionViewOrder": {
+    "description": "C-22 to C-24 Profile"
+  },
+  "tabExplore": "Explore",
+  "@tabExplore": {
+    "description": "Tab bar"
+  },
+  "tabOrders": "Orders",
+  "@tabOrders": {
+    "description": "Tab bar"
+  },
+  "tabProfile": "Profile",
+  "@tabProfile": {
+    "description": "Tab bar"
+  },
+  "showingFoodNear": "Showing food near",
+  "@showingFoodNear": {
+    "description": "C-04 to C-07, C-25 Explore"
+  },
+  "currentLocation": "Current location",
+  "@currentLocation": {
+    "description": "C-04 to C-07, C-25 Explore"
+  },
+  "currentLocationArea": "Current location · {area}",
+  "@currentLocationArea": {
+    "description": "C-04 to C-07, C-25 Explore",
+    "placeholders": {
+      "area": {
+        "type": "String"
+      }
+    }
+  },
+  "searchRestaurantsHint": "Search restaurants",
+  "@searchRestaurantsHint": {
+    "description": "C-04 to C-07, C-25 Explore"
+  },
+  "filters": "Filters",
+  "@filters": {
+    "description": "C-04 to C-07, C-25 Explore"
+  },
+  "restaurantsWithin": "{count, plural, =1{1 restaurant within 10 km} other{{count} restaurants within 10 km}}",
+  "@restaurantsWithin": {
+    "description": "C-04 to C-07, C-25 Explore",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "nearestFirst": "Nearest first",
+  "@nearestFirst": {
+    "description": "C-04 to C-07, C-25 Explore"
+  },
+  "itemsLeft": "{count} left",
+  "@itemsLeft": {
+    "description": "C-04 to C-07, C-25 Explore",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "pickupWindow": "Pickup {start} to {end}",
+  "@pickupWindow": {
+    "description": "C-04 to C-07, C-25 Explore",
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+  "priceFrom": "From {price}",
+  "@priceFrom": {
+    "description": "C-04 to C-07, C-25 Explore",
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "searchMatches": "{count, plural, =1{1 restaurant matches “{query}”} other{{count} restaurants match “{query}”}}",
+  "@searchMatches": {
+    "description": "C-04 to C-07, C-25 Explore",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "noMatchTitle": "No restaurants match",
+  "@noMatchTitle": {
+    "description": "C-04 to C-07, C-25 Explore"
+  },
+  "noMatchBody": "Try another name, or clear your filters.",
+  "@noMatchBody": {
+    "description": "C-04 to C-07, C-25 Explore"
+  },
+  "actionClearSearch": "Clear search",
+  "@actionClearSearch": {
+    "description": "C-04 to C-07, C-25 Explore"
+  },
+  "emptyNearbyTitle": "No food near you right now",
+  "@emptyNearbyTitle": {
+    "description": "C-04 to C-07, C-25 Explore"
+  },
+  "emptyNearbyBody": "Restaurants post surplus food each day. Check back later or try another area.",
+  "@emptyNearbyBody": {
+    "description": "C-04 to C-07, C-25 Explore"
+  },
+  "actionChangeArea": "Change area",
+  "@actionChangeArea": {
+    "description": "C-04 to C-07, C-25 Explore"
+  },
+  "noShowWarningLead": "You've missed {count} pickups.",
+  "@noShowWarningLead": {
+    "description": "C-04 to C-07, C-25 Explore",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noShowWarningBody": "One more and reservations will be paused.",
+  "@noShowWarningBody": {
+    "description": "C-04 to C-07, C-25 Explore"
+  },
+  "actionDismiss": "Dismiss",
+  "@actionDismiss": {
+    "description": "C-04 to C-07, C-25 Explore"
+  },
+  "filtersTitle": "Filters",
+  "@filtersTitle": {
+    "description": "C-05 Filters, categories and tags"
+  },
+  "filterCategory": "Category",
+  "@filterCategory": {
+    "description": "C-05 Filters, categories and tags"
+  },
+  "filterChooseOne": "Choose one",
+  "@filterChooseOne": {
+    "description": "C-05 Filters, categories and tags"
+  },
+  "filterDietary": "Dietary",
+  "@filterDietary": {
+    "description": "C-05 Filters, categories and tags"
+  },
+  "filterChooseAny": "Choose any",
+  "@filterChooseAny": {
+    "description": "C-05 Filters, categories and tags"
+  },
+  "actionShowResults": "Show results ({count})",
+  "@actionShowResults": {
+    "description": "C-05 Filters, categories and tags",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "categorySalads": "Salads",
+  "@categorySalads": {
+    "description": "C-05 Filters, categories and tags"
+  },
+  "categorySavouryDishes": "Savoury Dishes",
+  "@categorySavouryDishes": {
+    "description": "C-05 Filters, categories and tags"
+  },
+  "categorySweetTreats": "Sweet Treats",
+  "@categorySweetTreats": {
+    "description": "C-05 Filters, categories and tags"
+  },
+  "categoryBeverages": "Beverages",
+  "@categoryBeverages": {
+    "description": "C-05 Filters, categories and tags"
+  },
+  "categorySnacks": "Snacks",
+  "@categorySnacks": {
+    "description": "C-05 Filters, categories and tags"
+  },
+  "categoryBakery": "Bakery",
+  "@categoryBakery": {
+    "description": "C-05 Filters, categories and tags"
+  },
+  "categoryKidsMenu": "Kids Menu",
+  "@categoryKidsMenu": {
+    "description": "C-05 Filters, categories and tags"
+  },
+  "tagVegetarian": "Vegetarian",
+  "@tagVegetarian": {
+    "description": "C-05 Filters, categories and tags"
+  },
+  "tagVegan": "Vegan",
+  "@tagVegan": {
+    "description": "C-05 Filters, categories and tags"
+  },
+  "tagGlutenFree": "Gluten-free",
+  "@tagGlutenFree": {
+    "description": "C-05 Filters, categories and tags"
+  },
+  "tagContainsNuts": "Contains nuts",
+  "@tagContainsNuts": {
+    "description": "C-05 Filters, categories and tags"
+  },
+  "tagLactoseFree": "Lactose-free",
+  "@tagLactoseFree": {
+    "description": "C-05 Filters, categories and tags"
+  },
+  "filterNoNuts": "No nuts",
+  "@filterNoNuts": {
+    "description": "C-05 Filters, categories and tags"
+  },
+  "openingHoursToday": "Opening hours today",
+  "@openingHoursToday": {
+    "description": "C-08 to C-11 Restaurant, item and basket"
+  },
+  "pickupToday": "Pickup today",
+  "@pickupToday": {
+    "description": "C-08 to C-11 Restaurant, item and basket"
+  },
+  "availableToday": "Available today",
+  "@availableToday": {
+    "description": "C-08 to C-11 Restaurant, item and basket"
+  },
+  "basketBar": "{count, plural, =1{1 item} other{{count} items}} · {total}",
+  "@basketBar": {
+    "description": "C-08 to C-11 Restaurant, item and basket",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "actionViewBasket": "View basket",
+  "@actionViewBasket": {
+    "description": "C-08 to C-11 Restaurant, item and basket"
+  },
+  "categoryAtRestaurant": "{category} · {restaurant}",
+  "@categoryAtRestaurant": {
+    "description": "C-08 to C-11 Restaurant, item and basket",
+    "placeholders": {
+      "category": {
+        "type": "String"
+      },
+      "restaurant": {
+        "type": "String"
+      }
+    }
+  },
+  "percentOff": "{percent}% off",
+  "@percentOff": {
+    "description": "C-08 to C-11 Restaurant, item and basket",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "quantity": "Quantity",
+  "@quantity": {
+    "description": "C-08 to C-11 Restaurant, item and basket"
+  },
+  "maxPerOrder": "Max {max} per order",
+  "@maxPerOrder": {
+    "description": "C-08 to C-11 Restaurant, item and basket",
+    "placeholders": {
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "actionAddToBasket": "Add to basket · {price}",
+  "@actionAddToBasket": {
+    "description": "C-08 to C-11 Restaurant, item and basket",
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "newBasketTitle": "Start a new basket?",
+  "@newBasketTitle": {
+    "description": "C-08 to C-11 Restaurant, item and basket"
+  },
+  "newBasketBody": "Your basket has items from {currentRestaurant}. Clear it to add {item} from {restaurant}.",
+  "@newBasketBody": {
+    "description": "C-08 to C-11 Restaurant, item and basket",
+    "placeholders": {
+      "currentRestaurant": {
+        "type": "String"
+      },
+      "item": {
+        "type": "String"
+      },
+      "restaurant": {
+        "type": "String"
+      }
+    }
+  },
+  "actionClearAndAdd": "Clear and add",
+  "@actionClearAndAdd": {
+    "description": "C-08 to C-11 Restaurant, item and basket"
+  },
+  "basketTitle": "Basket",
+  "@basketTitle": {
+    "description": "C-08 to C-11 Restaurant, item and basket"
+  },
+  "priceEach": "{price} each",
+  "@priceEach": {
+    "description": "C-08 to C-11 Restaurant, item and basket",
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "totalToPayAtCounter": "Total to pay at the counter",
+  "@totalToPayAtCounter": {
+    "description": "C-08 to C-11 Restaurant, item and basket"
+  },
+  "payAtCounterNote": "Pay at the counter when you collect. There's no payment in the app.",
+  "@payAtCounterNote": {
+    "description": "C-08 to C-11 Restaurant, item and basket"
+  },
+  "actionReserve": "Reserve",
+  "@actionReserve": {
+    "description": "C-08 to C-11 Restaurant, item and basket"
+  },
+  "actionRemoveItem": "Remove {item}",
+  "@actionRemoveItem": {
+    "description": "C-08 to C-11 Restaurant, item and basket",
+    "placeholders": {
+      "item": {
+        "type": "String"
+      }
+    }
+  },
+  "activeLimitLead": "You have {count} active orders.",
+  "@activeLimitLead": {
+    "description": "C-08 to C-11 Restaurant, item and basket",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "activeLimitBody": "Collect one before reserving again.",
+  "@activeLimitBody": {
+    "description": "C-08 to C-11 Restaurant, item and basket"
+  },
+  "actionViewMyOrders": "View my orders",
+  "@actionViewMyOrders": {
+    "description": "C-08 to C-11 Restaurant, item and basket"
+  },
+  "reservationsPaused": "Reservations are paused on your account because of missed pickups. Contact {email}.",
+  "@reservationsPaused": {
+    "description": "C-08 to C-11 Restaurant, item and basket",
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTitle": "Confirm reservation",
+  "@confirmTitle": {
+    "description": "C-16 to C-18 Reserve"
+  },
+  "pickupWindowLabel": "Pickup window",
+  "@pickupWindowLabel": {
+    "description": "C-16 to C-18 Reserve"
+  },
+  "itemsLabel": "Items",
+  "@itemsLabel": {
+    "description": "C-16 to C-18 Reserve"
+  },
+  "todayWindow": "Today, {start} to {end}",
+  "@todayWindow": {
+    "description": "C-16 to C-18 Reserve",
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+  "itemTimesQty": "{item} × {qty}",
+  "@itemTimesQty": {
+    "description": "C-16 to C-18 Reserve",
+    "placeholders": {
+      "item": {
+        "type": "String"
+      },
+      "qty": {
+        "type": "int"
+      }
+    }
+  },
+  "collectWarning": "Please collect during the pickup window. Missed pickups count as no-shows and can pause your reservations.",
+  "@collectWarning": {
+    "description": "C-16 to C-18 Reserve"
+  },
+  "actionConfirmReservation": "Confirm reservation",
+  "@actionConfirmReservation": {
+    "description": "C-16 to C-18 Reserve"
+  },
+  "stockChangedLead": "Sorry, {item} now has only {count} left.",
+  "@stockChangedLead": {
+    "description": "C-16 to C-18 Reserve",
+    "placeholders": {
+      "item": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "stockChangedBody": "Nothing has been reserved yet.",
+  "@stockChangedBody": {
+    "description": "C-16 to C-18 Reserve"
+  },
+  "onlyLeft": "Only {count} left",
+  "@onlyLeft": {
+    "description": "C-16 to C-18 Reserve",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "actionUpdateBasket": "Update basket",
+  "@actionUpdateBasket": {
+    "description": "C-16 to C-18 Reserve"
+  },
+  "reservationConfirmed": "Reservation confirmed",
+  "@reservationConfirmed": {
+    "description": "C-16 to C-18 Reserve"
+  },
+  "remindTitle": "Get reminded before pickup",
+  "@remindTitle": {
+    "description": "C-16 to C-18 Reserve"
+  },
+  "remindBody": "We'll remind you {minutes} min before your pickup window closes, and tell you if your order changes.",
+  "@remindBody": {
+    "description": "C-16 to C-18 Reserve",
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "actionAllow": "Allow",
+  "@actionAllow": {
+    "description": "C-16 to C-18 Reserve"
+  },
+  "actionNotNow": "Not now",
+  "@actionNotNow": {
+    "description": "C-16 to C-18 Reserve"
+  },
+  "ordersTitle": "Orders",
+  "@ordersTitle": {
+    "description": "C-19 to C-21 Orders and pickup pass"
+  },
+  "segmentActive": "Active",
+  "@segmentActive": {
+    "description": "C-19 to C-21 Orders and pickup pass"
+  },
+  "segmentPast": "Past",
+  "@segmentPast": {
+    "description": "C-19 to C-21 Orders and pickup pass"
+  },
+  "todayPickup": "Today · Pickup {start} to {end}",
+  "@todayPickup": {
+    "description": "C-19 to C-21 Orders and pickup pass",
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+  "orderSummary": "{items} · {total}",
+  "@orderSummary": {
+    "description": "C-19 to C-21 Orders and pickup pass",
+    "placeholders": {
+      "items": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "statusReserved": "Reserved",
+  "@statusReserved": {
+    "description": "C-19 to C-21 Orders and pickup pass"
+  },
+  "statusCollected": "Collected",
+  "@statusCollected": {
+    "description": "C-19 to C-21 Orders and pickup pass"
+  },
+  "statusCancelled": "Cancelled",
+  "@statusCancelled": {
+    "description": "C-19 to C-21 Orders and pickup pass"
+  },
+  "statusExpired": "Expired",
+  "@statusExpired": {
+    "description": "C-19 to C-21 Orders and pickup pass"
+  },
+  "guestOrdersTitle": "Log in or sign up to see your orders",
+  "@guestOrdersTitle": {
+    "description": "C-19 to C-21 Orders and pickup pass"
+  },
+  "guestOrdersBody": "Your reservations and pickup passes appear here.",
+  "@guestOrdersBody": {
+    "description": "C-19 to C-21 Orders and pickup pass"
+  },
+  "emptyOrdersTitle": "No orders yet",
+  "@emptyOrdersTitle": {
+    "description": "C-19 to C-21 Orders and pickup pass"
+  },
+  "emptyOrdersBody": "Food you reserve will appear here.",
+  "@emptyOrdersBody": {
+    "description": "C-19 to C-21 Orders and pickup pass"
+  },
+  "actionFindFood": "Find food near you",
+  "@actionFindFood": {
+    "description": "C-19 to C-21 Orders and pickup pass"
+  },
+  "pickupPassTitle": "Pickup pass",
+  "@pickupPassTitle": {
+    "description": "C-19 to C-21 Orders and pickup pass"
+  },
+  "passInstruction": "Show the QR code or tell staff this code",
+  "@passInstruction": {
+    "description": "C-19 to C-21 Orders and pickup pass"
+  },
+  "closesIn": "Closes in {duration}",
+  "@closesIn": {
+    "description": "C-19 to C-21 Orders and pickup pass",
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "toPayAtCounter": "To pay at the counter",
+  "@toPayAtCounter": {
+    "description": "C-19 to C-21 Orders and pickup pass"
+  },
+  "offlinePassLead": "Offline:",
+  "@offlinePassLead": {
+    "description": "C-19 to C-21 Orders and pickup pass"
+  },
+  "offlinePassBody": "showing saved pass",
+  "@offlinePassBody": {
+    "description": "C-19 to C-21 Orders and pickup pass"
+  },
+  "orderDetailsTitle": "Order details",
+  "@orderDetailsTitle": {
+    "description": "C-19 to C-21 Orders and pickup pass"
+  },
+  "orderLabel": "Order",
+  "@orderLabel": {
+    "description": "C-19 to C-21 Orders and pickup pass"
+  },
+  "codeLabel": "Code",
+  "@codeLabel": {
+    "description": "C-19 to C-21 Orders and pickup pass"
+  },
+  "dateLabel": "Date",
+  "@dateLabel": {
+    "description": "C-19 to C-21 Orders and pickup pass"
+  },
+  "totalLabel": "Total",
+  "@totalLabel": {
+    "description": "C-19 to C-21 Orders and pickup pass"
+  },
+  "cancelledByRestaurant": "Cancelled by restaurant: {reason}",
+  "@cancelledByRestaurant": {
+    "description": "C-19 to C-21 Orders and pickup pass",
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "cancelledBySaveIt": "Cancelled by Save It: {reason}",
+  "@cancelledBySaveIt": {
+    "description": "C-19 to C-21 Orders and pickup pass",
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "nothingToPay": "There's nothing to pay.",
+  "@nothingToPay": {
+    "description": "C-19 to C-21 Orders and pickup pass"
+  },
+  "expiredNoShow": "Not collected in time; counts as a no-show",
+  "@expiredNoShow": {
+    "description": "C-19 to C-21 Orders and pickup pass"
+  },
+  "windowEndedAt": "The pickup window ended at {time}.",
+  "@windowEndedAt": {
+    "description": "C-19 to C-21 Orders and pickup pass",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "pushConfirmedTitle": "You've saved it!",
+  "@pushConfirmedTitle": {
+    "description": "C-27, B-17 Push notifications"
+  },
+  "pushConfirmedBody": "Hi {name}, your order is reserved, you saved it! Pick up at {restaurant}, {start} to {end}.",
+  "@pushConfirmedBody": {
+    "description": "C-27, B-17 Push notifications",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "restaurant": {
+        "type": "String"
+      },
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+  "pushReminderTitle": "Pickup closes soon",
+  "@pushReminderTitle": {
+    "description": "C-27, B-17 Push notifications"
+  },
+  "pushReminderBody": "Collect from {restaurant} by {time}",
+  "@pushReminderBody": {
+    "description": "C-27, B-17 Push notifications",
+    "placeholders": {
+      "restaurant": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "pushCancelledTitle": "Order cancelled",
+  "@pushCancelledTitle": {
+    "description": "C-27, B-17 Push notifications"
+  },
+  "pushCancelledBody": "{restaurant} cancelled your order: {reason}",
+  "@pushCancelledBody": {
+    "description": "C-27, B-17 Push notifications",
+    "placeholders": {
+      "restaurant": {
+        "type": "String"
+      },
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "pushExpiredTitle": "Order expired",
+  "@pushExpiredTitle": {
+    "description": "C-27, B-17 Push notifications"
+  },
+  "pushExpiredBody": "Your order from {restaurant} wasn't collected in time. This counts as a missed pickup.",
+  "@pushExpiredBody": {
+    "description": "C-27, B-17 Push notifications",
+    "placeholders": {
+      "restaurant": {
+        "type": "String"
+      }
+    }
+  },
+  "pushNewOrderTitle": "New order",
+  "@pushNewOrderTitle": {
+    "description": "C-27, B-17 Push notifications"
+  },
+  "pushNewOrderBody": "{items}, {total}, pickup {start} to {end}",
+  "@pushNewOrderBody": {
+    "description": "C-27, B-17 Push notifications",
+    "placeholders": {
+      "items": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+  "businessModeBadge": "BUSINESS MODE",
+  "@businessModeBadge": {
+    "description": "B-01, B-02 Business log in"
+  },
+  "bizLoginTitle": "Restaurant log in",
+  "@bizLoginTitle": {
+    "description": "B-01, B-02 Business log in"
+  },
+  "bizLoginBody": "Use your restaurant's login email. We'll send a 6-digit code.",
+  "@bizLoginBody": {
+    "description": "B-01, B-02 Business log in"
+  },
+  "fieldRestaurantEmail": "Restaurant email",
+  "@fieldRestaurantEmail": {
+    "description": "B-01, B-02 Business log in"
+  },
+  "bizAccountsNote": "Restaurant accounts are set up by Save It. Contact {email} to join.",
+  "@bizAccountsNote": {
+    "description": "B-01, B-02 Business log in",
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "actionBackToCustomerApp": "Back to the customer app",
+  "@actionBackToCustomerApp": {
+    "description": "B-01, B-02 Business log in"
+  },
+  "termsTitle": "Restaurant terms",
+  "@termsTitle": {
+    "description": "B-01, B-02 Business log in"
+  },
+  "termsIntro": "Please read and accept before using Business mode for {restaurant}.",
+  "@termsIntro": {
+    "description": "B-01, B-02 Business log in",
+    "placeholders": {
+      "restaurant": {
+        "type": "String"
+      }
+    }
+  },
+  "termsDocTitle": "Save It Restaurant Terms",
+  "@termsDocTitle": {
+    "description": "B-01, B-02 Business log in"
+  },
+  "termsAccept": "I have read and accept the Restaurant Terms on behalf of {restaurant}",
+  "@termsAccept": {
+    "description": "B-01, B-02 Business log in",
+    "placeholders": {
+      "restaurant": {
+        "type": "String"
+      }
+    }
+  },
+  "actionAcceptAndContinue": "Accept and continue",
+  "@actionAcceptAndContinue": {
+    "description": "B-01, B-02 Business log in"
+  },
+  "todayTitle": "Today",
+  "@todayTitle": {
+    "description": "B-03, B-04 Today and pickup window"
+  },
+  "todaysPickupWindow": "Today's pickup window",
+  "@todaysPickupWindow": {
+    "description": "B-03, B-04 Today and pickup window"
+  },
+  "allListingsUseWindow": "All of today's listings use this window",
+  "@allListingsUseWindow": {
+    "description": "B-03, B-04 Today and pickup window"
+  },
+  "statLiveListings": "Live listings",
+  "@statLiveListings": {
+    "description": "B-03, B-04 Today and pickup window"
+  },
+  "statItemsLeft": "Items left",
+  "@statItemsLeft": {
+    "description": "B-03, B-04 Today and pickup window"
+  },
+  "statReservedOrders": "Reserved orders",
+  "@statReservedOrders": {
+    "description": "B-03, B-04 Today and pickup window"
+  },
+  "statCollected": "Collected",
+  "@statCollected": {
+    "description": "B-03, B-04 Today and pickup window"
+  },
+  "actionAddListing": "Add listing",
+  "@actionAddListing": {
+    "description": "B-03, B-04 Today and pickup window"
+  },
+  "actionRepeatYesterday": "Repeat yesterday",
+  "@actionRepeatYesterday": {
+    "description": "B-03, B-04 Today and pickup window"
+  },
+  "setWindowTitle": "Set today's pickup window",
+  "@setWindowTitle": {
+    "description": "B-03, B-04 Today and pickup window"
+  },
+  "setWindowBody": "Listings can't go live until it's set.",
+  "@setWindowBody": {
+    "description": "B-03, B-04 Today and pickup window"
+  },
+  "actionSetPickupWindow": "Set pickup window",
+  "@actionSetPickupWindow": {
+    "description": "B-03, B-04 Today and pickup window"
+  },
+  "setWindowFirst": "Set today's pickup window first",
+  "@setWindowFirst": {
+    "description": "B-03, B-04 Today and pickup window"
+  },
+  "restaurantPausedLead": "Your restaurant is paused by Save It.",
+  "@restaurantPausedLead": {
+    "description": "B-03, B-04 Today and pickup window"
+  },
+  "restaurantPausedBody": "Existing orders can still be collected. Contact {email}.",
+  "@restaurantPausedBody": {
+    "description": "B-03, B-04 Today and pickup window",
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "reservedStillCollectable": "Reserved orders can still be collected",
+  "@reservedStillCollectable": {
+    "description": "B-03, B-04 Today and pickup window"
+  },
+  "pickupWindowTitle": "Pickup window",
+  "@pickupWindowTitle": {
+    "description": "B-03, B-04 Today and pickup window"
+  },
+  "openLabel": "Open",
+  "@openLabel": {
+    "description": "B-03, B-04 Today and pickup window"
+  },
+  "pickupAllowed": "Pickup allowed",
+  "@pickupAllowed": {
+    "description": "B-03, B-04 Today and pickup window"
+  },
+  "startTime": "Start time",
+  "@startTime": {
+    "description": "B-03, B-04 Today and pickup window"
+  },
+  "endTime": "End time",
+  "@endTime": {
+    "description": "B-03, B-04 Today and pickup window"
+  },
+  "windowRangesHint": "Only times inside both ranges can be picked. Same day only. One window per day; all of today's listings use it.",
+  "@windowRangesHint": {
+    "description": "B-03, B-04 Today and pickup window"
+  },
+  "toastWindowSaved": "Pickup window saved",
+  "@toastWindowSaved": {
+    "description": "B-03, B-04 Today and pickup window"
+  },
+  "listingsTitle": "Listings",
+  "@listingsTitle": {
+    "description": "B-05 to B-08 Listings"
+  },
+  "availableOfTotal": "{available} of {total} left",
+  "@availableOfTotal": {
+    "description": "B-05 to B-08 Listings",
+    "placeholders": {
+      "available": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "statusDraft": "Draft",
+  "@statusDraft": {
+    "description": "B-05 to B-08 Listings"
+  },
+  "statusLive": "Live",
+  "@statusLive": {
+    "description": "B-05 to B-08 Listings"
+  },
+  "statusSoldOut": "Sold out",
+  "@statusSoldOut": {
+    "description": "B-05 to B-08 Listings"
+  },
+  "statusHidden": "Hidden",
+  "@statusHidden": {
+    "description": "B-05 to B-08 Listings"
+  },
+  "editListingTitle": "Edit listing",
+  "@editListingTitle": {
+    "description": "B-05 to B-08 Listings"
+  },
+  "addListingTitle": "Add listing",
+  "@addListingTitle": {
+    "description": "B-05 to B-08 Listings"
+  },
+  "photoOptional": "Photo (optional)",
+  "@photoOptional": {
+    "description": "B-05 to B-08 Listings"
+  },
+  "actionTakePhoto": "Take photo",
+  "@actionTakePhoto": {
+    "description": "B-05 to B-08 Listings"
+  },
+  "actionGallery": "Gallery",
+  "@actionGallery": {
+    "description": "B-05 to B-08 Listings"
+  },
+  "fieldName": "Name",
+  "@fieldName": {
+    "description": "B-05 to B-08 Listings"
+  },
+  "fieldCategory": "Category",
+  "@fieldCategory": {
+    "description": "B-05 to B-08 Listings"
+  },
+  "fieldDietaryTags": "Dietary tags",
+  "@fieldDietaryTags": {
+    "description": "B-05 to B-08 Listings"
+  },
+  "fieldOriginalPrice": "Original price",
+  "@fieldOriginalPrice": {
+    "description": "B-05 to B-08 Listings"
+  },
+  "fieldDiscountedPrice": "Discounted price",
+  "@fieldDiscountedPrice": {
+    "description": "B-05 to B-08 Listings"
+  },
+  "fieldQuantity": "Quantity",
+  "@fieldQuantity": {
+    "description": "B-05 to B-08 Listings"
+  },
+  "alreadyReserved": "{count} already reserved",
+  "@alreadyReserved": {
+    "description": "B-05 to B-08 Listings",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "actionPublish": "Publish",
+  "@actionPublish": {
+    "description": "B-05 to B-08 Listings"
+  },
+  "actionRemoveListing": "Remove listing",
+  "@actionRemoveListing": {
+    "description": "B-05 to B-08 Listings"
+  },
+  "errorDiscountTooLow": "Discount must be at least {percent}%",
+  "@errorDiscountTooLow": {
+    "description": "B-05 to B-08 Listings",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "errorDiscountHint": "For {original}, the price can be {max} or less.",
+  "@errorDiscountHint": {
+    "description": "B-05 to B-08 Listings",
+    "placeholders": {
+      "original": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "errorQtyBelowReserved": "Quantity can't be lower than {count} already reserved",
+  "@errorQtyBelowReserved": {
+    "description": "B-05 to B-08 Listings",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "errorQtyHint": "Set {count} or more, or remove the listing (reserved orders stay active).",
+  "@errorQtyHint": {
+    "description": "B-05 to B-08 Listings",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "removeListingTitle": "Remove {item}?",
+  "@removeListingTitle": {
+    "description": "B-05 to B-08 Listings",
+    "placeholders": {
+      "item": {
+        "type": "String"
+      }
+    }
+  },
+  "removeListingBody": "{count, plural, =1{1 reserved order stays active. The customer can still collect it today.} other{{count} reserved orders stay active. Customers can still collect them today.}}",
+  "@removeListingBody": {
+    "description": "B-05 to B-08 Listings",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "repeatInfo": "Yesterday's {count} listings are copied as drafts. Check prices and quantities, then publish.",
+  "@repeatInfo": {
+    "description": "B-05 to B-08 Listings",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "qtyShort": "Qty {count}",
+  "@qtyShort": {
+    "description": "B-05 to B-08 Listings",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "actionPublishAll": "Publish all ({count})",
+  "@actionPublishAll": {
+    "description": "B-05 to B-08 Listings",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "ordersSubtitle": "Today · newest first",
+  "@ordersSubtitle": {
+    "description": "B-09 to B-11 Orders"
+  },
+  "filterAll": "All",
+  "@filterAll": {
+    "description": "B-09 to B-11 Orders"
+  },
+  "orderCode": "Order code",
+  "@orderCode": {
+    "description": "B-09 to B-11 Orders"
+  },
+  "reservedAt": "Reserved",
+  "@reservedAt": {
+    "description": "B-09 to B-11 Orders"
+  },
+  "pickupLabel": "Pickup",
+  "@pickupLabel": {
+    "description": "B-09 to B-11 Orders"
+  },
+  "toCollectAtCounter": "To collect at the counter",
+  "@toCollectAtCounter": {
+    "description": "B-09 to B-11 Orders"
+  },
+  "actionMarkCollected": "Mark as collected (enter code)",
+  "@actionMarkCollected": {
+    "description": "B-09 to B-11 Orders"
+  },
+  "actionCancelOrder": "Cancel order",
+  "@actionCancelOrder": {
+    "description": "B-09 to B-11 Orders"
+  },
+  "cancelOrderTitle": "Cancel {name}'s order?",
+  "@cancelOrderTitle": {
+    "description": "B-09 to B-11 Orders",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "reasonRequired": "Reason (required)",
+  "@reasonRequired": {
+    "description": "B-09 to B-11 Orders"
+  },
+  "reasonSoldOut": "Sold out",
+  "@reasonSoldOut": {
+    "description": "B-09 to B-11 Orders"
+  },
+  "reasonClosingEarly": "Closing early",
+  "@reasonClosingEarly": {
+    "description": "B-09 to B-11 Orders"
+  },
+  "reasonOther": "Other",
+  "@reasonOther": {
+    "description": "B-09 to B-11 Orders"
+  },
+  "cancelNotifyNote": "{name} will be notified with this reason by push and email.",
+  "@cancelNotifyNote": {
+    "description": "B-09 to B-11 Orders",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "actionKeepOrder": "Keep order",
+  "@actionKeepOrder": {
+    "description": "B-09 to B-11 Orders"
+  },
+  "reportsTitle": "Reports",
+  "@reportsTitle": {
+    "description": "B-15, B-16 Reports and account"
+  },
+  "statCollectedOrders": "Collected orders",
+  "@statCollectedOrders": {
+    "description": "B-15, B-16 Reports and account"
+  },
+  "statSales": "Sales",
+  "@statSales": {
+    "description": "B-15, B-16 Reports and account"
+  },
+  "commissionLabel": "Save It commission · {percent}%",
+  "@commissionLabel": {
+    "description": "B-15, B-16 Reports and account",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "amountDue": "Amount due",
+  "@amountDue": {
+    "description": "B-15, B-16 Reports and account"
+  },
+  "actionDownloadPdf": "Download PDF",
+  "@actionDownloadPdf": {
+    "description": "B-15, B-16 Reports and account"
+  },
+  "actionDownloadCsv": "Download CSV",
+  "@actionDownloadCsv": {
+    "description": "B-15, B-16 Reports and account"
+  },
+  "collectedOrdersHeader": "Collected orders",
+  "@collectedOrdersHeader": {
+    "description": "B-15, B-16 Reports and account"
+  },
+  "restaurantAccountTitle": "Restaurant account",
+  "@restaurantAccountTitle": {
+    "description": "B-15, B-16 Reports and account"
+  },
+  "readOnly": "Read-only",
+  "@readOnly": {
+    "description": "B-15, B-16 Reports and account"
+  },
+  "fieldAddress": "Address",
+  "@fieldAddress": {
+    "description": "B-15, B-16 Reports and account"
+  },
+  "managerPhone": "Manager phone",
+  "@managerPhone": {
+    "description": "B-15, B-16 Reports and account"
+  },
+  "managerEmailLogin": "Manager email (login)",
+  "@managerEmailLogin": {
+    "description": "B-15, B-16 Reports and account"
+  },
+  "openingHours": "Opening hours",
+  "@openingHours": {
+    "description": "B-15, B-16 Reports and account"
+  },
+  "closed": "Closed",
+  "@closed": {
+    "description": "B-15, B-16 Reports and account"
+  },
+  "contactToChange": "Contact Save It to change these: {email}",
+  "@contactToChange": {
+    "description": "B-15, B-16 Reports and account",
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "scanTitle": "Scan pickup code",
+  "@scanTitle": {
+    "description": "B-12 to B-14 Check-in"
+  },
+  "scanInstruction": "Point the camera at the customer's QR code",
+  "@scanInstruction": {
+    "description": "B-12 to B-14 Check-in"
+  },
+  "actionEnterCodeInstead": "Enter code instead",
+  "@actionEnterCodeInstead": {
+    "description": "B-12 to B-14 Check-in"
+  },
+  "torch": "Torch",
+  "@torch": {
+    "description": "B-12 to B-14 Check-in"
+  },
+  "enterCodeTitle": "Enter pickup code",
+  "@enterCodeTitle": {
+    "description": "B-12 to B-14 Check-in"
+  },
+  "enterCodeBody": "Type the 6-character code from the customer's pass.",
+  "@enterCodeBody": {
+    "description": "B-12 to B-14 Check-in"
+  },
+  "enterCodeHelp": "Letters and numbers. Not case-sensitive.",
+  "@enterCodeHelp": {
+    "description": "B-12 to B-14 Check-in"
+  },
+  "pickupResultTitle": "Pickup result",
+  "@pickupResultTitle": {
+    "description": "B-12 to B-14 Check-in"
+  },
+  "resultCollected": "Collected",
+  "@resultCollected": {
+    "description": "B-12 to B-14 Check-in"
+  },
+  "collectAtCounter": "Collect at the counter",
+  "@collectAtCounter": {
+    "description": "B-12 to B-14 Check-in"
+  },
+  "resultMeta": "{name} · {items}",
+  "@resultMeta": {
+    "description": "B-12 to B-14 Check-in",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "items": {
+        "type": "String"
+      }
+    }
+  },
+  "codeAtTime": "Code {code} · {time}",
+  "@codeAtTime": {
+    "description": "B-12 to B-14 Check-in",
+    "placeholders": {
+      "code": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "actionScanNext": "Scan next",
+  "@actionScanNext": {
+    "description": "B-12 to B-14 Check-in"
+  },
+  "resultTooEarlyTitle": "Pick up starts at {time}. Come back again soon!",
+  "@resultTooEarlyTitle": {
+    "description": "B-12 to B-14 Check-in",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "resultTooEarlyBody": "This order can be handed over from {start} to {end}.",
+  "@resultTooEarlyBody": {
+    "description": "B-12 to B-14 Check-in",
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+  "resultInvalidTitle": "Invalid code",
+  "@resultInvalidTitle": {
+    "description": "B-12 to B-14 Check-in"
+  },
+  "resultInvalidBody": "No order at {restaurant} matches “{code}”. Check the code and try again.",
+  "@resultInvalidBody": {
+    "description": "B-12 to B-14 Check-in",
+    "placeholders": {
+      "restaurant": {
+        "type": "String"
+      },
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "resultDuplicateTitle": "Already collected",
+  "@resultDuplicateTitle": {
+    "description": "B-12 to B-14 Check-in"
+  },
+  "resultDuplicateBody": "{name} · {items} · collected today at {time}. Don't hand over again.",
+  "@resultDuplicateBody": {
+    "description": "B-12 to B-14 Check-in",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "items": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "resultExpiredTitle": "Expired",
+  "@resultExpiredTitle": {
+    "description": "B-12 to B-14 Check-in"
+  },
+  "resultExpiredBody": "The pickup window ended at {time}. This order was not collected and can't be handed over.",
+  "@resultExpiredBody": {
+    "description": "B-12 to B-14 Check-in",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "resultCancelledTitle": "Cancelled",
+  "@resultCancelledTitle": {
+    "description": "B-12 to B-14 Check-in"
+  },
+  "resultCancelledBody": "This order was cancelled: {reason}. Don't hand it over.",
+  "@resultCancelledBody": {
+    "description": "B-12 to B-14 Check-in",
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "actionBackToScanner": "Back to scanner",
+  "@actionBackToScanner": {
+    "description": "B-12 to B-14 Check-in"
+  },
+  "bizErrorListings": "We couldn't load your listings.",
+  "@bizErrorListings": {
+    "description": "Business mode common states"
+  },
+  "bizOfflineBody": "Orders may be out of date. Scanning needs a connection.",
+  "@bizOfflineBody": {
+    "description": "Business mode common states"
+  },
+  "noOrdersTodayTitle": "No orders today",
+  "@noOrdersTodayTitle": {
+    "description": "Business mode common states"
+  },
+  "noOrdersTodayBody": "New orders appear here, and you'll get a notification for each one.",
+  "@noOrdersTodayBody": {
+    "description": "Business mode common states"
+  },
+  "noListingsTitle": "No listings yet",
+  "@noListingsTitle": {
+    "description": "Business mode common states"
+  },
+  "noListingsBody": "Add today's surplus food so nearby customers can reserve it.",
+  "@noListingsBody": {
+    "description": "Business mode common states"
+  }
+}
