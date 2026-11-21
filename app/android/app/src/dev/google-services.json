@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "689064537823",
+    "project_id": "saveit-dev-5754e",
+    "storage_bucket": "saveit-dev-5754e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689064537823:android:4f97f74249e2c4062c836a",
+        "android_client_info": {
+          "package_name": "org.arisehub.saveit.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuzlXn066GcOVXmcf18NF-N7LTPUEDQhw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,20 @@
+---
+description: When the user says asses or assess, report how complete the current phase is.
+alwaysApply: true
+---
+
+# Assess the phase
+
+When the user says "asses" or "assess", they mean: assess completion of the current phase and report. Do this without asking which phase they mean.
+
+The current phase is the earliest week file in `docs/phases/week-NN.md` that is not fully complete against its "Done when" lines and the end-of-week line. If they name a week or phase, use that one instead.
+
+Judge from the repo, the week file, and checks you can actually run. A ticked box is not enough when the "Done when" line is unmet, and an unticked box can still be met. Do not start the next phase unless they ask.
+
+Mark every task with one of these:
+
+- ✅ done: the "Done when" line is met
+- 🟡 partial: some of it is met and some is not
+- ⬜ open: not started, or skipped on purpose
+
+Lead with whether the phase is complete, then a table whose first column is that marker.

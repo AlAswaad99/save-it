@@ -12,6 +12,12 @@ app/android/app/*.jks
 supabase/.temp/
 supabase/.branches/
 
+# Android packages produced by scripts/build-android.sh
+builds/
+
+# Local scripts
+scripts/
+
 # OS
 .DS_Store
 Thumbs.db

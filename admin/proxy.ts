@@ -1,16 +1,16 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
+import { supabaseEnv } from "@/lib/supabase/env";
 
 function isAdmin(appMetadata: Record<string, unknown> | undefined): boolean {
   return appMetadata?.role === "admin";
 }
 
 export async function proxy(request: NextRequest) {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  const env = supabaseEnv();
   const isLogin = request.nextUrl.pathname.startsWith("/login");
 
-  if (!url || !anonKey) {
+  if (!env) {
     if (isLogin) {
       return NextResponse.next();
     }
@@ -20,7 +20,7 @@ export async function proxy(request: NextRequest) {
   }
 
   let response = NextResponse.next({ request });
-  const supabase = createServerClient(url, anonKey, {
+  const supabase = createServerClient(env.url, env.key, {
     cookies: {
       getAll() {
         return request.cookies.getAll();
