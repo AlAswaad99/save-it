@@ -14,11 +14,11 @@
 | [x] | T02.2 | You | Check the designs against the decisions and wireframes; client design review; fixes. Approval was given on 22 Nov 2026 for the wireframes and the high-fidelity UI | — | Approved exports in `docs/save-it-design-handoff/`. Suspension stays until an admin lifts it. The approved UI keeps the "No nuts" filter and the empty title "No food near you right now" |
 | [x] | T02.3 | You | Skipped 22 Nov 2026. No signed SRS. The client approved the wireframes and the high-fidelity design. The numeric rules stay in `docs/srs/decisions.md`. Terms and the privacy policy are still to come | All | Recorded as skipped. No signed file required |
 | [x] | T02.4 | Claude Code | Flutter theme from the approved style guide, or from the brand files in `docs/businessrules-and-contents/` if the style guide is not signed yet: colour and type tokens, ThemeData, the supplied logo, core widgets (buttons, inputs, cards, badges, empty, error and loading states, offline banner), a widget gallery screen in the dev flavor only | NF-09 | Gallery shows every core widget, and the logo is `La Logo.png` |
-| [ ] | T02.5 | Claude Code | Backend deploy workflow `deploy-backend.yml`: on merge to `dev`, apply migrations and deploy Edge Functions to the dev Supabase project; production only by manual run with a typed confirmation | — | A test migration reaches dev from a merged PR |
+| [x] | T02.5 | Claude Code | Backend deploy workflow `deploy-backend.yml`: on merge to `dev`, apply migrations and deploy Edge Functions to the dev Supabase project; production only by manual run with a typed confirmation | — | A test migration reaches dev from a merged PR |
 
 ## Friday update to Miss Reid
 
-The wireframes and the high-fidelity UI are approved. A signed SRS was skipped. The backend deploy is still open.
+The wireframes and the high-fidelity UI are approved. A signed SRS was skipped. A merge into `dev` that changes `supabase/` applies migrations to the dev Supabase project. Production deploy stays a manual run with the confirmation text.
 
 ## Claude Code prompt
 
