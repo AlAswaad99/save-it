@@ -2,7 +2,7 @@
 
 ## 1. Branching and commits
 
-- `main` is always deployable to dev, and is protected: changes reach it through a pull request with green CI. Merging deploys the backend and admin to dev and sends an Android dev build.
+- `dev`, `prod`, and `main` are protected. A merge into `dev` that changes `supabase/` deploys migrations and Edge Functions to the dev Supabase project. Production deploys only when someone starts `deploy-backend.yml` and types `DEPLOY PROD`. Admin and Android builds follow [13-ci-cd.md](13-ci-cd.md).
 - Branches are named `t07-1-reserve-order`, `fix/scan-torch` or `cr-01-ratings`, and live a few days at most.
 - Commits start with the task ID and list the SRS IDs: `T07.1 reserve_order RPC (CA-11, SR-07)`.
 - Squash-merge pull requests. The PR description links the task, lists what changed, and includes screenshots for UI work.
@@ -40,7 +40,7 @@
 
 See [13-ci-cd.md](13-ci-cd.md) for every workflow. In short:
 - `ci.yml` runs the checks on every pull request.
-- `deploy-backend.yml` deploys the database and functions.
+- `deploy-backend.yml` applies migrations and deploys Edge Functions to the dev project on merge into `dev`, and to production only after a typed confirmation.
 - `android.yml` handles Android builds.
 - Codemagic handles iOS.
 - Vercel deploys the admin.

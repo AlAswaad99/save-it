@@ -14,7 +14,7 @@
 | [ ] | T02.2 | You | Check the designs against the SRS and wireframes; client design review; fixes; written approval | — | Client approval email saved; exports in `docs/design/` |
 | [ ] | T02.3 | You | Issue SRS v1.0 from the answers already recorded in `docs/srs/decisions.md`, and both sign. The numeric rules and the screen copy are in; terms and the privacy policy are not | All | Signed SRS in `docs/srs/`; open questions in `decisions.md` answered or explicitly deferred |
 | [ ] | T02.4 | Claude Code | Flutter theme from the approved style guide, or from the brand files in `docs/businessrules-and-contents/` if the style guide is not signed yet: colour and type tokens, ThemeData, the supplied logo, core widgets (buttons, inputs, cards, badges, empty, error and loading states, offline banner), a widget gallery screen in the dev flavor only | NF-09 | Gallery shows every core widget, and the logo is `La Logo.png` |
-| [ ] | T02.5 | Claude Code | Backend deploy workflow `deploy-backend.yml`: on merge to `main`, apply migrations and deploy Edge Functions to dev; production only by manual run with a typed confirmation | — | A test migration reaches dev from a merged PR |
+| [ ] | T02.5 | Claude Code | Backend deploy workflow `deploy-backend.yml`: on merge to `dev`, apply migrations and deploy Edge Functions to the dev Supabase project; production only by manual run with a typed confirmation | — | A test migration reaches dev from a merged PR |
 
 ## Friday update to Miss Reid
 
