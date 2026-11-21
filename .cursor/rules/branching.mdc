@@ -9,7 +9,7 @@ Daniel Terefe is the only person who merges. Do not merge a pull request unless 
 
 Promotion order:
 
-1. A week branch into `dev`. `dev` rejects a direct push.
+1. A phase branch into `dev`. `dev` rejects a direct push.
 2. `dev` into `prod`. `prod` accepts a pull request only from `dev`.
 3. `prod` into `main`. `main` accepts a pull request only from `prod`.
 
@@ -17,8 +17,8 @@ Promotion order:
 
 Names:
 
-- Week branch: `week-NN/tNN.N-short-name`, for example `week-01/t01.6-firebase`. The phase comes first, then the task.
-- Commit: `TNN.N summary (SRS ids)`, for example `T01.6 Initialise Firebase for the dev flavor (NF-08)`. A fix on that task stays on the same week branch and names the task.
-- Pull request title: `Week NN · TNN.N summary`. The pull request targets `dev`.
+- Phase branch: `phase-NN/tNN.N-short-name`, for example `phase-01/t01.6-firebase`. The phase comes first, then the task. Phase 01 is the work in `docs/phases/week-01.md`.
+- Commit: `TNN.N summary (SRS ids)`, for example `T01.6 Initialise Firebase for the dev flavor (NF-08)`. A fix on that task stays on the same phase branch and names the task.
+- Pull request title: `Phase NN · TNN.N summary`. The pull request targets `dev`.
 
 There is no prod Firebase project. Crashlytics, when added, is for the dev flavor only.

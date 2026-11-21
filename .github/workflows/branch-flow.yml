@@ -21,7 +21,7 @@ jobs:
           case "$BASE" in
             dev)
               if [ "$HEAD" = "dev" ] || [ "$HEAD" = "prod" ] || [ "$HEAD" = "main" ]; then
-                echo "A pull request into dev comes from a week branch, not from dev, prod, or main."
+                echo "A pull request into dev comes from a phase branch, not from dev, prod, or main."
                 exit 1
               fi
               ;;

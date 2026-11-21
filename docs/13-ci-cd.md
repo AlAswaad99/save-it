@@ -5,7 +5,7 @@ These pipelines are the developer's own tooling. They let a Windows PC with an A
 | What | Tool | Trigger | Target |
 |---|---|---|---|
 | Checks (app, admin, database tests) | GitHub Actions `ci.yml` | Every PR, and every push to `dev`, `prod`, or `main` | — |
-| Promotion source | GitHub Actions `branch-flow.yml` | Every PR into `dev`, `prod`, or `main` | `dev` accepts a week branch. `prod` accepts `dev`. `main` accepts `prod` |
+| Promotion source | GitHub Actions `branch-flow.yml` | Every PR into `dev`, `prod`, or `main` | `dev` accepts a phase branch. `prod` accepts `dev`. `main` accepts `prod` |
 | Database migrations and Edge Functions | GitHub Actions `deploy-backend.yml` | Merge to `main` (changes in `supabase/`) → dev. Manual run with confirmation → prod | Supabase dev / prod |
 | Android dev build | GitHub Actions `android.yml` | Merge to `main` (changes in `app/`) | Firebase App Distribution |
 | Android release build | GitHub Actions `android.yml` | Tag `v*` | Google Play internal testing |
