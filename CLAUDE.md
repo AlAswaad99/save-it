@@ -28,7 +28,7 @@ There are two hosted Supabase projects, **dev** and **prod**, and no local Supab
 | Supabase | `saveit-dev` (free org) | `saveit-prod` (client's Pro org) |
 | Firebase | `saveit-dev` | `saveit-prod` |
 | App flavor | `dev` | `prod` |
-| Distribution | Firebase App Distribution (Android), TestFlight "Save it Dev" (iOS) | Google Play, App Store |
+| Distribution | Firebase App Distribution (Android), TestFlight "Save It Dev" (iOS) | Google Play, App Store |
 | Admin | Vercel deployment from `main` | Vercel production (custom domain) |
 
 CI runs the database tests on a temporary Supabase stack inside the GitHub runner, never against dev or prod.

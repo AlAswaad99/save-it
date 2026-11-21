@@ -118,7 +118,7 @@ Business events insert rows into `outbox`, in the same transaction as the change
 - **Single time zone:** all business rules use Gulf Standard Time (`Asia/Dubai`, UTC+4, no daylight saving). This covers "today" for listings and pickup windows, the expiry check and report months.
 - **`app_today()`** returns `(now() at time zone 'Asia/Dubai')::date`. It is used by every rule that needs today's date.
 - **Pickup windows** store full `timestamptz` start and end times, so comparisons never depend on the phone's clock.
-- **Overnight opening hours:** if `closes_at` is earlier than `opens_at` (for example 12:00–01:00), the restaurant closes after midnight. Pickup windows still end by 23:59 the same day (SR-02).
+- **Overnight opening hours:** if `closes_at` is earlier than `opens_at` (for example 12:00–01:00), the restaurant closes after midnight. A pickup window is still the same calendar day, and it must sit inside the BR-04 bounds (16:00–23:30 Asia/Dubai).
 
 ## 6. Security model (NF-05)
 
@@ -137,7 +137,7 @@ There are two hosted environments and no local Supabase stack on the developer's
 
 | Env | Supabase | Firebase | Admin | App flavor | Bundle / package ID | Distribution |
 |---|---|---|---|---|---|---|
-| dev | Project `saveit-dev`, Free plan (separate free org), Frankfurt | saveit-dev | Vercel deployment from `main` | `dev` | `<prefix>.saveit.dev` | Android: Firebase App Distribution. iOS: TestFlight app "Save it Dev" |
+| dev | Project `saveit-dev`, Free plan (separate free org), Frankfurt | saveit-dev | Vercel deployment from `main` | `dev` | `<prefix>.saveit.dev` | Android: Firebase App Distribution. iOS: TestFlight app "Save It Dev" |
 | prod | Project `saveit-prod`, client's Pro org, Frankfurt | saveit-prod | Vercel production (custom domain) | `prod` | `<prefix>.saveit` | Google Play and App Store |
 
 - **App IDs:** the bundle ID prefix (for example `org.arisehub`) is agreed with the client in T01.2.

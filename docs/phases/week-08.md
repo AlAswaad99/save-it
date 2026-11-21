@@ -14,7 +14,7 @@
 | [ ] | T08.2 | Claude Code | Scan, manual code entry and result screens, including Too early (B-12, B-13, B-14) | BM-09 | Scan to Collected in under 2 seconds on your phone |
 | [ ] | T08.3 | Claude Code | `restaurant_orders`, orders list with filters, order details (B-09, B-10) | BM-08 | Newest first; filters work |
 | [ ] | T08.4 | Claude Code | `cancel_order` (stock back if window open) and cancel sheet (B-11); tests | BM-10, SR-05 | Reason required; stock only returns before the window ends |
-| [ ] | T08.5 | Claude Code | `expire_orders` job and `refresh_customer_status` (warn, suspend, lifted_at); tests | SR-03, SR-04 | Fake-time tests move a customer to warned then suspended |
+| [ ] | T08.5 | Claude Code | `expire_orders` job and `refresh_customer_status` (warn on a rolling 7-day window, suspend on a rolling 30-day window, lifted_at); tests. A suspension stays until an admin lifts it (BR-10) | SR-03, SR-04 | Fake-time tests move a customer to warned then suspended, and a suspension stays until an admin lifts it |
 | [ ] | T08.6 | Claude Code | `delete-account` function and confirmation, blocked while a Reserved order exists (C-24 and its active-order state) | CA-05, NF-11 | Blocked with an active order; after deletion orders show "Deleted customer" and reports are unchanged |
 | [ ] | T08.7 | Claude Code | Flutter core-flow tests: basket and reserve controller unit tests; widget test from reserve to pass | Agreement: core order flow tests | Run in CI and pass |
 | [ ] | T08.8 | You | End-to-end run on dev (Android and the iOS TestFlight dev build); record the M2 demo and send it | — | Checklist in `08-testing.md` §4 steps 1–8 pass; video sent |

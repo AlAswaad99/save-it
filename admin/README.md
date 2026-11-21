@@ -1,6 +1,6 @@
-# Save it admin
+# Save It admin
 
-Next.js app for the Save it team. Pages and behaviour are in [docs/05-admin-web.md](../docs/05-admin-web.md).
+Next.js app for the Save It team. Pages and behaviour are in [docs/05-admin-web.md](../docs/05-admin-web.md).
 
 ```
 pnpm dev

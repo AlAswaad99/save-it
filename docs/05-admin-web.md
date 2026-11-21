@@ -1,6 +1,6 @@
 # 05. Admin web (Next.js)
 
-The admin is a desktop web app for the Save it team. It runs on Next.js (App Router, TypeScript), uses shadcn/ui components, and is hosted on Vercel. The supported browsers are current Chrome, Safari and Edge (NF-02).
+The admin is a desktop web app for the Save It team. It runs on Next.js (App Router, TypeScript), uses shadcn/ui components, and is hosted on Vercel. The supported browsers are current Chrome, Safari and Edge (NF-02).
 
 ## 1. Structure
 
@@ -32,7 +32,7 @@ admin/
 | Login | Supabase Auth, email and password | Deactivated admins are blocked. No "Forgot password" link. |
 | Account menu (top bar) | Supabase Auth | "Change password" dialog (A-12): current password, new password (min 12), confirm; and "Log out" |
 | Restaurants | `restaurants` table (admin RLS) | Search by name, area or login email; status filter; pagination of 25 |
-| New / edit restaurant | `admin-create-restaurant` Edge Function, or a table update for edits | Name, logo upload to `restaurant-logos`, area dropdown, address search, opening hours (7 rows, each with a Closed toggle), login email (unique), phone, status |
+| New / edit restaurant | `admin-create-restaurant` Edge Function, or a table update for edits | Name, logo upload to `restaurant-logos`, area dropdown, address search and map pin, opening hours (7 rows, each with a Closed toggle), manager email (the login), manager phone, status. BR-13 documents (trade licence, Emirates ID, ADAFSA permit, and the rest of that list) are checked offline. The admin does not upload them |
 | Orders | `admin_search_orders` | Filters for date range, restaurant and status. The side panel shows the timeline and a Cancel button that calls `cancel_order` with a reason. |
 | Export | `/api/export/orders` | Streams CSV with the columns: order code, date, restaurant, items, quantities, total, commission, status |
 | Customers | `admin_search_customers` | Shows the no-show count and status. Suspend and lift go through `admin_set_customer_status`. |

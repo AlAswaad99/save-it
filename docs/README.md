@@ -4,8 +4,8 @@ This is the technical plan for building the Save it Lean Package: an iOS and And
 
 | | |
 |---|---|
-| Version | 0.2 (18 November 2026) |
-| Based on | SRS v0.3, Wireframes (17 November 2026), Business Rules Sheet, Development Agreement dated 27 October 2026 |
+| Version | 0.3 (21 November 2026) |
+| Based on | SRS v0.3, Wireframes (17 November 2026), client answers in `businessrules-and-contents/` (21 November 2026), Development Agreement dated 27 October 2026 |
 | Timeline | 12 weeks, Monday 16 November 2026 to Friday 5 February 2027 |
 | Owner | Daniel Terefe |
 
@@ -40,6 +40,8 @@ This is the technical plan for building the Save it Lean Package: an iOS and And
 | [11-risks.md](11-risks.md) | Risk register |
 | [12-roadmap.md](12-roadmap.md) | Features excluded from the Lean Package and how the design leaves room for them |
 | [13-ci-cd.md](13-ci-cd.md) | GitHub Actions, Codemagic (iOS without a Mac) and Vercel pipelines |
+| [srs/decisions.md](srs/decisions.md) | Client answers that override the example values in the plan, and the questions still open |
+| [businessrules-and-contents/](businessrules-and-contents/) | The workbook, screen copy and logo files the client sent |
 | [design/ui-design-prompt.md](design/ui-design-prompt.md) | Prompt for the high-fidelity UI design in Claude Design |
 | [phases/](phases/) | One plan per week, with Claude Code prompts |
 

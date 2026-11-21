@@ -41,12 +41,12 @@ android {
         create("dev") {
             dimension = "env"
             applicationId = "org.arisehub.saveit.dev"
-            resValue("string", "app_name", "Save it Dev")
+            resValue("string", "app_name", "Save It Dev")
         }
         create("prod") {
             dimension = "env"
             applicationId = "org.arisehub.saveit"
-            resValue("string", "app_name", "Save it")
+            resValue("string", "app_name", "Save It")
         }
     }
 

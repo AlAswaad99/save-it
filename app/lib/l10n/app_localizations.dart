@@ -97,7 +97,7 @@ abstract class AppLocalizations {
   /// Application title shown by the operating system.
   ///
   /// In en, this message translates to:
-  /// **'Save it'**
+  /// **'Save It'**
   String get appTitle;
 
   /// Explore tab label.

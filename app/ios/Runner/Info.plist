@@ -7,13 +7,13 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Save it</string>
+	<string>Save It</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Save it uses your location to show surplus food near you.</string>
+	<string>Save It uses your location to show surplus food near you.</string>
 	<key>NSCameraUsageDescription</key>
-	<string>Save it uses the camera to photograph listings and scan pickup codes.</string>
+	<string>Save It uses the camera to photograph listings and scan pickup codes.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Save it uses your photo library so you can add a picture to a listing.</string>
+	<string>Save It uses your photo library so you can add a picture to a listing.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>

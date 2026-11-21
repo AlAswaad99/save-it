@@ -6,7 +6,7 @@ Builds come from pipelines, never from your PC. iOS can't be built on Windows. D
 
 | | Android | iOS |
 |---|---|---|
-| Dev builds | `android.yml` on every merge to `main` → Firebase App Distribution | Codemagic `ios-dev`, started manually → TestFlight app "Save it Dev" |
+| Dev builds | `android.yml` on every merge to `main` → Firebase App Distribution | Codemagic `ios-dev`, started manually → TestFlight app "Save It Dev" |
 | Release builds | `android.yml` on tag `v*` → Play internal testing track | Codemagic `ios-release` on tag `v*` → TestFlight on the real app |
 | Signing | Upload key created on your PC, stored in GitHub secrets (base64) and in a password manager; Play App Signing enabled | Codemagic automatic signing using the client's App Store Connect API key |
 | First upload | Once, **by hand** in Play Console (T04.8), because Google needs one manual upload before the API can publish | Automatic |
@@ -40,7 +40,7 @@ Before tagging a release, increase the `BUILD` number in `pubspec.yaml` and upda
 
 ## 3. App Store checklist (iOS)
 
-- [ ] The app record is created under the client's organisation account with name Q-05, bundle ID, primary language English, and category Food & Drink.
+- [ ] The app record is created under the client's organisation account with the name "Save It", bundle ID, primary language English, and category Food & Drink.
 - [ ] Description, keywords, support URL and privacy policy URL (Q-06, BR-18).
 - [ ] Screenshots: 6.9" and 6.5" iPhone sizes, showing Explore, Restaurant, Basket, Pickup pass and Business mode.
 - [ ] App Privacy answers:

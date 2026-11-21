@@ -1,6 +1,6 @@
 {
   "@@locale": "en",
-  "appTitle": "Save it",
+  "appTitle": "Save It",
   "@appTitle": {
     "description": "Application title shown by the operating system."
   },

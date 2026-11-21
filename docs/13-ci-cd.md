@@ -8,7 +8,7 @@ These pipelines are the developer's own tooling. They let a Windows PC with an A
 | Database migrations and Edge Functions | GitHub Actions `deploy-backend.yml` | Merge to `main` (changes in `supabase/`) → dev. Manual run with confirmation → prod | Supabase dev / prod |
 | Android dev build | GitHub Actions `android.yml` | Merge to `main` (changes in `app/`) | Firebase App Distribution |
 | Android release build | GitHub Actions `android.yml` | Tag `v*` | Google Play internal testing |
-| iOS dev build | Codemagic `ios-dev` | Manual start | TestFlight "Save it Dev" |
+| iOS dev build | Codemagic `ios-dev` | Manual start | TestFlight "Save It Dev" |
 | iOS release build | Codemagic `ios-release` | Tag `v*` | TestFlight on the real app |
 | Admin web | Vercel GitHub integration | PR → preview; `main` → dev; `production` branch → production | Vercel |
 
@@ -213,7 +213,7 @@ jobs:
 ```yaml
 workflows:
   ios-dev:
-    name: iOS dev to TestFlight (Save it Dev)
+    name: iOS dev to TestFlight (Save It Dev)
     instance_type: mac_mini_m2
     max_build_duration: 40
     integrations:
@@ -225,8 +225,8 @@ workflows:
       vars:
         FLAVOR: dev
         BUNDLE_ID: <prefix>.saveit.dev
-        APP_NAME: Save it Dev
-        APP_STORE_APPLE_ID: "0000000000"       # Apple ID of the "Save it Dev" app record
+        APP_NAME: Save It Dev
+        APP_STORE_APPLE_ID: "0000000000"       # Apple ID of the "Save It Dev" app record
       ios_signing:
         distribution_type: app_store
         bundle_identifier: <prefix>.saveit.dev
@@ -264,7 +264,7 @@ workflows:
         submit_to_testflight: true
 
   ios-release:
-    name: iOS release to TestFlight (Save it)
+    name: iOS release to TestFlight (Save It)
     instance_type: mac_mini_m2
     max_build_duration: 40
     integrations:
@@ -276,7 +276,7 @@ workflows:
       vars:
         FLAVOR: prod
         BUNDLE_ID: <prefix>.saveit
-        APP_NAME: Save it
+        APP_NAME: Save It
         APP_STORE_APPLE_ID: "0000000000"       # Apple ID of the real app record
       ios_signing:
         distribution_type: app_store

@@ -56,6 +56,6 @@ Business functions read the time through `app_now()`, which wraps `now()`. Tests
 ## 7. Client acceptance testing (M4)
 
 - **Builds:** distributed through TestFlight and Google Play internal testing.
-- **Who tests what:** the client tests on the devices in Q-07; the developer tests on Android.
+- **Who tests what:** Android and iOS are both built. On-device acceptance waits until a phone is available. The only device the client has named is a Galaxy S26 Ultra (Q-05).
 - **Reporting:** issues are reported with the SRS ID, the steps and a screenshot, then logged as defects or Change Requests (Agreement §6.1–6.2).
 - **Results:** Appendix A of the SRS is the checklist of record.

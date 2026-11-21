@@ -6,7 +6,7 @@ Before running it, fill in the two placeholders if Miss Reid has answered: the l
 
 ---
 
-Turn the attached **Save it** low-fidelity wireframes into high-fidelity UI designs. Save it is a mobile app (iOS and Android) and web admin that lets Abu Dhabi restaurants sell end-of-day surplus food at a discount. Customers reserve items, collect them during the restaurant's pickup window with a QR or 6-character code, and pay at the counter. Restaurants use a "Business mode" in the same app. The Save it team uses a desktop web admin.
+Turn the attached **Save It** low-fidelity wireframes into high-fidelity UI designs. Save It is a mobile app (iOS and Android) and web admin that lets Abu Dhabi restaurants sell end-of-day surplus food at a discount. Customers reserve items, collect them during the restaurant's pickup window with a QR or 6-character code, and pay at the counter. Restaurants use a "Business mode" in the same app. The Save It team uses a desktop web admin. The wordmark is "Save It", including the capital I.
 
 The wireframes and the attached SRS are the source of truth for **what is on each screen and how screens connect**. Your job is the **look**: visual style, hierarchy, spacing, components and states. Do not add, remove or rename screens, fields, buttons or features. If something in a wireframe looks wrong or unclear, list it in a "Questions" frame instead of changing it.
 
@@ -22,7 +22,7 @@ The wireframes and the attached SRS are the source of truth for **what is on eac
   - error red, distinct from terracotta, for errors and Cancelled
   - neutral grey, for Expired and Hidden
 - **Font:** [Titillium Web, unless the client says otherwise]. Use regular, semibold and bold only.
-- **Logo:** [use the attached logo file] or, if none is attached, a simple placeholder wordmark "Save it" in the brand font with a small leaf mark. Label it clearly as a placeholder.
+- **Logo:** `docs/businessrules-and-contents/La Logo.png`. Do not draw a replacement mark. Walkthrough illustrations are `Cycle.png`, `La point.png` and `La pay.png` in that folder, and the location pin is `image_7e411891.jpg`.
 - **Personality:** warm, fresh, trustworthy and practical. It's about good food not going to waste, so it should feel appetising and calm, not discount-store loud. Food photos are the hero on restaurant and item cards.
 - **Contrast:** check every text and colour pair meets WCAG AA (4.5:1 body, 3:1 large text and icons). If terracotta text on off-white fails, darken it slightly and note the final hex.
 

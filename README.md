@@ -1,4 +1,4 @@
-# Save it
+# Save It
 
 Surplus food from restaurants in Abu Dhabi. Customers reserve items in the app and pay at the counter with a pickup code.
 

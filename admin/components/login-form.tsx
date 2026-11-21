@@ -43,7 +43,7 @@ export function LoginForm() {
   return (
     <Card className="w-full max-w-sm">
       <CardHeader>
-        <CardTitle>Save it admin</CardTitle>
+        <CardTitle>Save It admin</CardTitle>
         <CardDescription>Sign in with your admin email and password.</CardDescription>
       </CardHeader>
       <CardContent>

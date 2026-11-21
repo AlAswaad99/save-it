@@ -37,7 +37,36 @@ One row per auth user. A trigger on `auth.users` insert creates it on first sign
 | created_at | timestamptz | default now() |
 
 ### areas
-The fallback list of Abu Dhabi areas for customers who don't share their location (CA-02). The values come from Business Rules Q-04.
+The fallback list of Abu Dhabi areas for customers who don't share their location (CA-02). Seed these names, in this order. Centres are decimal degrees, latitude then longitude. In PostGIS that is `ST_MakePoint(longitude, latitude)`. They are neighbourhood centroids gathered on 21 November 2026, not surveyed pins, and an admin can correct them later.
+
+| Name | Latitude | Longitude | How it was chosen |
+|---|---|---|---|
+| Al Bahyah | 24.55653 | 54.66416 | OpenStreetMap administrative area |
+| Al Bateen | 24.45138 | 54.33797 | OpenStreetMap administrative area in Abu Dhabi. A same-named place in Al Ain was ignored |
+| Al Danah | 24.48529 | 54.36989 | OpenStreetMap administrative area |
+| Al Hisn | 24.48250 | 54.35085 | OpenStreetMap administrative area. The sheet spelled this "Al Hisin" |
+| Al Hudayriyat Island | 24.41706 | 54.36027 | OpenStreetMap suburb |
+| Al Khalidiya | 24.46934 | 54.34881 | OpenStreetMap administrative area. The map spells it Al Khalidiyah |
+| Al Marina | 24.47604 | 54.32143 | Marina Mall. No district polygon is named Al Marina |
+| Al Maryah Island | 24.50298 | 54.38997 | OpenStreetMap administrative area |
+| Al Mina | 24.51828 | 54.37594 | Apple Maps place centroid for Al Mina |
+| Al Muneera | 24.45161 | 54.60542 | OpenStreetMap neighbourhood on Al Raha Beach |
+| Al Mushrif | 24.44109 | 54.38422 | OpenStreetMap administrative area |
+| Al Nahyan | 24.46446 | 54.38684 | OpenStreetMap administrative area |
+| Al Qana | 24.40400 | 54.49189 | GPS published on alqana.ae. It sits in Rabdan, beside Khor Al Maqta |
+| Al Raha | 24.44785 | 54.59630 | OpenStreetMap suburb |
+| Al Rawdah | 24.41797 | 54.44788 | OpenStreetMap administrative area near the airport. A smaller island neighbourhood of the same name is not used |
+| Al Reem Island | 24.49360 | 54.40784 | OpenStreetMap administrative area |
+| Al Zahiyah | 24.49648 | 54.37948 | OpenStreetMap administrative area |
+| Al Zeina | 24.45698 | 54.61421 | OpenStreetMap neighbourhood on Al Raha Beach |
+| Baniyas | 24.30648 | 54.63486 | OpenStreetMap administrative area. The map spells it Bani Yas |
+| Corniche | 24.47419 | 54.34019 | OpenStreetMap point for Corniche Beach. The Corniche is a waterfront, not a district polygon |
+| Khalifa City | 24.42013 | 54.57495 | OpenStreetMap administrative area |
+| Mohamed Bin Zayed City | 24.33396 | 54.55356 | OpenStreetMap suburb |
+| Mussafah | 24.34887 | 54.49044 | OpenStreetMap administrative area. The map spells it Musaffah |
+| Rabdan | 24.40548 | 54.50577 | OpenStreetMap administrative area |
+| Saadiyat Island | 24.54597 | 54.44369 | OpenStreetMap island |
+| Yas Island | 24.48837 | 54.60723 | OpenStreetMap administrative area |
 
 | Column | Type | Notes |
 |---|---|---|
@@ -69,6 +98,10 @@ Primary key `(restaurant_id, weekday)`. `weekday` runs from 0 (Sunday) to 6. Col
 
 ### categories, dietary_tags
 Fixed lists seeded from BR-11 and BR-12. Columns: `id smallint`, `name text unique` and `sort smallint`. There is no editing UI (SR-09).
+
+Categories, in order: Salads, Savoury Dishes, Sweet Treats, Beverages, Snacks, Bakery, Kids Menu.
+
+Dietary tags, in order: Vegetarian, Vegan, Gluten-free, Contains nuts, Lactose-free. Halal is not in the client's list.
 
 ### pickup_windows
 
@@ -114,7 +147,7 @@ The window can be edited during the day. If orders exist, `ends_at` can only mov
 | status | order_status | |
 | total | numeric(10,2) | sum of the line totals |
 | commission_rate | numeric(5,4) | copied from `app_settings` when the order is created |
-| commission_amount | numeric(10,2) | `round(total * rate, 2)`; the basis comes from Q-02 |
+| commission_amount | numeric(10,2) | `round(total * rate, 2)`; the total is the discounted amount the customer pays (Q-01) |
 | cancel_reason | cancel_reason null | |
 | cancel_note | text null | required when the reason is `other` |
 | cancelled_by | uuid null | |
@@ -126,19 +159,22 @@ The window can be edited during the day. If orders exist, `ends_at` can only mov
 ### app_settings
 Key-value configuration, seeded from the signed Business Rules Sheet. There is no admin UI: the developer changes values in a migration (SR-09, and the lean exclusion).
 
-| key | Example value | Source |
+| key | Seed value | Source |
 |---|---|---|
-| commission_rate | `0.15` | BR-01, Q-02 |
-| min_discount | `0.40` | BR-02 |
+| commission_rate | `0.40` | BR-01, Q-01. 40% of the amount the customer pays |
+| min_discount | `0.50` | BR-02. A listing must be at least half off |
 | currency | `"AED"` | BR-03 |
-| pickup_earliest, pickup_latest | `"17:00"`, `"23:00"` | BR-04 |
-| max_units_per_listing | `3` | BR-05 |
+| pickup_earliest, pickup_latest | `"16:00"`, `"23:30"` | BR-04, Asia/Dubai. The sheet wrote "16:00pm" and "23:30pm"; both are 24-hour times |
+| max_units_per_listing | `2` | BR-05. Per listing, not per order |
 | max_active_orders | `2` | BR-06 |
-| reminder_minutes | `30` | BR-07 |
-| noshow_warn_count, noshow_suspend_count, noshow_period_days | `2`, `3`, `30` | BR-08, BR-09 |
-| search_radius_m | `10000` | CA-02 |
-| support_email | `"support@…"` | BR-19 |
-| prices_include_vat | `true` | Q-03 |
+| reminder_minutes | `30` | BR-07. Before the window ends |
+| noshow_warn_count, noshow_warn_period_days | `2`, `7` | BR-08. "One week" is a rolling 7 days |
+| noshow_suspend_count, noshow_suspend_period_days | `3`, `30` | BR-09 |
+| search_radius_m | `10000` | CA-02. Not in the answer sheet; unchanged |
+| support_email | `"contact@arisehub.org"` | BR-19 |
+| prices_include_vat | `true` | Q-02. The app shows "incl. VAT" |
+
+Do not seed a single `noshow_period_days`. Warning and suspension use different windows.
 
 The helper `setting(key text) returns jsonb` is `stable`. Business functions read every value through it.
 
@@ -201,11 +237,11 @@ Every policy has a pgTAP test in `supabase/tests/rls_*.test.sql` (see 08-testing
 | `dispatch_outbox` | every 1 min | Calls the `dispatch` Edge Function through pg_net when there are pending rows | 06 |
 | `cleanup` | daily 03:00 GST | Removes `sent` outbox rows older than 30 days, and stale device tokens (not updated for 90 days) | — |
 
-`refresh_customer_status(customer)` counts the expired orders that fall within `noshow_period_days` and after `suspension_lifted_at`.
-- **Warning:** if the count is at least `noshow_warn_count`, the status becomes `warned`.
-- **Suspension:** if the count is at least `noshow_suspend_count`, the status becomes `suspended`.
+`refresh_customer_status(customer)` counts expired orders after `suspension_lifted_at`.
+- **Warning:** if at least `noshow_warn_count` of those orders expired inside `noshow_warn_period_days`, the status becomes `warned`.
+- **Suspension:** if at least `noshow_suspend_count` expired inside `noshow_suspend_period_days`, the status becomes `suspended`.
 
-It never lowers a manual suspension. Lifting a suspension (AD-04) sets `suspension_lifted_at = now()` and the status to `active`.
+Lifting a suspension (AD-04) sets `suspension_lifted_at = now()` and the status to `active`. A suspension stays until an admin lifts it (BR-10). It does not end by itself after a week.
 
 ## 7. Storage buckets
 

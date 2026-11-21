@@ -17,7 +17,7 @@
 | [ ] | T11.5 | Claude Code | Security review: RLS, secrets, storage policies, rate limits, key restrictions | NF-05 | Checklist in `08-testing.md` §6 ticked |
 | [ ] | T11.6 | Claude Code | App Review demo accounts: password sign-in only for allow-listed review emails (customer and restaurant) | NF-11 | Reviewers can log in without email access; others never see a password field |
 | [ ] | T11.7 | Claude Code | Release pipelines dry run: tag `v0.9.0` sends a prod AAB to Play internal testing (GitHub Actions) and a prod IPA to TestFlight (Codemagic `ios-release`) | — | Both builds appear in the store consoles |
-| [ ] | T11.8 | You | Beta: dev builds to the client through Firebase App Distribution and TestFlight "Save it Dev"; beta notes; decide on real restaurants joining | — | Client confirms install on her devices; invoice sent |
+| [ ] | T11.8 | You | Beta: dev builds to the client through Firebase App Distribution and TestFlight "Save It Dev"; beta notes; decide on real restaurants joining | — | Client confirms install once a device is available; invoice sent |
 
 ## Friday update to Miss Reid
 
