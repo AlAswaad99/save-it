@@ -4,13 +4,14 @@ These pipelines are the developer's own tooling. They let a Windows PC with an A
 
 | What | Tool | Trigger | Target |
 |---|---|---|---|
-| Checks (app, admin, database tests) | GitHub Actions `ci.yml` | Every PR and every push to `main` | — |
+| Checks (app, admin, database tests) | GitHub Actions `ci.yml` | Every PR, and every push to `dev`, `prod`, or `main` | — |
+| Promotion source | GitHub Actions `branch-flow.yml` | Every PR into `dev`, `prod`, or `main` | `dev` accepts a week branch. `prod` accepts `dev`. `main` accepts `prod` |
 | Database migrations and Edge Functions | GitHub Actions `deploy-backend.yml` | Merge to `main` (changes in `supabase/`) → dev. Manual run with confirmation → prod | Supabase dev / prod |
 | Android dev build | GitHub Actions `android.yml` | Merge to `main` (changes in `app/`) | Firebase App Distribution |
 | Android release build | GitHub Actions `android.yml` | Tag `v*` | Google Play internal testing |
 | iOS dev build | Codemagic `ios-dev` | Manual start | TestFlight "Save It Dev" |
 | iOS release build | Codemagic `ios-release` | Tag `v*` | TestFlight on the real app |
-| Admin web | Vercel GitHub integration | PR → preview; `main` → dev; `production` branch → production | Vercel |
+| Admin web | Vercel GitHub integration | PR → preview; `dev` → dev admin; `main` → production | Vercel |
 
 Promotion to production in Play Console and "Submit for review" in App Store Connect stay manual.
 

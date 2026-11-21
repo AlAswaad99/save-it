@@ -1,0 +1,24 @@
+---
+description: Branch, commit, and pull request names, and who may merge.
+alwaysApply: true
+---
+
+# Branches and pull requests
+
+Daniel Terefe is the only person who merges. Do not merge a pull request unless he asks in this conversation.
+
+Promotion order:
+
+1. A week branch into `dev`. `dev` rejects a direct push.
+2. `dev` into `prod`. `prod` accepts a pull request only from `dev`.
+3. `prod` into `main`. `main` accepts a pull request only from `prod`.
+
+`dev`, `prod`, and `main` are protected. Week branches are not.
+
+Names:
+
+- Week branch: `week-NN/tNN.N-short-name`, for example `week-01/t01.6-firebase`. The phase comes first, then the task.
+- Commit: `TNN.N summary (SRS ids)`, for example `T01.6 Initialise Firebase for the dev flavor (NF-08)`. A fix on that task stays on the same week branch and names the task.
+- Pull request title: `Week NN · TNN.N summary`. The pull request targets `dev`.
+
+There is no prod Firebase project. Crashlytics, when added, is for the dev flavor only.
