@@ -136,6 +136,216 @@ abstract class AppLocalizations {
   /// **'Sign in to manage your account.'**
   String get profilePlaceholder;
 
+  /// Semantics label for the supplied La Logo.png mark.
+  ///
+  /// In en, this message translates to:
+  /// **'Save It logo'**
+  String get logoSemantics;
+
+  /// Title of the dev-flavor widget gallery.
+  ///
+  /// In en, this message translates to:
+  /// **'Widget gallery'**
+  String get galleryTitle;
+
+  /// Dev-flavor Profile action that opens the widget gallery.
+  ///
+  /// In en, this message translates to:
+  /// **'Widget gallery'**
+  String get galleryOpen;
+
+  /// No description provided for @gallerySectionButtons.
+  ///
+  /// In en, this message translates to:
+  /// **'Buttons'**
+  String get gallerySectionButtons;
+
+  /// No description provided for @gallerySectionInputs.
+  ///
+  /// In en, this message translates to:
+  /// **'Inputs'**
+  String get gallerySectionInputs;
+
+  /// No description provided for @gallerySectionCard.
+  ///
+  /// In en, this message translates to:
+  /// **'Card'**
+  String get gallerySectionCard;
+
+  /// No description provided for @gallerySectionBadges.
+  ///
+  /// In en, this message translates to:
+  /// **'Badges'**
+  String get gallerySectionBadges;
+
+  /// No description provided for @gallerySectionStates.
+  ///
+  /// In en, this message translates to:
+  /// **'States'**
+  String get gallerySectionStates;
+
+  /// No description provided for @buttonPrimary.
+  ///
+  /// In en, this message translates to:
+  /// **'Primary'**
+  String get buttonPrimary;
+
+  /// No description provided for @buttonSecondary.
+  ///
+  /// In en, this message translates to:
+  /// **'Secondary'**
+  String get buttonSecondary;
+
+  /// No description provided for @buttonText.
+  ///
+  /// In en, this message translates to:
+  /// **'Text'**
+  String get buttonText;
+
+  /// No description provided for @buttonDestructive.
+  ///
+  /// In en, this message translates to:
+  /// **'Destructive'**
+  String get buttonDestructive;
+
+  /// No description provided for @buttonDisabled.
+  ///
+  /// In en, this message translates to:
+  /// **'Disabled'**
+  String get buttonDisabled;
+
+  /// Semantics label while a button is busy.
+  ///
+  /// In en, this message translates to:
+  /// **'Loading'**
+  String get buttonLoading;
+
+  /// No description provided for @fieldLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get fieldLabel;
+
+  /// No description provided for @fieldHint.
+  ///
+  /// In en, this message translates to:
+  /// **'name@example.com'**
+  String get fieldHint;
+
+  /// No description provided for @fieldError.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a valid email.'**
+  String get fieldError;
+
+  /// No description provided for @fieldDisabledLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Disabled'**
+  String get fieldDisabledLabel;
+
+  /// No description provided for @cardTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Restaurant'**
+  String get cardTitle;
+
+  /// No description provided for @cardBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Surplus meals available for pickup today.'**
+  String get cardBody;
+
+  /// No description provided for @badgeReserved.
+  ///
+  /// In en, this message translates to:
+  /// **'Reserved'**
+  String get badgeReserved;
+
+  /// No description provided for @badgeCollected.
+  ///
+  /// In en, this message translates to:
+  /// **'Collected'**
+  String get badgeCollected;
+
+  /// No description provided for @badgeCancelled.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancelled'**
+  String get badgeCancelled;
+
+  /// No description provided for @badgeExpired.
+  ///
+  /// In en, this message translates to:
+  /// **'Expired'**
+  String get badgeExpired;
+
+  /// No description provided for @badgeDraft.
+  ///
+  /// In en, this message translates to:
+  /// **'Draft'**
+  String get badgeDraft;
+
+  /// No description provided for @badgeLive.
+  ///
+  /// In en, this message translates to:
+  /// **'Live'**
+  String get badgeLive;
+
+  /// No description provided for @badgeSoldOut.
+  ///
+  /// In en, this message translates to:
+  /// **'Sold out'**
+  String get badgeSoldOut;
+
+  /// No description provided for @badgeHidden.
+  ///
+  /// In en, this message translates to:
+  /// **'Hidden'**
+  String get badgeHidden;
+
+  /// No description provided for @galleryEmptyTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Nothing here yet'**
+  String get galleryEmptyTitle;
+
+  /// No description provided for @galleryEmptyBody.
+  ///
+  /// In en, this message translates to:
+  /// **'This is the empty state.'**
+  String get galleryEmptyBody;
+
+  /// No description provided for @galleryErrorTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Something went wrong'**
+  String get galleryErrorTitle;
+
+  /// No description provided for @galleryErrorBody.
+  ///
+  /// In en, this message translates to:
+  /// **'This is the error state.'**
+  String get galleryErrorBody;
+
+  /// No description provided for @errorRetry.
+  ///
+  /// In en, this message translates to:
+  /// **'Try again'**
+  String get errorRetry;
+
+  /// Semantics label for the skeleton loading state.
+  ///
+  /// In en, this message translates to:
+  /// **'Loading'**
+  String get loadingLabel;
+
+  /// Banner shown when the phone has no connection.
+  ///
+  /// In en, this message translates to:
+  /// **'You are offline. A saved pickup pass still opens.'**
+  String get offlineBanner;
+
   /// Fallback when an RPC returns a code the app does not recognise yet.
   ///
   /// In en, this message translates to:
