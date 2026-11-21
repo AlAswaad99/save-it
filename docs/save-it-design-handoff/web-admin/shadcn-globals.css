@@ -1,0 +1,26 @@
+/* shadcn/ui theme for the Save It admin. Paste into app/globals.css (Tailwind v3 style, HSL channels). */
+/* Note: shadcn "accent" is the hover/selected tint (vine container), not Save It terracotta. */
+@layer base {
+  :root {
+    --background: 38.2 40.7% 94.7%; /* #F7F3EC */
+    --foreground: 40.0 5.7% 10.4%; /* #1C1B19 */
+    --card: 0.0 0.0% 100.0%; /* #FFFFFF */
+    --card-foreground: 40.0 5.7% 10.4%; /* #1C1B19 */
+    --popover: 0.0 0.0% 100.0%; /* #FFFFFF */
+    --popover-foreground: 40.0 5.7% 10.4%; /* #1C1B19 */
+    --primary: 89.5 35.9% 35.5%; /* #5B7B3A */
+    --primary-foreground: 0.0 0.0% 100.0%; /* #FFFFFF */
+    --secondary: 38.6 30.4% 91.0%; /* #EFEAE1 */
+    --secondary-foreground: 40.0 5.7% 10.4%; /* #1C1B19 */
+    --muted: 38.6 30.4% 91.0%; /* #EFEAE1 */
+    --muted-foreground: 28.0 7.5% 39.0%; /* #6B635C */
+    --accent: 85.7 30.4% 91.0%; /* #E9EFE1 */
+    --accent-foreground: 89.5 36.3% 30.8%; /* #4F6B32 */
+    --destructive: 349.7 67.4% 42.2%; /* #B4233C */
+    --destructive-foreground: 0.0 0.0% 100.0%; /* #FFFFFF */
+    --border: 36.7 23.7% 85.1%; /* #E2DBD0 */
+    --input: 31.8 6.9% 51.6%; /* #8C847B */
+    --ring: 89.5 35.9% 35.5%; /* #5B7B3A */
+    --radius: 0.75rem; /* 12px controls; cards use rounded-card (20px) */
+  }
+}

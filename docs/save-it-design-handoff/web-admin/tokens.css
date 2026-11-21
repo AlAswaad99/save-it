@@ -1,0 +1,69 @@
+:root {
+  /* Save It colour tokens */
+  --si-primary: #5B7B3A;
+  --si-primary-text: #587738;
+  --si-primary-container: #E9EFE1;
+  --si-on-primary-container: #4F6B32;
+  --si-accent: #B5543A;
+  --si-accent-text: #B15239;
+  --si-background: #F7F3EC;
+  --si-surface: #FFFFFF;
+  --si-surface-muted: #EFEAE1;
+  --si-table-header: #FBF9F5;
+  --si-outline: #E2DBD0;
+  --si-outline-strong: #8C847B;
+  --si-text-primary: #1C1B19;
+  --si-text-secondary: #6B635C;
+  --si-success-tint: #E4F0E2;
+  --si-success: #2E6B3A;
+  --si-warning-tint: #FCEFD2;
+  --si-warning: #7A5200;
+  --si-error-tint: #FBE7EA;
+  --si-error: #B4233C;
+  --si-neutral-tint: #ECE9E4;
+  --si-neutral: #55504A;
+  --si-dark: #2B2926;
+  --si-business-badge: #C6DDA8;
+
+  /* Radii */
+  --si-radius-thumb: 8px;
+  --si-radius-control: 12px;
+  --si-radius-card: 20px;
+  --si-radius-sheet: 28px;
+  --si-radius-full: 9999px;
+
+  /* Spacing (4-point) */
+  --si-space-1: 4px;
+  --si-space-2: 8px;
+  --si-space-3: 12px;
+  --si-space-4: 16px;
+  --si-space-5: 20px;
+  --si-space-6: 24px;
+  --si-space-8: 32px;
+  --si-space-12: 48px;
+  --si-space-16: 64px;
+
+  /* Elevation */
+  --si-shadow-e1: 0 1px 2px rgba(28,27,25,.06), 0 4px 12px rgba(28,27,25,.06);
+  --si-shadow-e2: 0 -4px 16px rgba(28,27,25,.08);
+  --si-shadow-e3: 0 12px 32px rgba(28,27,25,.18);
+
+  --si-scrim: rgba(28,27,25,.48);
+  --si-font: 'Titillium Web', system-ui, sans-serif;
+}
+
+/* Type scale: font-size / line-height / weight / tracking */
+.si-display { font-family: var(--si-font); font-size: 34px; line-height: 40px; font-weight: 700; }
+.si-screen-title { font-family: var(--si-font); font-size: 28px; line-height: 34px; font-weight: 700; }
+.si-title { font-family: var(--si-font); font-size: 26px; line-height: 32px; font-weight: 700; }
+.si-sheet-title { font-family: var(--si-font); font-size: 22px; line-height: 28px; font-weight: 700; }
+.si-headline { font-family: var(--si-font); font-size: 20px; line-height: 26px; font-weight: 600; }
+.si-app-bar { font-family: var(--si-font); font-size: 18px; line-height: 24px; font-weight: 600; }
+.si-body { font-family: var(--si-font); font-size: 16px; line-height: 24px; font-weight: 400; }
+.si-body-small { font-family: var(--si-font); font-size: 14px; line-height: 20px; font-weight: 400; }
+.si-label { font-family: var(--si-font); font-size: 16px; line-height: 20px; font-weight: 600; }
+.si-label-small { font-family: var(--si-font); font-size: 14px; line-height: 20px; font-weight: 600; }
+.si-caption { font-family: var(--si-font); font-size: 12px; line-height: 16px; font-weight: 400; }
+.si-badge { font-family: var(--si-font); font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.si-code { font-family: var(--si-font); font-size: 32px; line-height: 40px; font-weight: 700; letter-spacing: 0.18em; font-variant-numeric: tabular-nums; }
+.si-pass-code { font-family: var(--si-font); font-size: 40px; line-height: 48px; font-weight: 700; letter-spacing: 0.18em; font-variant-numeric: tabular-nums; }

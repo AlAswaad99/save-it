@@ -28,6 +28,59 @@
   "@profilePlaceholder": {
     "description": "Empty Profile tab while the account screens are not built yet."
   },
+  "logoSemantics": "Save It logo",
+  "@logoSemantics": {
+    "description": "Semantics label for the supplied La Logo.png mark."
+  },
+  "galleryTitle": "Widget gallery",
+  "@galleryTitle": {
+    "description": "Title of the dev-flavor widget gallery."
+  },
+  "galleryOpen": "Widget gallery",
+  "@galleryOpen": {
+    "description": "Dev-flavor Profile action that opens the widget gallery."
+  },
+  "gallerySectionButtons": "Buttons",
+  "gallerySectionInputs": "Inputs",
+  "gallerySectionCard": "Card",
+  "gallerySectionBadges": "Badges",
+  "gallerySectionStates": "States",
+  "buttonPrimary": "Primary",
+  "buttonSecondary": "Secondary",
+  "buttonText": "Text",
+  "buttonDestructive": "Destructive",
+  "buttonDisabled": "Disabled",
+  "buttonLoading": "Loading",
+  "@buttonLoading": {
+    "description": "Semantics label while a button is busy."
+  },
+  "fieldLabel": "Email",
+  "fieldHint": "name@example.com",
+  "fieldError": "Enter a valid email.",
+  "fieldDisabledLabel": "Disabled",
+  "cardTitle": "Restaurant",
+  "cardBody": "Surplus meals available for pickup today.",
+  "badgeReserved": "Reserved",
+  "badgeCollected": "Collected",
+  "badgeCancelled": "Cancelled",
+  "badgeExpired": "Expired",
+  "badgeDraft": "Draft",
+  "badgeLive": "Live",
+  "badgeSoldOut": "Sold out",
+  "badgeHidden": "Hidden",
+  "galleryEmptyTitle": "Nothing here yet",
+  "galleryEmptyBody": "This is the empty state.",
+  "galleryErrorTitle": "Something went wrong",
+  "galleryErrorBody": "This is the error state.",
+  "errorRetry": "Try again",
+  "loadingLabel": "Loading",
+  "@loadingLabel": {
+    "description": "Semantics label for the skeleton loading state."
+  },
+  "offlineBanner": "You are offline. A saved pickup pass still opens.",
+  "@offlineBanner": {
+    "description": "Banner shown when the phone has no connection."
+  },
   "errorUnknown": "Something went wrong ({code}).",
   "@errorUnknown": {
     "description": "Fallback when an RPC returns a code the app does not recognise yet.",
