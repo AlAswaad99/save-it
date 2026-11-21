@@ -1,4 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:save_it/core/config/env.dart';
 import 'package:save_it/firebase_options_dev.dart' as firebase_dev;
@@ -15,6 +17,11 @@ Future<void> bootstrap() async {
     await Firebase.initializeApp(
       options: firebase_dev.DefaultFirebaseOptions.currentPlatform,
     );
+    FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
+    PlatformDispatcher.instance.onError = (error, stack) {
+      FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
+      return true;
+    };
   }
   if (!env.isConfigured) {
     return;
