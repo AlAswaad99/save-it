@@ -4,13 +4,14 @@ These pipelines are the developer's own tooling. They let a Windows PC with an A
 
 | What | Tool | Trigger | Target |
 |---|---|---|---|
-| Checks (app, admin, database tests) | GitHub Actions `ci.yml` | Every PR and every push to `main` | — |
-| Database migrations and Edge Functions | GitHub Actions `deploy-backend.yml` | Merge to `main` (changes in `supabase/`) → dev. Manual run with confirmation → prod | Supabase dev / prod |
+| Checks (app, admin, database tests) | GitHub Actions `ci.yml` | Every PR, and every push to `dev`, `prod`, or `main` | — |
+| Promotion source | GitHub Actions `branch-flow.yml` | Every PR into `dev`, `prod`, or `main` | `dev` accepts a phase branch. `prod` accepts `dev`. `main` accepts `prod` |
+| Database migrations and Edge Functions | GitHub Actions `deploy-backend.yml` | Merge into `dev` (changes in `supabase/`) → dev Supabase. Manual run with confirmation → prod | Supabase dev / prod |
 | Android dev build | GitHub Actions `android.yml` | Merge to `main` (changes in `app/`) | Firebase App Distribution |
 | Android release build | GitHub Actions `android.yml` | Tag `v*` | Google Play internal testing |
 | iOS dev build | Codemagic `ios-dev` | Manual start | TestFlight "Save It Dev" |
 | iOS release build | Codemagic `ios-release` | Tag `v*` | TestFlight on the real app |
-| Admin web | Vercel GitHub integration | PR → preview; `main` → dev; `production` branch → production | Vercel |
+| Admin web | Vercel GitHub integration | PR → preview; `dev` → dev admin; `main` → production | Vercel |
 
 Promotion to production in Play Console and "Submit for review" in App Store Connect stay manual.
 
@@ -85,7 +86,7 @@ Docker exists on GitHub's Ubuntu runners, so the database tests run there even t
 name: Deploy backend
 on:
   push:
-    branches: [main]
+    branches: [dev]
     paths: ['supabase/**']
   workflow_dispatch:
     inputs:
@@ -105,22 +106,56 @@ jobs:
         with: { version: latest }
       - name: Choose target
         id: t
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_TARGET: ${{ github.event.inputs.target }}
+          INPUT_CONFIRM: ${{ github.event.inputs.confirm }}
         run: |
-          T="${{ github.event.inputs.target || 'dev' }}"
-          if [ "$T" = "prod" ] && [ "${{ github.event.inputs.confirm }}" != "DEPLOY PROD" ]; then
+          set -euo pipefail
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            T="$INPUT_TARGET"
+          else
+            T="dev"
+          fi
+          if [ "$T" != "dev" ] && [ "$T" != "prod" ]; then
+            echo "Unknown target."; exit 1
+          fi
+          if [ "$T" = "prod" ] && [ "$INPUT_CONFIRM" != "DEPLOY PROD" ]; then
             echo "Production deploy needs the confirmation text."; exit 1
           fi
           echo "target=$T" >> "$GITHUB_OUTPUT"
       - name: Link project
+        env:
+          TARGET: ${{ steps.t.outputs.target }}
+          DEV_SUPABASE_REF: ${{ secrets.DEV_SUPABASE_REF }}
+          PROD_SUPABASE_REF: ${{ secrets.PROD_SUPABASE_REF }}
+          DEV_SUPABASE_DB_PASSWORD: ${{ secrets.DEV_SUPABASE_DB_PASSWORD }}
+          PROD_SUPABASE_DB_PASSWORD: ${{ secrets.PROD_SUPABASE_DB_PASSWORD }}
         run: |
-          if [ "${{ steps.t.outputs.target }}" = "prod" ]; then
-            supabase link --project-ref "${{ secrets.PROD_SUPABASE_REF }}" -p "${{ secrets.PROD_SUPABASE_DB_PASSWORD }}"
+          set -euo pipefail
+          if [ "$TARGET" = "prod" ]; then
+            REF="$PROD_SUPABASE_REF"
+            export SUPABASE_DB_PASSWORD="$PROD_SUPABASE_DB_PASSWORD"
           else
-            supabase link --project-ref "${{ secrets.DEV_SUPABASE_REF }}" -p "${{ secrets.DEV_SUPABASE_DB_PASSWORD }}"
+            REF="$DEV_SUPABASE_REF"
+            export SUPABASE_DB_PASSWORD="$DEV_SUPABASE_DB_PASSWORD"
           fi
-      - run: supabase db push
-      - run: supabase functions deploy --use-api   # deploys every function in supabase/functions
+          if [ -z "$REF" ] || [ -z "$SUPABASE_DB_PASSWORD" ]; then
+            echo "Missing Supabase project ref or database password for $TARGET."; exit 1
+          fi
+          supabase link --project-ref "$REF" -p "$SUPABASE_DB_PASSWORD"
+      - run: supabase db push --yes --remote
+      - name: Deploy Edge Functions
+        run: |
+          set -euo pipefail
+          if [ -d supabase/functions ] && find supabase/functions -mindepth 1 -type d -print -quit | grep -q .; then
+            supabase functions deploy --yes --use-api
+          else
+            echo "No Edge Functions to deploy."
+          fi
 ```
+
+A push to `dev` always deploys to the dev project. Production runs only from a manual start, and only when the confirmation input is exactly `DEPLOY PROD`. The current Supabase CLI applies `db push` to the local stack unless `--remote` is set, and it refuses a hosted change in CI unless `--yes` is set. `--use-api` bundles functions without Docker. The function step does nothing until `supabase/functions` contains a function.
 
 Edge Function secrets (Resend key, FCM service account, hook and dispatch secrets) are set once per project with `supabase secrets set`, not in this workflow. Auth settings (code length, expiry, Send Email Hook, session timeout) are set in the dashboard, following `09-release.md` §2.
 

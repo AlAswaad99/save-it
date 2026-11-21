@@ -1,0 +1,91 @@
+name: Deploy backend
+
+on:
+  push:
+    branches: [dev]
+    paths: ['supabase/**']
+  workflow_dispatch:
+    inputs:
+      target:
+        description: Where to deploy
+        type: choice
+        options:
+          - dev
+          - prod
+        default: dev
+      confirm:
+        description: Type DEPLOY PROD to deploy to production
+        required: false
+        type: string
+
+concurrency:
+  group: deploy-backend
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: supabase/setup-cli@v3
+        with:
+          version: latest
+
+      - name: Choose target
+        id: t
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_TARGET: ${{ github.event.inputs.target }}
+          INPUT_CONFIRM: ${{ github.event.inputs.confirm }}
+        run: |
+          set -euo pipefail
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            T="$INPUT_TARGET"
+          else
+            T="dev"
+          fi
+          if [ "$T" != "dev" ] && [ "$T" != "prod" ]; then
+            echo "Unknown target."
+            exit 1
+          fi
+          if [ "$T" = "prod" ] && [ "$INPUT_CONFIRM" != "DEPLOY PROD" ]; then
+            echo "Production deploy needs the confirmation text."
+            exit 1
+          fi
+          echo "target=$T" >> "$GITHUB_OUTPUT"
+
+      - name: Link project
+        env:
+          TARGET: ${{ steps.t.outputs.target }}
+          DEV_SUPABASE_REF: ${{ secrets.DEV_SUPABASE_REF }}
+          PROD_SUPABASE_REF: ${{ secrets.PROD_SUPABASE_REF }}
+          DEV_SUPABASE_DB_PASSWORD: ${{ secrets.DEV_SUPABASE_DB_PASSWORD }}
+          PROD_SUPABASE_DB_PASSWORD: ${{ secrets.PROD_SUPABASE_DB_PASSWORD }}
+        run: |
+          set -euo pipefail
+          if [ "$TARGET" = "prod" ]; then
+            REF="$PROD_SUPABASE_REF"
+            export SUPABASE_DB_PASSWORD="$PROD_SUPABASE_DB_PASSWORD"
+          else
+            REF="$DEV_SUPABASE_REF"
+            export SUPABASE_DB_PASSWORD="$DEV_SUPABASE_DB_PASSWORD"
+          fi
+          if [ -z "$REF" ] || [ -z "$SUPABASE_DB_PASSWORD" ]; then
+            echo "Missing Supabase project ref or database password for $TARGET."
+            exit 1
+          fi
+          supabase link --project-ref "$REF" -p "$SUPABASE_DB_PASSWORD"
+
+      - name: Apply migrations
+        run: supabase db push --yes --remote
+
+      - name: Deploy Edge Functions
+        run: |
+          set -euo pipefail
+          if [ -d supabase/functions ] && find supabase/functions -mindepth 1 -type d -print -quit | grep -q .; then
+            supabase functions deploy --yes --use-api
+          else
+            echo "No Edge Functions to deploy."
+          fi

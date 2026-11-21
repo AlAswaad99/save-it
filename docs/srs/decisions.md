@@ -1,6 +1,6 @@
 # Decision log
 
-Source: `docs/businessrules-and-contents/Save it - Business Rules (1).xlsx` and `Save it- Wireframe content.docx`, received 21 November 2026. The workbook's "Your answer" column overrides the example numbers that were in the plan. SRS v1.0 is not signed yet.
+Source: `docs/businessrules-and-contents/Save it - Business Rules (1).xlsx` and `Save it- Wireframe content.docx`, received 21 November 2026. The workbook's "Your answer" column overrides the example numbers that were in the plan. On 22 November 2026 Daniel skipped a signed SRS v1.0. The client had already approved the wireframes and the high-fidelity UI. These decisions remain the rules for the build.
 
 Question numbers below are the client's sheet, which does not use the same Q numbers as the older plan drafts.
 
@@ -30,6 +30,7 @@ Question numbers below are the client's sheet, which does not use the same Q num
 | Q-04 | Name "Save It" | App, stores, emails, and admin use "Save It". Dev builds are "Save It Dev" |
 | Q-05 | Devices | Build Android and iOS now. On-device acceptance waits until a phone is available |
 | Copy | Walkthrough, location sheet, empty list, too-early line, welcome and order-confirmed wording | `04-mobile-app.md` and `06-notifications.md` |
+| Design, 22 Nov 2026 | Approved high-fidelity UI in `docs/save-it-design-handoff/` | Suspension copy has no end date. The Explore empty title is "No food near you right now". The filter chip "No nuts" hides items tagged Contains nuts. The item tag stays "Contains nuts". Halal is not a tag |
 | Art | Logo and three walkthrough drawings, plus a map pin | `docs/businessrules-and-contents/`. The walkthrough pairing is slide 1 `Cycle.png`, slide 2 `La point.png`, slide 3 `La pay.png`, location `image_7e411891.jpg` |
 
 ## Still to come

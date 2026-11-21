@@ -1,0 +1,41 @@
+name: Branch flow
+
+on:
+  pull_request:
+    branches: [dev, prod, main]
+
+permissions:
+  contents: read
+
+jobs:
+  promotion:
+    name: promotion
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check the source branch
+        env:
+          BASE: ${{ github.base_ref }}
+          HEAD: ${{ github.head_ref }}
+        run: |
+          set -euo pipefail
+          case "$BASE" in
+            dev)
+              if [ "$HEAD" = "dev" ] || [ "$HEAD" = "prod" ] || [ "$HEAD" = "main" ]; then
+                echo "A pull request into dev comes from a phase branch, not from dev, prod, or main."
+                exit 1
+              fi
+              ;;
+            prod)
+              if [ "$HEAD" != "dev" ]; then
+                echo "A pull request into prod comes from dev. This one comes from ${HEAD}."
+                exit 1
+              fi
+              ;;
+            main)
+              if [ "$HEAD" != "prod" ]; then
+                echo "A pull request into main comes from prod. This one comes from ${HEAD}."
+                exit 1
+              fi
+              ;;
+          esac
+          echo "Allowed: ${HEAD} into ${BASE}."
