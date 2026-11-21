@@ -44,11 +44,13 @@ jobs:
     runs-on: ubuntu-latest
     defaults: { run: { working-directory: app } }
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: subosito/flutter-action@v2
-        with: { channel: stable, cache: true }
+        with:
+          flutter-version: 3.47.9
+          cache: true
       - run: flutter pub get
-      - run: dart run build_runner build --delete-conflicting-outputs
+      - run: dart run build_runner build
       - run: flutter analyze
       - run: flutter test
 
@@ -56,9 +58,10 @@ jobs:
     runs-on: ubuntu-latest
     defaults: { run: { working-directory: admin } }
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+        with: { package_json_file: admin/package.json }
+      - uses: actions/setup-node@v7
         with: { node-version: 22, cache: pnpm, cache-dependency-path: admin/pnpm-lock.yaml }
       - run: pnpm install --frozen-lockfile
       - run: pnpm lint
@@ -67,8 +70,8 @@ jobs:
   db:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: supabase/setup-cli@v1
+      - uses: actions/checkout@v7
+      - uses: supabase/setup-cli@v3
         with: { version: latest }
       - run: supabase db start        # temporary Postgres in the runner, migrations applied
       - run: supabase test db         # pgTAP tests in supabase/tests
@@ -97,8 +100,8 @@ jobs:
     env:
       SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: supabase/setup-cli@v1
+      - uses: actions/checkout@v7
+      - uses: supabase/setup-cli@v3
         with: { version: latest }
       - name: Choose target
         id: t
@@ -158,7 +161,7 @@ jobs:
       APP_ENV_PROD: ${{ secrets.APP_ENV_PROD }}
       KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-java@v4
         with: { distribution: zulu, java-version: '17' }
       - uses: subosito/flutter-action@v2
