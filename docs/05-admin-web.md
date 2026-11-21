@@ -62,5 +62,5 @@ The key is restricted to the Places API (New), with a daily quota cap of 500 req
   - Pull requests get preview deployments.
   - `main` deploys to the dev environment.
   - The `production` branch deploys to production, using prod Supabase.
-- **Environment variables:** `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY` (server only, used for the CSV export route) and `GOOGLE_PLACES_KEY`.
+- **Environment variables:** `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` (the public client key; `NEXT_PUBLIC_SUPABASE_ANON_KEY` is still accepted), `SUPABASE_SERVICE_ROLE_KEY` (server only, used for the CSV export route) and `GOOGLE_PLACES_KEY`.
 - **Domain:** for example `admin.<client-domain>`, set up in T12.3.

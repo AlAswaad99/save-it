@@ -3,6 +3,9 @@ import java.io.FileInputStream
 
 plugins {
     id("com.android.application")
+    // START: FlutterFire Configuration
+    id("com.google.gms.google-services")
+    // END: FlutterFire Configuration
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
 }
@@ -21,6 +24,10 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        resValues = true
     }
 
     defaultConfig {
@@ -80,4 +87,11 @@ kotlin {
 
 flutter {
     source = "../.."
+}
+
+// Prod has no google-services.json yet. The dev file lives in src/dev.
+tasks.matching { task ->
+    task.name.contains("GoogleServices") && task.name.contains("Prod")
+}.configureEach {
+    enabled = false
 }
