@@ -1,0 +1,1 @@
+Lucide icons (ISC licence) used in the designs, from lucide-static 0.460.0. 24 grid, 2 px stroke, round caps and joins. Use the lucide_icons_flutter package in the app and lucide-react in the admin; these SVGs are for reference.

@@ -2,23 +2,23 @@
 
 **Mon 23 Nov to Fri 27 Nov 2026** · M1 Discovery and Design
 
-**Goal:** Approved UI designs, signed SRS v1.0 with the Business Rules, and the app theme in code. Also, backend deployment automated.
+**Goal:** Approved UI designs, the business rules recorded in `docs/srs/decisions.md`, and the app theme in code. Also, backend deployment automated. A signed SRS v1.0 is not required.
 
-**End of week:** Signed SRS v1.0 and Business Rules; approved designs exported to `docs/design/`; theme and core widgets in the app.
+**End of week:** Client-approved designs in `docs/save-it-design-handoff/`; theme and core widgets in the app.
 
 ## Tasks
 
 | Done | ID | Who | Task | SRS | Done when |
 |---|---|---|---|---|---|
-| [ ] | T02.1 | You | UI design in Claude Design from `docs/design/ui-design-prompt.md`: style guide, then all customer, Business mode and admin screens | All | Every wireframe screen has a designed version; style guide is one page |
-| [ ] | T02.2 | You | Check the designs against the SRS and wireframes; client design review; fixes; written approval | — | Client approval email saved; exports in `docs/design/` |
-| [ ] | T02.3 | You | Issue SRS v1.0 from the answers already recorded in `docs/srs/decisions.md`, and both sign. The numeric rules and the screen copy are in; terms and the privacy policy are not | All | Signed SRS in `docs/srs/`; open questions in `decisions.md` answered or explicitly deferred |
+| [x] | T02.1 | You | UI design in Claude Design from `docs/design/ui-design-prompt.md`: style guide, then all customer, Business mode and admin screens | All | Every wireframe screen has a designed version; style guide is one page |
+| [x] | T02.2 | You | Check the designs against the decisions and wireframes; client design review; fixes. Approval was given on 22 Nov 2026 for the wireframes and the high-fidelity UI | — | Approved exports in `docs/save-it-design-handoff/`. Suspension stays until an admin lifts it. The approved UI keeps the "No nuts" filter and the empty title "No food near you right now" |
+| [x] | T02.3 | You | Skipped 22 Nov 2026. No signed SRS. The client approved the wireframes and the high-fidelity design. The numeric rules stay in `docs/srs/decisions.md`. Terms and the privacy policy are still to come | All | Recorded as skipped. No signed file required |
 | [x] | T02.4 | Claude Code | Flutter theme from the approved style guide, or from the brand files in `docs/businessrules-and-contents/` if the style guide is not signed yet: colour and type tokens, ThemeData, the supplied logo, core widgets (buttons, inputs, cards, badges, empty, error and loading states, offline banner), a widget gallery screen in the dev flavor only | NF-09 | Gallery shows every core widget, and the logo is `La Logo.png` |
-| [ ] | T02.5 | Claude Code | Backend deploy workflow `deploy-backend.yml`: on merge to `main`, apply migrations and deploy Edge Functions to dev; production only by manual run with a typed confirmation | — | A test migration reaches dev from a merged PR |
+| [ ] | T02.5 | Claude Code | Backend deploy workflow `deploy-backend.yml`: on merge to `dev`, apply migrations and deploy Edge Functions to the dev Supabase project; production only by manual run with a typed confirmation | — | A test migration reaches dev from a merged PR |
 
 ## Friday update to Miss Reid
 
-Designs for review (Mon/Tue), approval request, SRS v1.0 for signature. Milestone 1 complete once both are signed.
+The wireframes and the high-fidelity UI are approved. A signed SRS was skipped. The backend deploy is still open.
 
 ## Claude Code prompt
 

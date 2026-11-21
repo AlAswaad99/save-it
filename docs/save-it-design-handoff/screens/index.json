@@ -1,0 +1,768 @@
+[
+ {
+  "file": "screens/1-customer-signup/C-01-splash@2x.png",
+  "name": "C-01 Splash",
+  "note": "App shell",
+  "state": false
+ },
+ {
+  "file": "screens/1-customer-signup/C-29-walkthrough-1-of-3@2x.png",
+  "name": "C-29 Walkthrough · 1 of 3",
+  "note": "CA-02 (first launch)",
+  "state": false
+ },
+ {
+  "file": "screens/1-customer-signup/C-29-walkthrough-2-of-3@2x.png",
+  "name": "C-29 Walkthrough · 2 of 3",
+  "note": "CA-02 (first launch)",
+  "state": false
+ },
+ {
+  "file": "screens/1-customer-signup/C-29-walkthrough-3-of-3@2x.png",
+  "name": "C-29 Walkthrough · 3 of 3",
+  "note": "CA-02 (first launch)",
+  "state": false
+ },
+ {
+  "file": "screens/1-customer-signup/C-02-location-permission@2x.png",
+  "name": "C-02 Location permission",
+  "note": "CA-02 · bottom sheet over a dimmed C-04",
+  "state": false
+ },
+ {
+  "file": "screens/1-customer-signup/C-03-choose-area@2x.png",
+  "name": "C-03 Choose area",
+  "note": "CA-02",
+  "state": false
+ },
+ {
+  "file": "screens/1-customer-signup/C-12-sign-up-gate@2x.png",
+  "name": "C-12 Sign-up gate",
+  "note": "CA-01 · bottom sheet over the C-11 basket",
+  "state": false
+ },
+ {
+  "file": "screens/1-customer-signup/C-14-continue-with-email@2x.png",
+  "name": "C-14 Continue with email",
+  "note": "CA-04",
+  "state": false
+ },
+ {
+  "file": "screens/1-customer-signup/C-15-enter-code@2x.png",
+  "name": "C-15 Enter code",
+  "note": "CA-04",
+  "state": false
+ },
+ {
+  "file": "screens/1-customer-signup/C-13-complete-your-profile@2x.png",
+  "name": "C-13 Complete your profile",
+  "note": "CA-03 · new emails only",
+  "state": false
+ },
+ {
+  "file": "screens/1-customer-signup/C-15-enter-code-incorrect-or-expired@2x.png",
+  "name": "C-15 Enter code · incorrect or expired",
+  "note": "CA-04",
+  "state": true
+ },
+ {
+  "file": "screens/1-customer-signup/C-15-enter-code-resend-limit-reached@2x.png",
+  "name": "C-15 Enter code · resend limit reached",
+  "note": "CA-04",
+  "state": true
+ },
+ {
+  "file": "screens/1-customer-signup/C-22-profile-guest@2x.png",
+  "name": "C-22 Profile · guest",
+  "note": "CA-01, CA-05",
+  "state": false
+ },
+ {
+  "file": "screens/1-customer-signup/C-22-profile@2x.png",
+  "name": "C-22 Profile",
+  "note": "CA-05",
+  "state": false
+ },
+ {
+  "file": "screens/1-customer-signup/C-23-edit-profile@2x.png",
+  "name": "C-23 Edit profile",
+  "note": "CA-05",
+  "state": false
+ },
+ {
+  "file": "screens/1-customer-signup/C-24-delete-account-confirmation@2x.png",
+  "name": "C-24 Delete account confirmation",
+  "note": "CA-05",
+  "state": false
+ },
+ {
+  "file": "screens/1-customer-signup/C-24-delete-account-active-order@2x.png",
+  "name": "C-24 Delete account · active order",
+  "note": "CA-05 · shown instead of the confirmation",
+  "state": true
+ },
+ {
+  "file": "screens/1-customer-signup/C-28-email-login-code@2x.png",
+  "name": "C-28 Email · Login code",
+  "note": "CA-04 · also sent for Business mode logins (BM-01)",
+  "state": false
+ },
+ {
+  "file": "screens/1-customer-signup/C-28-email-welcome@2x.png",
+  "name": "C-28 Email · Welcome",
+  "note": "CA-16 · sent once, when a new customer completes C-13",
+  "state": false
+ },
+ {
+  "file": "screens/2-browse-and-reserve/C-04-explore@2x.png",
+  "name": "C-04 Explore",
+  "note": "CA-06 · restaurant list",
+  "state": false
+ },
+ {
+  "file": "screens/2-browse-and-reserve/C-05-filters@2x.png",
+  "name": "C-05 Filters",
+  "note": "CA-07 · bottom sheet over C-04",
+  "state": false
+ },
+ {
+  "file": "screens/2-browse-and-reserve/C-06-search-results@2x.png",
+  "name": "C-06 Search results",
+  "note": "CA-07",
+  "state": false
+ },
+ {
+  "file": "screens/2-browse-and-reserve/C-06-search-results-no-match@2x.png",
+  "name": "C-06 Search results · no match",
+  "note": "CA-07",
+  "state": true
+ },
+ {
+  "file": "screens/2-browse-and-reserve/C-07-explore-nothing-nearby@2x.png",
+  "name": "C-07 Explore · nothing nearby",
+  "note": "CA-06 · empty state",
+  "state": true
+ },
+ {
+  "file": "screens/2-browse-and-reserve/C-25-no-show-warning@2x.png",
+  "name": "C-25 No-show warning",
+  "note": "SR-04 · dismissible banner on C-04",
+  "state": true
+ },
+ {
+  "file": "screens/2-browse-and-reserve/C-08-restaurant-page@2x.png",
+  "name": "C-08 Restaurant page",
+  "note": "CA-08",
+  "state": false
+ },
+ {
+  "file": "screens/2-browse-and-reserve/C-09-item-details@2x.png",
+  "name": "C-09 Item details",
+  "note": "CA-09, CA-10 · bottom sheet over C-08",
+  "state": false
+ },
+ {
+  "file": "screens/2-browse-and-reserve/C-10-different-restaurant@2x.png",
+  "name": "C-10 Different restaurant",
+  "note": "CA-10 · dialog",
+  "state": false
+ },
+ {
+  "file": "screens/2-browse-and-reserve/C-11-basket@2x.png",
+  "name": "C-11 Basket",
+  "note": "CA-10, CA-12",
+  "state": false
+ },
+ {
+  "file": "screens/2-browse-and-reserve/C-11-basket-active-order-limit@2x.png",
+  "name": "C-11 Basket · active order limit",
+  "note": "SR-07, CA-10",
+  "state": true
+ },
+ {
+  "file": "screens/2-browse-and-reserve/C-26-reservations-paused@2x.png",
+  "name": "C-26 Reservations paused",
+  "note": "CA-17 · on the basket",
+  "state": true
+ },
+ {
+  "file": "screens/2-browse-and-reserve/C-16-confirm-reservation@2x.png",
+  "name": "C-16 Confirm reservation",
+  "note": "CA-11, CA-12",
+  "state": false
+ },
+ {
+  "file": "screens/2-browse-and-reserve/C-17-stock-changed@2x.png",
+  "name": "C-17 Stock changed",
+  "note": "CA-11 · after Confirm",
+  "state": true
+ },
+ {
+  "file": "screens/2-browse-and-reserve/C-18-notification-permission@2x.png",
+  "name": "C-18 Notification permission",
+  "note": "CA-15 · after the first reservation only",
+  "state": false
+ },
+ {
+  "file": "screens/2-browse-and-reserve/C-27-push-order-confirmed@2x.png",
+  "name": "C-27 Push · Order confirmed",
+  "note": "CA-15 · lock screen",
+  "state": false
+ },
+ {
+  "file": "screens/2-browse-and-reserve/C-28-email-order-confirmation@2x.png",
+  "name": "C-28 Email · Order confirmation",
+  "note": "CA-16 · sent when the order is reserved",
+  "state": false
+ },
+ {
+  "file": "screens/3-pickup/C-20-orders-active@2x.png",
+  "name": "C-20 Orders · Active",
+  "note": "CA-14",
+  "state": false
+ },
+ {
+  "file": "screens/3-pickup/C-19-pickup-pass@2x.png",
+  "name": "C-19 Pickup pass",
+  "note": "CA-13",
+  "state": false
+ },
+ {
+  "file": "screens/3-pickup/C-19-pickup-pass-offline@2x.png",
+  "name": "C-19 Pickup pass · offline",
+  "note": "CA-13",
+  "state": true
+ },
+ {
+  "file": "screens/3-pickup/C-19-pickup-pass-text-130@2x.png",
+  "name": "C-19 Pickup pass · text 130%",
+  "note": "CA-13 · accessibility check",
+  "state": true
+ },
+ {
+  "file": "screens/3-pickup/C-20-orders-past@2x.png",
+  "name": "C-20 Orders · Past",
+  "note": "CA-14",
+  "state": false
+ },
+ {
+  "file": "screens/3-pickup/C-21-order-details-cancelled@2x.png",
+  "name": "C-21 Order details · Cancelled",
+  "note": "CA-14",
+  "state": false
+ },
+ {
+  "file": "screens/3-pickup/C-21-order-details-expired@2x.png",
+  "name": "C-21 Order details · Expired",
+  "note": "CA-14, SR-03",
+  "state": true
+ },
+ {
+  "file": "screens/3-pickup/C-20-orders-guest@2x.png",
+  "name": "C-20 Orders · guest",
+  "note": "CA-01, CA-14",
+  "state": true
+ },
+ {
+  "file": "screens/3-pickup/common-state-loading@2x.png",
+  "name": "Common state · Loading",
+  "note": "Example: C-04 Explore · NF-03",
+  "state": true
+ },
+ {
+  "file": "screens/3-pickup/common-state-error@2x.png",
+  "name": "Common state · Error",
+  "note": "Example: C-04 Explore",
+  "state": true
+ },
+ {
+  "file": "screens/3-pickup/common-state-no-internet@2x.png",
+  "name": "Common state · No internet",
+  "note": "Example: C-20 Orders",
+  "state": true
+ },
+ {
+  "file": "screens/3-pickup/common-state-empty-list@2x.png",
+  "name": "Common state · Empty list",
+  "note": "Example: C-20 Orders, no orders yet",
+  "state": true
+ },
+ {
+  "file": "screens/3-pickup/B-12-scan-code@2x.png",
+  "name": "B-12 Scan code",
+  "note": "BM-09 · Business mode",
+  "state": false
+ },
+ {
+  "file": "screens/3-pickup/B-13-enter-code@2x.png",
+  "name": "B-13 Enter code",
+  "note": "BM-09 · Business mode",
+  "state": false
+ },
+ {
+  "file": "screens/3-pickup/B-14-pickup-result-success@2x.png",
+  "name": "B-14 Pickup result · Success",
+  "note": "BM-09 · Business mode",
+  "state": false
+ },
+ {
+  "file": "screens/3-pickup/B-14-pickup-result-too-early@2x.png",
+  "name": "B-14 Pickup result · Too early",
+  "note": "BM-09",
+  "state": true
+ },
+ {
+  "file": "screens/3-pickup/B-14-pickup-result-invalid-code@2x.png",
+  "name": "B-14 Pickup result · Invalid code",
+  "note": "BM-09",
+  "state": true
+ },
+ {
+  "file": "screens/3-pickup/B-14-pickup-result-already-collected@2x.png",
+  "name": "B-14 Pickup result · Already collected",
+  "note": "BM-09",
+  "state": true
+ },
+ {
+  "file": "screens/3-pickup/B-14-pickup-result-expired@2x.png",
+  "name": "B-14 Pickup result · Expired",
+  "note": "BM-09, SR-03",
+  "state": true
+ },
+ {
+  "file": "screens/3-pickup/B-14-pickup-result-cancelled@2x.png",
+  "name": "B-14 Pickup result · Cancelled",
+  "note": "BM-09, SR-05",
+  "state": true
+ },
+ {
+  "file": "screens/3-pickup/C-27-push-notifications-after-reserving@2x.png",
+  "name": "C-27 Push notifications · after reserving",
+  "note": "CA-15 · lock screen",
+  "state": false
+ },
+ {
+  "file": "screens/3-pickup/C-28-email-order-cancellation@2x.png",
+  "name": "C-28 Email · Order cancellation",
+  "note": "CA-16 · sent when a restaurant or an admin cancels (BM-10)",
+  "state": false
+ },
+ {
+  "file": "screens/4-business-mode/B-01-business-login@2x.png",
+  "name": "B-01 Business login",
+  "note": "BM-01 · opened from C-22",
+  "state": false
+ },
+ {
+  "file": "screens/4-business-mode/B-02-accept-restaurant-terms@2x.png",
+  "name": "B-02 Accept restaurant terms",
+  "note": "BM-01 · first login only",
+  "state": false
+ },
+ {
+  "file": "screens/4-business-mode/B-03-today@2x.png",
+  "name": "B-03 Today",
+  "note": "BM-02 · Business mode home",
+  "state": false
+ },
+ {
+  "file": "screens/4-business-mode/B-03-today-window-not-set@2x.png",
+  "name": "B-03 Today · window not set",
+  "note": "BM-02",
+  "state": true
+ },
+ {
+  "file": "screens/4-business-mode/B-03-today-restaurant-paused@2x.png",
+  "name": "B-03 Today · restaurant paused",
+  "note": "BM-02, AD-02",
+  "state": true
+ },
+ {
+  "file": "screens/4-business-mode/B-04-set-pickup-window@2x.png",
+  "name": "B-04 Set pickup window",
+  "note": "BM-02, SR-02",
+  "state": false
+ },
+ {
+  "file": "screens/4-business-mode/B-05-listings@2x.png",
+  "name": "B-05 Listings",
+  "note": "BM-05, BM-06",
+  "state": false
+ },
+ {
+  "file": "screens/4-business-mode/B-07-add-or-edit-listing@2x.png",
+  "name": "B-07 Add or edit listing",
+  "note": "BM-03, BM-05, SR-01 · edit mode shown",
+  "state": false
+ },
+ {
+  "file": "screens/4-business-mode/B-07-add-or-edit-listing-errors@2x.png",
+  "name": "B-07 Add or edit listing · errors",
+  "note": "SR-01, BM-05",
+  "state": true
+ },
+ {
+  "file": "screens/4-business-mode/B-08-remove-listing@2x.png",
+  "name": "B-08 Remove listing",
+  "note": "BM-05 · dialog over B-07",
+  "state": false
+ },
+ {
+  "file": "screens/4-business-mode/B-06-repeat-yesterday@2x.png",
+  "name": "B-06 Repeat yesterday",
+  "note": "BM-04",
+  "state": false
+ },
+ {
+  "file": "screens/4-business-mode/B-17-new-order-notification@2x.png",
+  "name": "B-17 New order notification",
+  "note": "BM-07 · lock screen",
+  "state": false
+ },
+ {
+  "file": "screens/4-business-mode/B-09-orders-today@2x.png",
+  "name": "B-09 Orders (today)",
+  "note": "BM-08",
+  "state": false
+ },
+ {
+  "file": "screens/4-business-mode/B-10-order-details@2x.png",
+  "name": "B-10 Order details",
+  "note": "BM-08, BM-10",
+  "state": false
+ },
+ {
+  "file": "screens/4-business-mode/B-11-cancel-order@2x.png",
+  "name": "B-11 Cancel order",
+  "note": "BM-10 · bottom sheet over B-10",
+  "state": false
+ },
+ {
+  "file": "screens/4-business-mode/B-15-reports@2x.png",
+  "name": "B-15 Reports",
+  "note": "BM-11, SR-06",
+  "state": false
+ },
+ {
+  "file": "screens/4-business-mode/B-16-restaurant-account@2x.png",
+  "name": "B-16 Restaurant account",
+  "note": "BM-01",
+  "state": false
+ },
+ {
+  "file": "screens/4-business-mode/common-state-loading@2x.png",
+  "name": "Common state · Loading",
+  "note": "Example: B-03 Today",
+  "state": true
+ },
+ {
+  "file": "screens/4-business-mode/common-state-error@2x.png",
+  "name": "Common state · Error",
+  "note": "Example: B-05 Listings",
+  "state": true
+ },
+ {
+  "file": "screens/4-business-mode/common-state-no-internet@2x.png",
+  "name": "Common state · No internet",
+  "note": "Example: B-09 Orders",
+  "state": true
+ },
+ {
+  "file": "screens/4-business-mode/common-state-empty-no-orders-today@2x.png",
+  "name": "Common state · Empty · no orders today",
+  "note": "Example: B-09 Orders",
+  "state": true
+ },
+ {
+  "file": "screens/4-business-mode/common-state-empty-no-listings-yet@2x.png",
+  "name": "Common state · Empty · no listings yet",
+  "note": "Example: B-05 Listings",
+  "state": true
+ },
+ {
+  "file": "screens/5-admin/A-01-admin-login@2x.png",
+  "name": "A-01 Admin login",
+  "note": "AD-01 · shown with its error state",
+  "state": false
+ },
+ {
+  "file": "screens/5-admin/A-02-restaurants-list@2x.png",
+  "name": "A-02 Restaurants list",
+  "note": "AD-02",
+  "state": false
+ },
+ {
+  "file": "screens/5-admin/A-03-add-or-edit-restaurant@2x.png",
+  "name": "A-03 Add or edit restaurant",
+  "note": "AD-02, AD-03 · edit mode, address search open",
+  "state": false
+ },
+ {
+  "file": "screens/5-admin/A-04-suspend-restaurant@2x.png",
+  "name": "A-04 Suspend restaurant",
+  "note": "AD-02 · dialog over A-02",
+  "state": false
+ },
+ {
+  "file": "screens/5-admin/A-05-orders@2x.png",
+  "name": "A-05 Orders",
+  "note": "AD-04, AD-05",
+  "state": false
+ },
+ {
+  "file": "screens/5-admin/A-06-order-details@2x.png",
+  "name": "A-06 Order details",
+  "note": "AD-04 · side panel over A-05",
+  "state": false
+ },
+ {
+  "file": "screens/5-admin/A-07-export-csv@2x.png",
+  "name": "A-07 Export CSV",
+  "note": "AD-05 · dialog over A-05",
+  "state": false
+ },
+ {
+  "file": "screens/5-admin/A-08-customers@2x.png",
+  "name": "A-08 Customers",
+  "note": "AD-04",
+  "state": false
+ },
+ {
+  "file": "screens/5-admin/A-09-customer-details@2x.png",
+  "name": "A-09 Customer details",
+  "note": "AD-04, SR-04 · lift-suspension confirmation open",
+  "state": false
+ },
+ {
+  "file": "screens/5-admin/A-10-admins-add-admin@2x.png",
+  "name": "A-10 Admins · Add admin",
+  "note": "AD-01 · dialog open",
+  "state": false
+ },
+ {
+  "file": "screens/5-admin/A-10-reset-password@2x.png",
+  "name": "A-10 Reset password",
+  "note": "AD-01, NF-05 · dialog from a row",
+  "state": true
+ },
+ {
+  "file": "screens/5-admin/top-bar-account-menu@2x.png",
+  "name": "Top bar · account menu",
+  "note": "AD-01 · on every admin page",
+  "state": false
+ },
+ {
+  "file": "screens/5-admin/A-12-change-password@2x.png",
+  "name": "A-12 Change password",
+  "note": "AD-01, NF-05 · dialog from the account menu",
+  "state": false
+ },
+ {
+  "file": "screens/5-admin/admin-loading@2x.png",
+  "name": "Admin · Loading",
+  "note": "Example: A-02 Restaurants",
+  "state": true
+ },
+ {
+  "file": "screens/5-admin/admin-error@2x.png",
+  "name": "Admin · Error",
+  "note": "Example: A-05 Orders",
+  "state": true
+ },
+ {
+  "file": "screens/5-admin/admin-no-internet@2x.png",
+  "name": "Admin · No internet",
+  "note": "Example: A-08 Customers",
+  "state": true
+ },
+ {
+  "file": "screens/5-admin/admin-no-search-results@2x.png",
+  "name": "Admin · No search results",
+  "note": "Example: A-08 Customers",
+  "state": true
+ },
+ {
+  "file": "screens/6-emails-and-notifications/C-28-email-login-code@2x.png",
+  "name": "C-28 Email · Login code",
+  "note": "CA-04, BM-01 · customers and Business mode logins",
+  "state": false
+ },
+ {
+  "file": "screens/6-emails-and-notifications/C-28-email-welcome@2x.png",
+  "name": "C-28 Email · Welcome",
+  "note": "CA-16 · once, after C-13",
+  "state": false
+ },
+ {
+  "file": "screens/6-emails-and-notifications/C-28-email-order-confirmation@2x.png",
+  "name": "C-28 Email · Order confirmation",
+  "note": "CA-16 · sent when the order is reserved",
+  "state": false
+ },
+ {
+  "file": "screens/6-emails-and-notifications/C-28-email-order-cancellation@2x.png",
+  "name": "C-28 Email · Order cancellation",
+  "note": "CA-16 · sent when a restaurant or an admin cancels (BM-10)",
+  "state": false
+ },
+ {
+  "file": "screens/6-emails-and-notifications/C-27-order-confirmed@2x.png",
+  "name": "C-27 Order confirmed",
+  "note": "CA-15 · when the order is reserved",
+  "state": false
+ },
+ {
+  "file": "screens/6-emails-and-notifications/C-27-pickup-reminder@2x.png",
+  "name": "C-27 Pickup reminder",
+  "note": "CA-15 · 30 min before the window closes",
+  "state": false
+ },
+ {
+  "file": "screens/6-emails-and-notifications/C-27-order-cancelled@2x.png",
+  "name": "C-27 Order cancelled",
+  "note": "CA-15 · restaurant or admin cancels",
+  "state": false
+ },
+ {
+  "file": "screens/6-emails-and-notifications/C-27-order-expired@2x.png",
+  "name": "C-27 Order expired",
+  "note": "CA-15 · when the window ends uncollected",
+  "state": false
+ },
+ {
+  "file": "screens/6-emails-and-notifications/B-17-new-order@2x.png",
+  "name": "B-17 New order",
+  "note": "BM-07 · to the restaurant's phone",
+  "state": false
+ },
+ {
+  "file": "design-system/style-guide/full-page@2x.png",
+  "name": "Main",
+  "note": "whole board"
+ },
+ {
+  "file": "design-system/style-guide/01-colour-tokens@2x.png",
+  "name": "Colour tokens",
+  "note": "style guide section"
+ },
+ {
+  "file": "design-system/style-guide/02-type-scale-titillium-web@2x.png",
+  "name": "Type scale · Titillium Web",
+  "note": "style guide section"
+ },
+ {
+  "file": "design-system/style-guide/03-spacing-4-point-scale@2x.png",
+  "name": "Spacing · 4-point scale",
+  "note": "style guide section"
+ },
+ {
+  "file": "design-system/style-guide/04-corner-radii@2x.png",
+  "name": "Corner radii",
+  "note": "style guide section"
+ },
+ {
+  "file": "design-system/style-guide/05-elevation@2x.png",
+  "name": "Elevation",
+  "note": "style guide section"
+ },
+ {
+  "file": "design-system/style-guide/06-icons-lucide@2x.png",
+  "name": "Icons · Lucide",
+  "note": "style guide section"
+ },
+ {
+  "file": "design-system/style-guide/07-imagery@2x.png",
+  "name": "Imagery",
+  "note": "style guide section"
+ },
+ {
+  "file": "design-system/style-guide/08-contrast-checks@2x.png",
+  "name": "Contrast checks",
+  "note": "style guide section"
+ },
+ {
+  "file": "design-system/components/full-page@2x.png",
+  "name": "Components",
+  "note": "whole board"
+ },
+ {
+  "file": "design-system/components/01-buttons@2x.png",
+  "name": "Buttons",
+  "note": "component group"
+ },
+ {
+  "file": "design-system/components/02-text-fields@2x.png",
+  "name": "Text fields",
+  "note": "component group"
+ },
+ {
+  "file": "design-system/components/03-search-chips-and-selection@2x.png",
+  "name": "Search, chips and selection",
+  "note": "component group"
+ },
+ {
+  "file": "design-system/components/04-tab-bars@2x.png",
+  "name": "Tab bars",
+  "note": "component group"
+ },
+ {
+  "file": "design-system/components/05-app-bars-and-headers@2x.png",
+  "name": "App bars and headers",
+  "note": "component group"
+ },
+ {
+  "file": "design-system/components/06-status-badges@2x.png",
+  "name": "Status badges",
+  "note": "component group"
+ },
+ {
+  "file": "design-system/components/07-restaurant-card-and-item-row@2x.png",
+  "name": "Restaurant card and item row",
+  "note": "component group"
+ },
+ {
+  "file": "design-system/components/08-basket-bar-stepper-and-price@2x.png",
+  "name": "Basket bar, stepper and price",
+  "note": "component group"
+ },
+ {
+  "file": "design-system/components/09-banners@2x.png",
+  "name": "Banners",
+  "note": "component group"
+ },
+ {
+  "file": "design-system/components/10-bottom-sheet@2x.png",
+  "name": "Bottom sheet",
+  "note": "component group"
+ },
+ {
+  "file": "design-system/components/11-dialog-and-toast@2x.png",
+  "name": "Dialog and toast",
+  "note": "component group"
+ },
+ {
+  "file": "design-system/components/12-empty-loading-and-error@2x.png",
+  "name": "Empty, loading and error",
+  "note": "component group"
+ },
+ {
+  "file": "flows/flow-customer@2x.png",
+  "name": "Flow-Customer",
+  "note": "whole board"
+ },
+ {
+  "file": "flows/flow-business@2x.png",
+  "name": "Flow-Business",
+  "note": "whole board"
+ },
+ {
+  "file": "flows/flow-admin@2x.png",
+  "name": "Flow-Admin",
+  "note": "whole board"
+ },
+ {
+  "file": "decisions/questions@2x.png",
+  "name": "Questions",
+  "note": "whole board"
+ }
+]

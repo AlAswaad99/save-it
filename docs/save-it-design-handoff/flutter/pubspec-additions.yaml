@@ -1,0 +1,20 @@
+# Merge into your pubspec.yaml.
+dependencies:
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+  lucide_icons_flutter: any   # pin to the version you install
+
+flutter:
+  generate: true   # builds AppLocalizations from lib/l10n/app_en.arb
+  fonts:
+    - family: TitilliumWeb
+      fonts:
+        - asset: fonts/TitilliumWeb-Regular.ttf
+          weight: 400
+        - asset: fonts/TitilliumWeb-SemiBold.ttf
+          weight: 600
+        - asset: fonts/TitilliumWeb-Bold.ttf
+          weight: 700
+  assets:
+    - assets/images/
