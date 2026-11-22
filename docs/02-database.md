@@ -26,15 +26,17 @@ One row per auth user. A trigger on `auth.users` insert creates it on first sign
 |---|---|---|
 | id | uuid PK | references `auth.users(id)` on delete cascade |
 | role | user_role | default `customer`; set by the admin functions for restaurant and admin users |
-| full_name | text | null until the profile is completed; required before reserving |
-| email | text | copy of the auth email, for search |
-| phone | text | customers; E.164 format (+971…) |
+| full_name | text | null until the profile is completed; required before reserving. A customer can change this directly |
+| email | text | copy of the auth email, for search. Not writable by the customer |
+| phone | text | customers; E.164 format (+971…). A customer can change this directly |
 | terms_accepted_at | timestamptz | required for customers (CA-03) |
 | status | customer_status | default `active` |
 | status_changed_at | timestamptz | |
 | suspension_lifted_at | timestamptz | no-shows before this time are ignored (SR-04) |
 | is_active | boolean | for admins (deactivate, AD-01) |
 | created_at | timestamptz | default now() |
+
+A customer update may change only `full_name` and `phone`. Any other column raises SI001. `complete_profile` sets the transaction setting `app.trusted_profile_write` to `on` before it writes `terms_accepted_at`. `listings.quantity_reserved` is not granted to the API roles; order RPCs change it as the table owner.
 
 ### areas
 The fallback list of Abu Dhabi areas for customers who don't share their location (CA-02). Seed these names, in this order. Centres are decimal degrees, latitude then longitude. In PostGIS that is `ST_MakePoint(longitude, latitude)`. They are neighbourhood centroids gathered on 21 November 2026, not surveyed pins, and an admin can correct them later.
