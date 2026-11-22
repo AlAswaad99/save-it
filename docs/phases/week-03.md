@@ -11,7 +11,7 @@
 | Done | ID | Who | Task | SRS | Done when |
 |---|---|---|---|---|---|
 | [x] | T03.1 | Claude Code | Migration 1: enums, profiles, areas, restaurants (with `area_id`), opening_hours, categories, dietary_tags, app_settings seeded from `docs/srs/decisions.md` and `02-database.md` | SR-09, NF-06 | Tables match `02-database.md`; commission is 0.40, minimum discount is 0.50, and the category and area lists match the decision log |
-| [ ] | T03.2 | Claude Code | Migration 2: pickup_windows, listings, listing_tags, orders, order_items, device_tokens, outbox, audit_log; constraints and indexes | SR-01–SR-08 | All constraints and indexes from `02-database.md` §2–3 exist |
+| [x] | T03.2 | Claude Code | Migration 2: pickup_windows, listings, listing_tags, orders, order_items, device_tokens, outbox, audit_log; constraints and indexes | SR-01–SR-08 | All constraints and indexes from `02-database.md` §2–3 exist |
 | [ ] | T03.3 | Claude Code | Helper functions (`app_now`, `app_today`, `setting`, `is_admin`, `my_restaurant_id`, `is_open_now`, `generate_order_code`) and the trigger that creates a profile on first sign-in | SR-10 | pgTAP tests cover the helpers, including overnight hours and the Dubai date at 23:30 UTC |
 | [ ] | T03.4 | Claude Code | RLS policies for every table; storage buckets and policies | NF-05 | Matches the matrix in `02-database.md` §5 |
 | [ ] | T03.5 | Claude Code | pgTAP RLS tests for each role (anon, customer, restaurant, admin), including cross-tenant attempts | NF-05 | Each matrix cell has a passing test in CI |
