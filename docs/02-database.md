@@ -187,6 +187,7 @@ The helper `setting(key text) returns jsonb` is `stable`. Business functions rea
 | device_tokens | `(user_id, token unique, platform, updated_at)`: FCM tokens, upserted on login and app start, deleted on logout |
 | outbox | `(id, channel, recipient_user_id, template, payload jsonb, state, attempts, next_attempt_at, last_error, created_at, sent_at)` |
 | audit_log | `(id, actor_id, action, target_type, target_id, detail jsonb, created_at)`: admin actions |
+| auth_code_requests | `(id, email, requested_at)`: login-code attempts for the 3-per-hour limit. No client access. `reserve_login_code` is called by the `auth-send-email` function |
 
 ## 3. Indexes
 
