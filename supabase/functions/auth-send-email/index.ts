@@ -17,7 +17,7 @@ type HookPayload = {
 
 Deno.serve(async (request) => {
   if (request.method !== "POST") {
-    return json({ error: { http_code: 405, message: "SI001" } }, 405);
+    return hookError(405, "SI001");
   }
 
   const body = await request.text();
@@ -26,13 +26,13 @@ Deno.serve(async (request) => {
     const headers = Object.fromEntries(request.headers);
     payload = new Webhook(hookSecret).verify(body, headers) as HookPayload;
   } catch {
-    return json({ error: { http_code: 401, message: "SI001" } }, 401);
+    return hookError(401, "SI001");
   }
 
   const email = payload.user.email?.trim() ?? "";
   const code = payload.email_data.token ?? "";
   if (email === "" || code === "") {
-    return json({ error: { http_code: 400, message: "SI001" } }, 400);
+    return hookError(400, "SI001");
   }
 
   const supabase = createClient(
@@ -42,15 +42,12 @@ Deno.serve(async (request) => {
 
   const reserved = await supabase.rpc("reserve_login_code", { p_email: email });
   if (reserved.error) {
-    return json({ error: { http_code: 500, message: "SI001" } }, 500);
+    return hookError(500, "SI001");
   }
 
   const decision = reserved.data as { ok?: boolean; code?: string } | null;
   if (decision?.ok === false) {
-    return json(
-      { error: { http_code: 429, message: decision.code ?? "SI050" } },
-      429,
-    );
+    return hookError(429, decision.code ?? "SI050");
   }
 
   const message = loginCodeEmail(code);
@@ -72,11 +69,17 @@ Deno.serve(async (request) => {
 
   if (!sent.ok) {
     await supabase.rpc("release_login_code", { p_email: email });
-    return json({ error: { http_code: 500, message: "SI001" } }, 500);
+    return hookError(500, "SI001");
   }
 
   return json({}, 200);
 });
+
+// Auth forwards a hook error only when the HTTP status is 200 or 202.
+// A 429 is reported to the app as "Service currently unavailable due to hook".
+function hookError(httpCode: number, message: string): Response {
+  return json({ error: { http_code: httpCode, message } }, 200);
+}
 
 function json(body: unknown, status: number): Response {
   return new Response(JSON.stringify(body), {
