@@ -200,11 +200,14 @@ jobs:
       - uses: actions/setup-java@v4
         with: { distribution: zulu, java-version: '17' }
       - uses: subosito/flutter-action@v2
-        with: { channel: stable, cache: true }
-      - name: Write env and signing files
+        with: { flutter-version: 3.47.9, cache: true }
+      - name: Write env files
         run: |
-          printf '%s' "$APP_ENV_DEV"  > env/dev.json
+          printf '%s' "$APP_ENV_DEV" > env/dev.json
           printf '%s' "$APP_ENV_PROD" > env/prod.json
+      - name: Write the upload keystore
+        if: env.KEYSTORE_B64 != ''
+        run: |
           printf '%s' "$KEYSTORE_B64" | base64 -d > android/app/upload-keystore.jks
           cat > android/key.properties <<EOF
           storeFile=upload-keystore.jks
@@ -212,9 +215,12 @@ jobs:
           keyAlias=${{ secrets.ANDROID_KEY_ALIAS }}
           keyPassword=${{ secrets.ANDROID_KEY_PASSWORD }}
           EOF
+      - name: Require the upload key for a release tag
+        if: github.ref_type == 'tag' && env.KEYSTORE_B64 == ''
+        run: echo "ANDROID_KEYSTORE_BASE64 is required to sign a prod app bundle" && exit 1
       - run: flutter pub get && dart run build_runner build --delete-conflicting-outputs
 
-      # Dev build on every merge to main
+      # Dev build on every merge to main. Without a keystore this APK is debug-signed.
       - name: Build dev APK
         if: github.ref_type != 'tag'
         run: flutter build apk --flavor dev --dart-define-from-file=env/dev.json --build-number=${{ github.run_number }}
@@ -227,7 +233,7 @@ jobs:
           groups: testers
           file: app/build/app/outputs/flutter-apk/app-dev-release.apk
 
-      # Release build on tags
+      # Release build on tags, signed with the upload key.
       - name: Build prod app bundle
         if: github.ref_type == 'tag'
         run: flutter build appbundle --flavor prod --dart-define-from-file=env/prod.json
@@ -236,13 +242,13 @@ jobs:
         uses: r0adkll/upload-google-play@v1
         with:
           serviceAccountJsonPlainText: ${{ secrets.PLAY_SA_JSON }}
-          packageName: <prefix>.saveit
+          packageName: org.arisehub.saveit
           releaseFiles: app/build/app/outputs/bundle/prodRelease/app-prod-release.aab
           track: internal
           status: completed
 ```
 
-- **Signing setup:** `android/app/build.gradle` reads `key.properties` for the release signing config. `key.properties` and `*.jks` are git-ignored.
+- **Signing setup:** `app/android/app/build.gradle.kts` reads `app/android/key.properties` for the release signing config. `key.properties` and `*.jks` are git-ignored. The prod application id is `org.arisehub.saveit` (dev is `org.arisehub.saveit.dev`). A dev APK built before the upload keystore secret exists is signed with the debug key. A tag build stops if `ANDROID_KEYSTORE_BASE64` is empty.
 - **First upload:** the very first prod AAB is uploaded by hand in Play Console (T04.8). After that the pipeline can publish.
 - **Version numbers:** dev builds use the run number as the build number. Release builds use `pubspec.yaml`.
 
