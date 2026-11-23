@@ -351,6 +351,192 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Something went wrong ({code}).'**
   String errorUnknown(String code);
+
+  /// No description provided for @errorSi001.
+  ///
+  /// In en, this message translates to:
+  /// **'You cannot do that with this account.'**
+  String get errorSi001;
+
+  /// No description provided for @errorSi002.
+  ///
+  /// In en, this message translates to:
+  /// **'This account is suspended.'**
+  String get errorSi002;
+
+  /// No description provided for @errorSi002Contact.
+  ///
+  /// In en, this message translates to:
+  /// **'This account is suspended. Contact {email}.'**
+  String errorSi002Contact(String email);
+
+  /// No description provided for @errorSi003.
+  ///
+  /// In en, this message translates to:
+  /// **'You already have the maximum number of active orders.'**
+  String get errorSi003;
+
+  /// No description provided for @errorSi003Max.
+  ///
+  /// In en, this message translates to:
+  /// **'You can have {max} active orders at a time.'**
+  String errorSi003Max(int max);
+
+  /// No description provided for @errorSi004.
+  ///
+  /// In en, this message translates to:
+  /// **'That quantity is over the limit for this listing.'**
+  String get errorSi004;
+
+  /// No description provided for @errorSi004Max.
+  ///
+  /// In en, this message translates to:
+  /// **'You can reserve at most {max} from one listing.'**
+  String errorSi004Max(int max);
+
+  /// No description provided for @errorSi005.
+  ///
+  /// In en, this message translates to:
+  /// **'There is not enough of that item left.'**
+  String get errorSi005;
+
+  /// No description provided for @errorSi005Available.
+  ///
+  /// In en, this message translates to:
+  /// **'Only {available} left of that item.'**
+  String errorSi005Available(int available);
+
+  /// No description provided for @errorSi006.
+  ///
+  /// In en, this message translates to:
+  /// **'That item is no longer available.'**
+  String get errorSi006;
+
+  /// No description provided for @errorSi007.
+  ///
+  /// In en, this message translates to:
+  /// **'A basket can only hold items from one restaurant.'**
+  String get errorSi007;
+
+  /// No description provided for @errorSi010.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a pickup time inside the allowed hours.'**
+  String get errorSi010;
+
+  /// No description provided for @errorSi011.
+  ///
+  /// In en, this message translates to:
+  /// **'The pickup window has to be today.'**
+  String get errorSi011;
+
+  /// No description provided for @errorSi012.
+  ///
+  /// In en, this message translates to:
+  /// **'That pickup window clashes with orders already reserved.'**
+  String get errorSi012;
+
+  /// No description provided for @errorSi013.
+  ///
+  /// In en, this message translates to:
+  /// **'This restaurant is suspended.'**
+  String get errorSi013;
+
+  /// No description provided for @errorSi013Contact.
+  ///
+  /// In en, this message translates to:
+  /// **'This restaurant is suspended. Contact {email}.'**
+  String errorSi013Contact(String email);
+
+  /// No description provided for @errorSi020.
+  ///
+  /// In en, this message translates to:
+  /// **'The discount is below the minimum.'**
+  String get errorSi020;
+
+  /// No description provided for @errorSi021.
+  ///
+  /// In en, this message translates to:
+  /// **'The quantity cannot be lower than the amount already reserved.'**
+  String get errorSi021;
+
+  /// No description provided for @errorSi021Reserved.
+  ///
+  /// In en, this message translates to:
+  /// **'The quantity cannot be lower than the {reserved} already reserved.'**
+  String errorSi021Reserved(int reserved);
+
+  /// No description provided for @errorSi030.
+  ///
+  /// In en, this message translates to:
+  /// **'That code does not match an order at this restaurant.'**
+  String get errorSi030;
+
+  /// No description provided for @errorSi031.
+  ///
+  /// In en, this message translates to:
+  /// **'This order was already collected.'**
+  String get errorSi031;
+
+  /// No description provided for @errorSi032.
+  ///
+  /// In en, this message translates to:
+  /// **'This order has expired.'**
+  String get errorSi032;
+
+  /// No description provided for @errorSi033.
+  ///
+  /// In en, this message translates to:
+  /// **'This order was cancelled.'**
+  String get errorSi033;
+
+  /// No description provided for @errorSi034.
+  ///
+  /// In en, this message translates to:
+  /// **'Pickup has not started yet.'**
+  String get errorSi034;
+
+  /// No description provided for @errorSi040.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a reason for the cancellation.'**
+  String get errorSi040;
+
+  /// No description provided for @errorSi041.
+  ///
+  /// In en, this message translates to:
+  /// **'This order cannot be cancelled.'**
+  String get errorSi041;
+
+  /// No description provided for @errorSi050.
+  ///
+  /// In en, this message translates to:
+  /// **'Too many codes were sent. Try again later.'**
+  String get errorSi050;
+
+  /// No description provided for @errorSi050Wait.
+  ///
+  /// In en, this message translates to:
+  /// **'Too many codes were sent. Try again in {minutes} minutes.'**
+  String errorSi050Wait(int minutes);
+
+  /// No description provided for @errorSi051.
+  ///
+  /// In en, this message translates to:
+  /// **'Add your name, phone, and acceptance of the terms to continue.'**
+  String get errorSi051;
+
+  /// No description provided for @errorSi060.
+  ///
+  /// In en, this message translates to:
+  /// **'This account cannot be deleted while an order is still reserved.'**
+  String get errorSi060;
+
+  /// No description provided for @errorSi070.
+  ///
+  /// In en, this message translates to:
+  /// **'An admin cannot reset or deactivate their own account.'**
+  String get errorSi070;
 }
 
 class _AppLocalizationsDelegate

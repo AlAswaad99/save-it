@@ -140,4 +140,118 @@ class AppLocalizationsEn extends AppLocalizations {
   String errorUnknown(String code) {
     return 'Something went wrong ($code).';
   }
+
+  @override
+  String get errorSi001 => 'You cannot do that with this account.';
+
+  @override
+  String get errorSi002 => 'This account is suspended.';
+
+  @override
+  String errorSi002Contact(String email) {
+    return 'This account is suspended. Contact $email.';
+  }
+
+  @override
+  String get errorSi003 =>
+      'You already have the maximum number of active orders.';
+
+  @override
+  String errorSi003Max(int max) {
+    return 'You can have $max active orders at a time.';
+  }
+
+  @override
+  String get errorSi004 => 'That quantity is over the limit for this listing.';
+
+  @override
+  String errorSi004Max(int max) {
+    return 'You can reserve at most $max from one listing.';
+  }
+
+  @override
+  String get errorSi005 => 'There is not enough of that item left.';
+
+  @override
+  String errorSi005Available(int available) {
+    return 'Only $available left of that item.';
+  }
+
+  @override
+  String get errorSi006 => 'That item is no longer available.';
+
+  @override
+  String get errorSi007 => 'A basket can only hold items from one restaurant.';
+
+  @override
+  String get errorSi010 => 'Choose a pickup time inside the allowed hours.';
+
+  @override
+  String get errorSi011 => 'The pickup window has to be today.';
+
+  @override
+  String get errorSi012 =>
+      'That pickup window clashes with orders already reserved.';
+
+  @override
+  String get errorSi013 => 'This restaurant is suspended.';
+
+  @override
+  String errorSi013Contact(String email) {
+    return 'This restaurant is suspended. Contact $email.';
+  }
+
+  @override
+  String get errorSi020 => 'The discount is below the minimum.';
+
+  @override
+  String get errorSi021 =>
+      'The quantity cannot be lower than the amount already reserved.';
+
+  @override
+  String errorSi021Reserved(int reserved) {
+    return 'The quantity cannot be lower than the $reserved already reserved.';
+  }
+
+  @override
+  String get errorSi030 =>
+      'That code does not match an order at this restaurant.';
+
+  @override
+  String get errorSi031 => 'This order was already collected.';
+
+  @override
+  String get errorSi032 => 'This order has expired.';
+
+  @override
+  String get errorSi033 => 'This order was cancelled.';
+
+  @override
+  String get errorSi034 => 'Pickup has not started yet.';
+
+  @override
+  String get errorSi040 => 'Choose a reason for the cancellation.';
+
+  @override
+  String get errorSi041 => 'This order cannot be cancelled.';
+
+  @override
+  String get errorSi050 => 'Too many codes were sent. Try again later.';
+
+  @override
+  String errorSi050Wait(int minutes) {
+    return 'Too many codes were sent. Try again in $minutes minutes.';
+  }
+
+  @override
+  String get errorSi051 =>
+      'Add your name, phone, and acceptance of the terms to continue.';
+
+  @override
+  String get errorSi060 =>
+      'This account cannot be deleted while an order is still reserved.';
+
+  @override
+  String get errorSi070 =>
+      'An admin cannot reset or deactivate their own account.';
 }
