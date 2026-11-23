@@ -47,7 +47,28 @@ class ProfileScreen extends ConsumerWidget {
                       ],
                     ),
                   )
-                : PlaceholderBody(message: l10n.profilePlaceholder),
+                : Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Expanded(
+                        child: PlaceholderBody(message: l10n.profilePlaceholder),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(AppSpacing.lg),
+                        child: SaveItButton(
+                          key: const Key('log-out'),
+                          label: l10n.actionLogOut,
+                          variant: SaveItButtonVariant.text,
+                          onPressed: () async {
+                            await ref.read(appSessionProvider.notifier).signOut();
+                            if (context.mounted) {
+                              context.go('/explore');
+                            }
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
           ),
           if (isDev)
             Padding(

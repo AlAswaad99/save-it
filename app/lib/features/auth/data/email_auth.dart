@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:save_it/core/session/app_session.dart';
 import 'package:save_it/core/supabase/supabase_client_provider.dart';
+import 'package:save_it/features/auth/data/session_account.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 enum AuthFailureKind { wrongOrExpired, rateLimited }
@@ -17,10 +18,12 @@ class VerifiedEmail {
     required this.role,
     required this.profileComplete,
     required this.email,
+    this.restaurantTermsAccepted = false,
   });
 
   final AppRole role;
   final bool profileComplete;
+  final bool restaurantTermsAccepted;
   final String email;
 }
 
@@ -64,24 +67,11 @@ class SupabaseEmailAuth implements EmailAuth {
     if (user == null) {
       throw const AuthFailure(AuthFailureKind.wrongOrExpired);
     }
-    final row = await client
-        .from('profiles')
-        .select('role, full_name, phone, terms_accepted_at')
-        .eq('id', user.id)
-        .single();
-    final roleName = row['role'] as String?;
-    final role = switch (roleName) {
-      'restaurant' => AppRole.restaurant,
-      'admin' => AppRole.customer,
-      _ => AppRole.customer,
-    };
-    final complete =
-        row['full_name'] != null &&
-        row['phone'] != null &&
-        row['terms_accepted_at'] != null;
+    final session = await loadAppSession(client);
     return VerifiedEmail(
-      role: role,
-      profileComplete: complete,
+      role: session.role == AppRole.guest ? AppRole.customer : session.role,
+      profileComplete: session.profileComplete,
+      restaurantTermsAccepted: session.restaurantTermsAccepted,
       email: user.email ?? email,
     );
   }
@@ -108,12 +98,14 @@ class SupabaseEmailAuth implements EmailAuth {
 class FakeEmailAuth implements EmailAuth {
   FakeEmailAuth({
     this.profileComplete = false,
+    this.restaurantTermsAccepted = false,
     this.role = AppRole.customer,
     this.verifyFailure,
     this.sendFailure,
   });
 
   bool profileComplete;
+  bool restaurantTermsAccepted;
   AppRole role;
   AuthFailure? verifyFailure;
   AuthFailure? sendFailure;
@@ -142,6 +134,7 @@ class FakeEmailAuth implements EmailAuth {
     return VerifiedEmail(
       role: role,
       profileComplete: profileComplete,
+      restaurantTermsAccepted: restaurantTermsAccepted,
       email: email,
     );
   }

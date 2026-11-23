@@ -54,9 +54,15 @@ class _CodeScreenState extends ConsumerState<CodeScreen> {
       final session = ref.read(appSessionProvider.notifier);
       if (verified.role == AppRole.restaurant) {
         session.replace(
-          const AppSession.restaurant(restaurantTermsAccepted: false),
+          AppSession.restaurant(
+            restaurantTermsAccepted: verified.restaurantTermsAccepted,
+          ),
         );
-        context.go('/business/terms');
+        context.go(
+          verified.restaurantTermsAccepted
+              ? '/business/today'
+              : '/business/terms',
+        );
       } else if (verified.profileComplete) {
         session.signedInCustomer(profileComplete: true);
         context.go(widget.returnTo);

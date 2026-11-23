@@ -239,5 +239,6 @@
   "guestTitle": "You're browsing as a guest.",
   "guestBody": "Log in or sign up to reserve food and see your orders.",
   "guestOrdersTitle": "Log in or sign up to see your orders",
-  "guestOrdersBody": "Your reservations and pickup passes appear here."
+  "guestOrdersBody": "Your reservations and pickup passes appear here.",
+  "actionLogOut": "Log out"
 }

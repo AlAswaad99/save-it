@@ -855,6 +855,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Your reservations and pickup passes appear here.'**
   String get guestOrdersBody;
+
+  /// No description provided for @actionLogOut.
+  ///
+  /// In en, this message translates to:
+  /// **'Log out'**
+  String get actionLogOut;
 }
 
 class _AppLocalizationsDelegate

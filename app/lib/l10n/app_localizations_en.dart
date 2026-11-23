@@ -425,4 +425,7 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get guestOrdersBody =>
       'Your reservations and pickup passes appear here.';
+
+  @override
+  String get actionLogOut => 'Log out';
 }
