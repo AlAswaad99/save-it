@@ -17,7 +17,7 @@
 | [x] | T03.5 | Claude Code | pgTAP RLS tests for each role (anon, customer, restaurant, admin), including cross-tenant attempts | NF-05 | Each matrix cell has a passing test in CI |
 | [ ] | T03.6 | Claude Code | Auth settings on dev (6-digit code, 10-minute expiry, admin password policy) and the `auth-send-email` hook with Resend and the 3-per-hour limit | CA-04, BM-01, AD-01 | A code email arrives; a 4th request within an hour returns SI050 |
 | [x] | T03.7 | Claude Code | Seed script for dev (`supabase/seed.sql`, run manually): areas, 8 sample restaurants with hours and listings, test users for every role | — | Dev has a usable dataset; script can be re-run safely |
-| [ ] | T03.8 | Claude Code | Flutter data layer: Supabase client per flavor, RPC helper, SIxxx error mapping, base repository, freezed models for the core tables | — | Unit tests for the error mapping and model JSON pass |
+| [x] | T03.8 | Claude Code | Flutter data layer: Supabase client per flavor, RPC helper, SIxxx error mapping, base repository, freezed models for the core tables | — | Unit tests for the error mapping and model JSON pass |
 
 ## Friday update to Miss Reid
 

@@ -90,5 +90,71 @@
         "example": "SI001"
       }
     }
-  }
+  },
+  "errorSi001": "You cannot do that with this account.",
+  "errorSi002": "This account is suspended.",
+  "errorSi002Contact": "This account is suspended. Contact {email}.",
+  "@errorSi002Contact": {
+    "placeholders": {
+      "email": {"type": "String"}
+    }
+  },
+  "errorSi003": "You already have the maximum number of active orders.",
+  "errorSi003Max": "You can have {max} active orders at a time.",
+  "@errorSi003Max": {
+    "placeholders": {
+      "max": {"type": "int"}
+    }
+  },
+  "errorSi004": "That quantity is over the limit for this listing.",
+  "errorSi004Max": "You can reserve at most {max} from one listing.",
+  "@errorSi004Max": {
+    "placeholders": {
+      "max": {"type": "int"}
+    }
+  },
+  "errorSi005": "There is not enough of that item left.",
+  "errorSi005Available": "Only {available} left of that item.",
+  "@errorSi005Available": {
+    "placeholders": {
+      "available": {"type": "int"}
+    }
+  },
+  "errorSi006": "That item is no longer available.",
+  "errorSi007": "A basket can only hold items from one restaurant.",
+  "errorSi010": "Choose a pickup time inside the allowed hours.",
+  "errorSi011": "The pickup window has to be today.",
+  "errorSi012": "That pickup window clashes with orders already reserved.",
+  "errorSi013": "This restaurant is suspended.",
+  "errorSi013Contact": "This restaurant is suspended. Contact {email}.",
+  "@errorSi013Contact": {
+    "placeholders": {
+      "email": {"type": "String"}
+    }
+  },
+  "errorSi020": "The discount is below the minimum.",
+  "errorSi021": "The quantity cannot be lower than the amount already reserved.",
+  "errorSi021Reserved": "The quantity cannot be lower than the {reserved} already reserved.",
+  "@errorSi021Reserved": {
+    "placeholders": {
+      "reserved": {"type": "int"}
+    }
+  },
+  "errorSi030": "That code does not match an order at this restaurant.",
+  "errorSi031": "This order was already collected.",
+  "errorSi032": "This order has expired.",
+  "errorSi033": "This order was cancelled.",
+  "errorSi034": "Pickup has not started yet.",
+  "errorSi040": "Choose a reason for the cancellation.",
+  "errorSi041": "This order cannot be cancelled.",
+  "errorSi050": "Too many codes were sent. Try again later.",
+  "errorSi050Wait": "Too many codes were sent. Try again in {minutes} minutes.",
+  "@errorSi050Wait": {
+    "placeholders": {
+      "minutes": {"type": "int"}
+    }
+  },
+  "errorSi051": "Add your name, phone, and acceptance of the terms to continue.",
+  "errorSi060": "This account cannot be deleted while an order is still reserved.",
+  "errorSi070": "An admin cannot reset or deactivate their own account."
 }
