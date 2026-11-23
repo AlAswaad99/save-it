@@ -126,6 +126,7 @@ Screens never call Supabase directly.
   - After a successful reservation and on every orders refresh, the pass is saved to `shared_preferences` under `pass_cache`: active orders only, with code, restaurant name, address, lat/lng, window, items and total.
   - When offline, `/orders/:id` shows the cached pass with the offline banner.
   - The countdown uses the stored `window_end`.
+- **Profile (CA-05):** a signed-in customer updates `full_name` and `phone` on their own `profiles` row. Email stays read-only. Terms, privacy, and the support address from `public_settings` open from the profile.
 - **Session (CA-04):** Supabase refreshes tokens automatically. The 30-day inactivity timeout is configured in Supabase Auth (Pro). When the session expires, the app returns to the guest state and keeps the basket.
 - **Push (CA-15, BM-07):**
   - Ask for permission after the first reservation (C-18). Restaurants are asked at first login.

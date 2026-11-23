@@ -428,4 +428,19 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get actionLogOut => 'Log out';
+
+  @override
+  String get actionEdit => 'Edit';
+
+  @override
+  String get editProfileTitle => 'Edit profile';
+
+  @override
+  String get emailLocked => 'Your email is your login and can\'t be changed.';
+
+  @override
+  String get actionSaveChanges => 'Save changes';
+
+  @override
+  String get support => 'Support';
 }

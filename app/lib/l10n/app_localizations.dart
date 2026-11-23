@@ -861,6 +861,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Log out'**
   String get actionLogOut;
+
+  /// No description provided for @actionEdit.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit'**
+  String get actionEdit;
+
+  /// No description provided for @editProfileTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit profile'**
+  String get editProfileTitle;
+
+  /// No description provided for @emailLocked.
+  ///
+  /// In en, this message translates to:
+  /// **'Your email is your login and can\'t be changed.'**
+  String get emailLocked;
+
+  /// No description provided for @actionSaveChanges.
+  ///
+  /// In en, this message translates to:
+  /// **'Save changes'**
+  String get actionSaveChanges;
+
+  /// No description provided for @support.
+  ///
+  /// In en, this message translates to:
+  /// **'Support'**
+  String get support;
 }
 
 class _AppLocalizationsDelegate

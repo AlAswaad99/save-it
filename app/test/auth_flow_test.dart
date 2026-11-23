@@ -104,7 +104,7 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('Almost done.'), findsNothing);
-    expect(find.text('Sign in to manage your account.'), findsOneWidget);
+    expect(find.text('Log out'), findsOneWidget);
   });
 
   testWidgets('a wrong code and a rate limit show their messages', (

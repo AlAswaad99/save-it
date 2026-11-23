@@ -16,6 +16,7 @@ import 'package:save_it/features/onboarding/data/walkthrough_store.dart';
 import 'package:save_it/features/onboarding/presentation/splash_screen.dart';
 import 'package:save_it/features/onboarding/presentation/welcome_screen.dart';
 import 'package:save_it/features/orders/presentation/orders_screen.dart';
+import 'package:save_it/features/profile/presentation/edit_profile_screen.dart';
 import 'package:save_it/features/profile/presentation/legal_screen.dart';
 import 'package:save_it/features/profile/presentation/profile_screen.dart';
 import 'package:save_it/l10n/app_localizations.dart';
@@ -121,10 +122,7 @@ List<RouteBase> buildAppRoutes({required bool isDev}) {
     ),
     GoRoute(
       path: '/profile/edit',
-      builder: (context, state) => RoutePlaceholder(
-        screenKey: const Key('profile-edit'),
-        title: _l10n(context).tabProfile,
-      ),
+      builder: (context, state) => const EditProfileScreen(),
     ),
     GoRoute(
       path: '/business/login',

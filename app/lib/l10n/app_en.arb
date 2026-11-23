@@ -240,5 +240,10 @@
   "guestBody": "Log in or sign up to reserve food and see your orders.",
   "guestOrdersTitle": "Log in or sign up to see your orders",
   "guestOrdersBody": "Your reservations and pickup passes appear here.",
-  "actionLogOut": "Log out"
+  "actionLogOut": "Log out",
+  "actionEdit": "Edit",
+  "editProfileTitle": "Edit profile",
+  "emailLocked": "Your email is your login and can't be changed.",
+  "actionSaveChanges": "Save changes",
+  "support": "Support"
 }
