@@ -7,6 +7,12 @@ class AppSessionController extends Notifier<AppSession> {
   AppSession build() => const AppSession.guest();
 
   void replace(AppSession session) => state = session;
+
+  void signedInCustomer({required bool profileComplete}) {
+    state = AppSession.customer(profileComplete: profileComplete);
+  }
+
+  void signedOut() => state = const AppSession.guest();
 }
 
 final appSessionProvider = NotifierProvider<AppSessionController, AppSession>(

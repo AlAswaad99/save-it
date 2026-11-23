@@ -21,7 +21,7 @@ Every message is queued in `outbox` in the same transaction as the event that ca
 | Template | Trigger | Content | Req |
 |---|---|---|---|
 | `login_code` | Auth Send Email Hook | The 6-digit code, "expires in 10 minutes", and a note to ignore the email if you didn't request it | CA-04, BM-01 |
-| `welcome` | Customer completes the profile (`complete_profile`, C-13) | Subject "You're in! Welcome to Save It". Body starts "Hi {name}, Marhaba! Welcome to Save It! You are now with many others who have joined this good sustainability act of helping to reduce food waste in the UAE whilst saving money too - it's a win win!" then the first walkthrough paragraph, then the support email | CA-16 |
+| `welcome` | Customer completes the profile (`complete_profile`, C-13) | Subject "You're in! Welcome to Save It". Body starts "Hi {name}, Marhaba! Welcome to Save It! You are now with many others who have joined this good sustainability act of helping to reduce food waste in the UAE whilst saving money too - it's a win win!" then the first walkthrough paragraph, then the support email. The outbox payload is `{name, email, support_email, subject}`. The HTML lives in `supabase/functions/_shared/emails/welcome.ts` and is sent by `dispatch` | CA-16 |
 | `order_confirmation` | `reserve_order` | Subject "You've saved it!". Then the code (large), restaurant name and address, Directions link, pickup window, items, and the total to pay at the counter. The client's draft says to follow the same description as the welcome mail; keep the order facts above that paragraph | CA-16 |
 | `order_cancellation` | `cancel_order` | Restaurant, reason, items, apology line, link to explore other restaurants | CA-16 |
 

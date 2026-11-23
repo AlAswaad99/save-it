@@ -651,6 +651,210 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'The area list could not be loaded.'**
   String get areasLoadError;
+
+  /// No description provided for @actionContinue.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue'**
+  String get actionContinue;
+
+  /// No description provided for @actionContinueWithEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue with email'**
+  String get actionContinueWithEmail;
+
+  /// No description provided for @actionSendCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Send code'**
+  String get actionSendCode;
+
+  /// No description provided for @actionResendCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Resend code'**
+  String get actionResendCode;
+
+  /// No description provided for @signUpGateTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Log in or sign up to reserve.'**
+  String get signUpGateTitle;
+
+  /// No description provided for @signUpGateBody.
+  ///
+  /// In en, this message translates to:
+  /// **'You can keep browsing as a guest. Enter your email to reserve; there\'s no password.'**
+  String get signUpGateBody;
+
+  /// No description provided for @emailAppBar.
+  ///
+  /// In en, this message translates to:
+  /// **'Log in or sign up'**
+  String get emailAppBar;
+
+  /// No description provided for @emailHeading.
+  ///
+  /// In en, this message translates to:
+  /// **'What\'s your email?'**
+  String get emailHeading;
+
+  /// No description provided for @emailBody.
+  ///
+  /// In en, this message translates to:
+  /// **'We\'ll send a 6-digit code. New to Save It? You\'ll add your details next.'**
+  String get emailBody;
+
+  /// No description provided for @fieldEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get fieldEmail;
+
+  /// No description provided for @codeAppBar.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter code'**
+  String get codeAppBar;
+
+  /// No description provided for @codeHeading.
+  ///
+  /// In en, this message translates to:
+  /// **'Check your email.'**
+  String get codeHeading;
+
+  /// No description provided for @codeSentTo.
+  ///
+  /// In en, this message translates to:
+  /// **'Code sent to {maskedEmail}.'**
+  String codeSentTo(String maskedEmail);
+
+  /// No description provided for @codeDidntGetIt.
+  ///
+  /// In en, this message translates to:
+  /// **'Didn\'t get it?'**
+  String get codeDidntGetIt;
+
+  /// No description provided for @codeErrorTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Incorrect or expired code'**
+  String get codeErrorTitle;
+
+  /// No description provided for @codeErrorBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Check the code or request a new one.'**
+  String get codeErrorBody;
+
+  /// No description provided for @codeResendWait.
+  ///
+  /// In en, this message translates to:
+  /// **'Try again in {minutes} min'**
+  String codeResendWait(int minutes);
+
+  /// No description provided for @codeResendLimit.
+  ///
+  /// In en, this message translates to:
+  /// **'You can request up to 3 codes per hour.'**
+  String get codeResendLimit;
+
+  /// No description provided for @profileSetupAppBar.
+  ///
+  /// In en, this message translates to:
+  /// **'Create your account'**
+  String get profileSetupAppBar;
+
+  /// No description provided for @profileSetupHeading.
+  ///
+  /// In en, this message translates to:
+  /// **'Almost done.'**
+  String get profileSetupHeading;
+
+  /// No description provided for @profileSetupBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Tell us who\'s collecting the food.'**
+  String get profileSetupBody;
+
+  /// No description provided for @verified.
+  ///
+  /// In en, this message translates to:
+  /// **'Verified'**
+  String get verified;
+
+  /// No description provided for @fieldFullName.
+  ///
+  /// In en, this message translates to:
+  /// **'Full name'**
+  String get fieldFullName;
+
+  /// No description provided for @fieldPhone.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone'**
+  String get fieldPhone;
+
+  /// No description provided for @phonePrefix.
+  ///
+  /// In en, this message translates to:
+  /// **'+971'**
+  String get phonePrefix;
+
+  /// No description provided for @phoneInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a valid phone number.'**
+  String get phoneInvalid;
+
+  /// No description provided for @termsAgreePrefix.
+  ///
+  /// In en, this message translates to:
+  /// **'I agree to the'**
+  String get termsAgreePrefix;
+
+  /// No description provided for @termsAgreeJoin.
+  ///
+  /// In en, this message translates to:
+  /// **'and'**
+  String get termsAgreeJoin;
+
+  /// No description provided for @termsLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Terms and Conditions'**
+  String get termsLink;
+
+  /// No description provided for @privacyLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy Policy'**
+  String get privacyLink;
+
+  /// No description provided for @guestTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'You\'re browsing as a guest.'**
+  String get guestTitle;
+
+  /// No description provided for @guestBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Log in or sign up to reserve food and see your orders.'**
+  String get guestBody;
+
+  /// No description provided for @guestOrdersTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Log in or sign up to see your orders'**
+  String get guestOrdersTitle;
+
+  /// No description provided for @guestOrdersBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Your reservations and pickup passes appear here.'**
+  String get guestOrdersBody;
 }
 
 class _AppLocalizationsDelegate

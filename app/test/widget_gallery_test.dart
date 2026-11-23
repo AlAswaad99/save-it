@@ -124,7 +124,7 @@ void main() {
     await tester.tap(find.text('Profile'));
     await tester.pumpAndSettle();
     expect(find.text('Widget gallery'), findsNothing);
-    expect(find.text('Sign in to manage your account.'), findsOneWidget);
+    expect(find.text('You\'re browsing as a guest.'), findsOneWidget);
   });
 }
 

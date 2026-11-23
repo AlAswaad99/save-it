@@ -315,4 +315,114 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get areasLoadError => 'The area list could not be loaded.';
+
+  @override
+  String get actionContinue => 'Continue';
+
+  @override
+  String get actionContinueWithEmail => 'Continue with email';
+
+  @override
+  String get actionSendCode => 'Send code';
+
+  @override
+  String get actionResendCode => 'Resend code';
+
+  @override
+  String get signUpGateTitle => 'Log in or sign up to reserve.';
+
+  @override
+  String get signUpGateBody =>
+      'You can keep browsing as a guest. Enter your email to reserve; there\'s no password.';
+
+  @override
+  String get emailAppBar => 'Log in or sign up';
+
+  @override
+  String get emailHeading => 'What\'s your email?';
+
+  @override
+  String get emailBody =>
+      'We\'ll send a 6-digit code. New to Save It? You\'ll add your details next.';
+
+  @override
+  String get fieldEmail => 'Email';
+
+  @override
+  String get codeAppBar => 'Enter code';
+
+  @override
+  String get codeHeading => 'Check your email.';
+
+  @override
+  String codeSentTo(String maskedEmail) {
+    return 'Code sent to $maskedEmail.';
+  }
+
+  @override
+  String get codeDidntGetIt => 'Didn\'t get it?';
+
+  @override
+  String get codeErrorTitle => 'Incorrect or expired code';
+
+  @override
+  String get codeErrorBody => 'Check the code or request a new one.';
+
+  @override
+  String codeResendWait(int minutes) {
+    return 'Try again in $minutes min';
+  }
+
+  @override
+  String get codeResendLimit => 'You can request up to 3 codes per hour.';
+
+  @override
+  String get profileSetupAppBar => 'Create your account';
+
+  @override
+  String get profileSetupHeading => 'Almost done.';
+
+  @override
+  String get profileSetupBody => 'Tell us who\'s collecting the food.';
+
+  @override
+  String get verified => 'Verified';
+
+  @override
+  String get fieldFullName => 'Full name';
+
+  @override
+  String get fieldPhone => 'Phone';
+
+  @override
+  String get phonePrefix => '+971';
+
+  @override
+  String get phoneInvalid => 'Enter a valid phone number.';
+
+  @override
+  String get termsAgreePrefix => 'I agree to the';
+
+  @override
+  String get termsAgreeJoin => 'and';
+
+  @override
+  String get termsLink => 'Terms and Conditions';
+
+  @override
+  String get privacyLink => 'Privacy Policy';
+
+  @override
+  String get guestTitle => 'You\'re browsing as a guest.';
+
+  @override
+  String get guestBody =>
+      'Log in or sign up to reserve food and see your orders.';
+
+  @override
+  String get guestOrdersTitle => 'Log in or sign up to see your orders';
+
+  @override
+  String get guestOrdersBody =>
+      'Your reservations and pickup passes appear here.';
 }
