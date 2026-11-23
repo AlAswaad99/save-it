@@ -25,6 +25,6 @@ Every message is queued in `outbox` in the same transaction as the event that ca
 | `order_confirmation` | `reserve_order` | Subject "You've saved it!". Then the code (large), restaurant name and address, Directions link, pickup window, items, and the total to pay at the counter. The client's draft says to follow the same description as the welcome mail; keep the order facts above that paragraph | CA-16 |
 | `order_cancellation` | `cancel_order` | Restaurant, reason, items, apology line, link to explore other restaurants | CA-16 |
 
-- **Sender:** `Save It <no-reply@arisehub.org>` once the client verifies `arisehub.org` in Resend (SPF, DKIM, DMARC). The support address in the footer is `contact@arisehub.org`.
+- **Sender:** `Save It <no-reply@arisehub.org>` once `arisehub.org` is verified in Resend (SPF, DKIM, DMARC). The dev project has no verified domain, so its `RESEND_FROM` secret is `Save It <onboarding@resend.dev>`, and Resend will deliver those messages only to the address on the Resend account. The support address in the footer is `contact@arisehub.org`.
 - **Format:** templates are plain responsive HTML in `supabase/functions/_shared/emails/`, each with a plain-text version.
 - **Look:** brand colours, the logo, and the support email in the footer.
