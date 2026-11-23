@@ -6,7 +6,6 @@ import 'package:go_router/go_router.dart';
 import 'package:save_it/core/theme/app_colors.dart';
 import 'package:save_it/core/theme/app_spacing.dart';
 import 'package:save_it/core/widgets/save_it_button.dart';
-import 'package:save_it/features/location/presentation/location_prompt.dart';
 import 'package:save_it/features/onboarding/data/walkthrough_store.dart';
 import 'package:save_it/l10n/context_l10n.dart';
 
@@ -59,7 +58,6 @@ class _WelcomeScreenState extends ConsumerState<WelcomeScreen> {
 
   Future<void> _finish() async {
     await ref.read(walkthroughSeenProvider.notifier).markSeen();
-    ref.read(locationPromptProvider.notifier).request();
     if (!mounted) {
       return;
     }

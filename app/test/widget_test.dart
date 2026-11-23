@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:save_it/core/session/app_session.dart';
 import 'package:save_it/core/session/app_session_controller.dart';
+import 'package:save_it/features/location/data/origin_store.dart';
+import 'package:save_it/features/location/domain/search_origin.dart';
 import 'package:save_it/features/onboarding/data/walkthrough_store.dart';
 import 'package:save_it/features/onboarding/presentation/splash_screen.dart';
 import 'package:save_it/main.dart';
@@ -10,7 +12,10 @@ import 'package:save_it/main.dart';
 void main() {
   testWidgets('guest shell opens on Explore after the splash', (tester) async {
     await tester.pumpWidget(
-      ProviderScope(overrides: [_seenWalkthrough], child: const SaveItApp()),
+      ProviderScope(
+        overrides: [_seenWalkthrough, _savedOrigin],
+        child: const SaveItApp(),
+      ),
     );
     expect(find.byKey(SplashScreen.screenKey), findsOneWidget);
 
@@ -31,6 +36,7 @@ void main() {
       ProviderScope(
         overrides: [
           _seenWalkthrough,
+          _savedOrigin,
           appSessionProvider.overrideWith(
             () => _FixedSession(
               const AppSession.restaurant(restaurantTermsAccepted: false),
@@ -52,6 +58,17 @@ void main() {
 
 final _seenWalkthrough = walkthroughStoreProvider.overrideWithValue(
   MemoryWalkthroughStore(seen: true),
+);
+
+final _savedOrigin = originStoreProvider.overrideWithValue(
+  MemoryOriginStore()
+    ..origin = SearchOrigin(
+      latitude: 24.47419,
+      longitude: 54.34019,
+      isGps: false,
+      fixedAt: DateTime.utc(2026, 11, 23),
+      areaName: 'Corniche',
+    ),
 );
 
 class _FixedSession extends AppSessionController {

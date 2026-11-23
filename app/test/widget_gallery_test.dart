@@ -15,6 +15,8 @@ import 'package:save_it/core/widgets/save_it_loading_state.dart';
 import 'package:save_it/core/widgets/save_it_logo.dart';
 import 'package:save_it/core/widgets/save_it_offline_banner.dart';
 import 'package:save_it/core/widgets/save_it_text_field.dart';
+import 'package:save_it/features/location/data/origin_store.dart';
+import 'package:save_it/features/location/domain/search_origin.dart';
 import 'package:save_it/features/onboarding/data/walkthrough_store.dart';
 import 'package:save_it/features/onboarding/presentation/splash_screen.dart';
 import 'package:save_it/l10n/app_localizations.dart';
@@ -24,11 +26,14 @@ void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
   test('gallery route is registered only for the dev flavor', () {
-    final dev = ProviderContainer(overrides: [_seenWalkthrough]);
+    final dev = ProviderContainer(
+      overrides: [_seenWalkthrough, _savedOrigin],
+    );
     addTearDown(dev.dispose);
     final prod = ProviderContainer(
       overrides: [
         _seenWalkthrough,
+        _savedOrigin,
         envProvider.overrideWithValue(
           const Env(flavor: 'prod', supabaseUrl: '', supabaseAnonKey: ''),
         ),
@@ -87,7 +92,10 @@ void main() {
 
   testWidgets('dev profile opens the gallery', (tester) async {
     await tester.pumpWidget(
-      ProviderScope(overrides: [_seenWalkthrough], child: const SaveItApp()),
+      ProviderScope(
+        overrides: [_seenWalkthrough, _savedOrigin],
+        child: const SaveItApp(),
+      ),
     );
     await _leaveSplash(tester);
     await tester.tap(find.text('Profile'));
@@ -104,6 +112,7 @@ void main() {
       ProviderScope(
         overrides: [
           _seenWalkthrough,
+          _savedOrigin,
           envProvider.overrideWithValue(
             const Env(flavor: 'prod', supabaseUrl: '', supabaseAnonKey: ''),
           ),
@@ -142,6 +151,17 @@ Future<void> _pumpGallery(WidgetTester tester, {double textScale = 1}) async {
 
 final _seenWalkthrough = walkthroughStoreProvider.overrideWithValue(
   MemoryWalkthroughStore(seen: true),
+);
+
+final _savedOrigin = originStoreProvider.overrideWithValue(
+  MemoryOriginStore()
+    ..origin = SearchOrigin(
+      latitude: 24.47419,
+      longitude: 54.34019,
+      isGps: false,
+      fixedAt: DateTime.utc(2026, 11, 23),
+      areaName: 'Corniche',
+    ),
 );
 
 Future<void> _leaveSplash(WidgetTester tester) async {

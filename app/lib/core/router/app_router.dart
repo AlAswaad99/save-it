@@ -8,6 +8,7 @@ import 'package:save_it/core/router/app_shell.dart';
 import 'package:save_it/core/router/route_placeholder.dart';
 import 'package:save_it/core/session/app_session_controller.dart';
 import 'package:save_it/features/discovery/presentation/explore_screen.dart';
+import 'package:save_it/features/location/presentation/area_screen.dart';
 import 'package:save_it/features/onboarding/data/walkthrough_store.dart';
 import 'package:save_it/features/onboarding/presentation/splash_screen.dart';
 import 'package:save_it/features/onboarding/presentation/welcome_screen.dart';
@@ -58,10 +59,7 @@ List<RouteBase> buildAppRoutes({required bool isDev}) {
     ),
     GoRoute(
       path: '/area',
-      builder: (context, state) => RoutePlaceholder(
-        screenKey: const Key('area'),
-        title: _l10n(context).tabExplore,
-      ),
+      builder: (context, state) => const AreaScreen(),
     ),
     GoRoute(
       path: '/auth/email',

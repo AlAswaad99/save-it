@@ -1,10 +1,14 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:save_it/core/theme/app_spacing.dart';
 import 'package:save_it/core/widgets/save_it_button.dart';
+import 'package:save_it/features/location/presentation/location_flow.dart';
 import 'package:save_it/l10n/app_localizations.dart';
 
 /// C-02. The permission explainer shown over Explore.
-class LocationSheet extends StatelessWidget {
+class LocationSheet extends ConsumerWidget {
   const LocationSheet({super.key});
 
   static const sheetKey = Key('location-sheet');
@@ -20,7 +24,7 @@ class LocationSheet extends StatelessWidget {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppLocalizations.of(context);
     if (l10n == null) {
       throw StateError('AppLocalizations is not installed');
@@ -58,12 +62,12 @@ class LocationSheet extends StatelessWidget {
           const SizedBox(height: AppSpacing.lg),
           SaveItButton(
             label: l10n.actionAllowLocation,
-            onPressed: () => Navigator.of(context).pop(),
+            onPressed: () => unawaited(LocationFlow.allow(ref, context)),
           ),
           SaveItButton(
             label: l10n.actionChooseAreaInstead,
             variant: SaveItButtonVariant.text,
-            onPressed: () => Navigator.of(context).pop(),
+            onPressed: () => LocationFlow.chooseArea(context),
           ),
         ],
       ),

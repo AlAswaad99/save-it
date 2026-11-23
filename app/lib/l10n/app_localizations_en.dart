@@ -297,4 +297,22 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get actionChooseAreaInstead => 'Choose area instead';
+
+  @override
+  String get chooseAreaTitle => 'Choose your area';
+
+  @override
+  String get searchAreasHint => 'Search areas';
+
+  @override
+  String get areasHeader => 'Abu Dhabi areas';
+
+  @override
+  String get actionShowRestaurants => 'Show restaurants';
+
+  @override
+  String get currentLocation => 'Current location';
+
+  @override
+  String get areasLoadError => 'The area list could not be loaded.';
 }

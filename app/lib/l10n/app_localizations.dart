@@ -615,6 +615,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Choose area instead'**
   String get actionChooseAreaInstead;
+
+  /// No description provided for @chooseAreaTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose your area'**
+  String get chooseAreaTitle;
+
+  /// No description provided for @searchAreasHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Search areas'**
+  String get searchAreasHint;
+
+  /// No description provided for @areasHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Abu Dhabi areas'**
+  String get areasHeader;
+
+  /// No description provided for @actionShowRestaurants.
+  ///
+  /// In en, this message translates to:
+  /// **'Show restaurants'**
+  String get actionShowRestaurants;
+
+  /// No description provided for @currentLocation.
+  ///
+  /// In en, this message translates to:
+  /// **'Current location'**
+  String get currentLocation;
+
+  /// No description provided for @areasLoadError.
+  ///
+  /// In en, this message translates to:
+  /// **'The area list could not be loaded.'**
+  String get areasLoadError;
 }
 
 class _AppLocalizationsDelegate

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:save_it/features/location/data/origin_store.dart';
 import 'package:save_it/features/onboarding/data/walkthrough_store.dart';
 import 'package:save_it/features/onboarding/presentation/splash_screen.dart';
 import 'package:save_it/features/onboarding/presentation/welcome_screen.dart';
@@ -20,6 +21,7 @@ void main() {
       ProviderScope(
         overrides: [
           walkthroughStoreProvider.overrideWithValue(store),
+          originStoreProvider.overrideWithValue(MemoryOriginStore()),
         ],
         child: const SaveItApp(),
       ),
@@ -80,6 +82,7 @@ void main() {
           walkthroughStoreProvider.overrideWithValue(
             MemoryWalkthroughStore(seen: true),
           ),
+          originStoreProvider.overrideWithValue(MemoryOriginStore()),
         ],
         child: const SaveItApp(),
       ),
@@ -88,7 +91,7 @@ void main() {
     await tester.pump(SplashScreen.hold);
     await tester.pumpAndSettle();
     expect(find.byKey(WelcomeScreen.screenKey), findsNothing);
-    expect(find.text('See food venues near you.'), findsNothing);
+    expect(find.text('See food venues near you.'), findsWidgets);
     expect(find.text('Nearby surplus will show up here.'), findsOneWidget);
   });
 
@@ -100,6 +103,7 @@ void main() {
       ProviderScope(
         overrides: [
           walkthroughStoreProvider.overrideWithValue(store),
+          originStoreProvider.overrideWithValue(MemoryOriginStore()),
         ],
         child: const SaveItApp(),
       ),

@@ -193,5 +193,11 @@
     "description": "C-02 location sheet body."
   },
   "actionAllowLocation": "Allow location",
-  "actionChooseAreaInstead": "Choose area instead"
+  "actionChooseAreaInstead": "Choose area instead",
+  "chooseAreaTitle": "Choose your area",
+  "searchAreasHint": "Search areas",
+  "areasHeader": "Abu Dhabi areas",
+  "actionShowRestaurants": "Show restaurants",
+  "currentLocation": "Current location",
+  "areasLoadError": "The area list could not be loaded."
 }
