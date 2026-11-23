@@ -891,6 +891,96 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Support'**
   String get support;
+
+  /// No description provided for @businessModeEntry.
+  ///
+  /// In en, this message translates to:
+  /// **'Restaurant? Log in to Business mode.'**
+  String get businessModeEntry;
+
+  /// No description provided for @businessModeBadge.
+  ///
+  /// In en, this message translates to:
+  /// **'BUSINESS MODE'**
+  String get businessModeBadge;
+
+  /// No description provided for @bizLoginTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Restaurant log in'**
+  String get bizLoginTitle;
+
+  /// No description provided for @bizLoginBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Use your restaurant\'s login email. We\'ll send a 6-digit code.'**
+  String get bizLoginBody;
+
+  /// No description provided for @fieldRestaurantEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Restaurant email'**
+  String get fieldRestaurantEmail;
+
+  /// No description provided for @bizAccountsNotePrefix.
+  ///
+  /// In en, this message translates to:
+  /// **'Restaurant accounts are set up by Save It. Contact '**
+  String get bizAccountsNotePrefix;
+
+  /// No description provided for @bizAccountsNoteSuffix.
+  ///
+  /// In en, this message translates to:
+  /// **' to join.'**
+  String get bizAccountsNoteSuffix;
+
+  /// No description provided for @bizAccountMissing.
+  ///
+  /// In en, this message translates to:
+  /// **'No restaurant account uses that email.'**
+  String get bizAccountMissing;
+
+  /// No description provided for @actionBackToCustomerApp.
+  ///
+  /// In en, this message translates to:
+  /// **'Back to the customer app'**
+  String get actionBackToCustomerApp;
+
+  /// No description provided for @termsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Restaurant terms'**
+  String get termsTitle;
+
+  /// No description provided for @termsIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'Please read and accept before using Business mode for {restaurant}.'**
+  String termsIntro(String restaurant);
+
+  /// No description provided for @termsDocTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Save It Restaurant Terms'**
+  String get termsDocTitle;
+
+  /// No description provided for @termsPending.
+  ///
+  /// In en, this message translates to:
+  /// **'Final legal text supplied by Arise Ltd.'**
+  String get termsPending;
+
+  /// No description provided for @termsAccept.
+  ///
+  /// In en, this message translates to:
+  /// **'I have read and accept the Restaurant Terms on behalf of {restaurant}'**
+  String termsAccept(String restaurant);
+
+  /// No description provided for @actionAcceptAndContinue.
+  ///
+  /// In en, this message translates to:
+  /// **'Accept and continue'**
+  String get actionAcceptAndContinue;
 }
 
 class _AppLocalizationsDelegate

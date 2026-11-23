@@ -7,6 +7,8 @@ import 'package:save_it/core/router/app_redirect.dart';
 import 'package:save_it/core/router/app_shell.dart';
 import 'package:save_it/core/router/route_placeholder.dart';
 import 'package:save_it/core/session/app_session_controller.dart';
+import 'package:save_it/features/business/presentation/business_login_screen.dart';
+import 'package:save_it/features/business/presentation/restaurant_terms_screen.dart';
 import 'package:save_it/features/auth/presentation/code_screen.dart';
 import 'package:save_it/features/auth/presentation/complete_profile_screen.dart';
 import 'package:save_it/features/auth/presentation/email_screen.dart';
@@ -126,17 +128,11 @@ List<RouteBase> buildAppRoutes({required bool isDev}) {
     ),
     GoRoute(
       path: '/business/login',
-      builder: (context, state) => RoutePlaceholder(
-        screenKey: const Key('business-login'),
-        title: _l10n(context).tabProfile,
-      ),
+      builder: (context, state) => const BusinessLoginScreen(),
     ),
     GoRoute(
       path: '/business/terms',
-      builder: (context, state) => RoutePlaceholder(
-        screenKey: const Key('business-terms'),
-        title: _l10n(context).tabProfile,
-      ),
+      builder: (context, state) => const RestaurantTermsScreen(),
     ),
     GoRoute(
       path: '/business/today',

@@ -67,7 +67,7 @@ RPCs raise errors with `raise exception using errcode = 'P0001', message = 'SIxx
 
 | Function | Arguments | Returns | Req |
 |---|---|---|---|
-| `accept_restaurant_terms` | — | — | BM-01 |
+| `accept_restaurant_terms` | — | Sets `restaurants.terms_accepted_at` for the caller. SI001 unless the caller is a restaurant with a row. A later call keeps the first time. | BM-01 |
 | `set_pickup_window` | `starts_at time, ends_at time` | the window. Errors SI010–SI012 | BM-02, SR-02 |
 | `today_summary` | — | `{window, live_listings, items_left, reserved, collected}` | B-03 |
 | `copy_yesterday_listings` | — | Draft listings created for today from the previous day's listings that had status live. Skips any already copied. SI013 while suspended. | BM-04 |

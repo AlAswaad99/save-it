@@ -75,6 +75,12 @@ class _GuestProfile extends StatelessWidget {
               SignInGate.show(context, returnTo: '/profile'),
             ),
           ),
+          const SizedBox(height: AppSpacing.md),
+          SaveItButton(
+            label: l10n.businessModeEntry,
+            variant: SaveItButtonVariant.text,
+            onPressed: () => context.push('/business/login'),
+          ),
         ],
       ),
     );
@@ -125,6 +131,14 @@ class _SignedInProfile extends ConsumerWidget {
                     ),
                   ),
                 ],
+              ),
+            ),
+            const SizedBox(height: AppSpacing.md),
+            SaveItCard(
+              child: _LinkRow(
+                icon: Icons.storefront_outlined,
+                label: l10n.businessModeEntry,
+                onTap: () => context.push('/business/login'),
               ),
             ),
           ],

@@ -28,7 +28,7 @@ class VerifiedEmail {
 }
 
 abstract class EmailAuth {
-  Future<void> sendCode(String email);
+  Future<void> sendCode(String email, {bool allowCreate = true});
 
   Future<VerifiedEmail> verifyCode({required String email, required String code});
 }
@@ -39,10 +39,13 @@ class SupabaseEmailAuth implements EmailAuth {
   final Ref _ref;
 
   @override
-  Future<void> sendCode(String email) async {
+  Future<void> sendCode(String email, {bool allowCreate = true}) async {
     final client = _client();
     try {
-      await client.auth.signInWithOtp(email: email);
+      await client.auth.signInWithOtp(
+        email: email,
+        shouldCreateUser: allowCreate,
+      );
     } on AuthException catch (error) {
       throw _failure(error.message);
     }
@@ -111,11 +114,13 @@ class FakeEmailAuth implements EmailAuth {
   AuthFailure? sendFailure;
   var sends = 0;
   String? lastEmail;
+  bool? lastAllowCreate;
 
   @override
-  Future<void> sendCode(String email) async {
+  Future<void> sendCode(String email, {bool allowCreate = true}) async {
     sends += 1;
     lastEmail = email;
+    lastAllowCreate = allowCreate;
     final failure = sendFailure;
     if (failure != null) {
       throw failure;

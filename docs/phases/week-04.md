@@ -19,7 +19,7 @@
 | [x] | T04.7 | Claude Code | Android pipeline `android.yml`: dev APK to Firebase App Distribution on merge to `main`; prod AAB signed with the upload key on tag | — | A merge puts a new dev build on your phone automatically |
 | [ ] | T04.8 | You | First prod AAB uploaded by hand to Play internal testing; Play API service account created for the pipeline | — | Play Console shows the internal release; service account has release access |
 | [ ] | T04.9 | You | Codemagic: connect the repo, App Store Connect API key, "Save It Dev" app record; run `ios-dev` to TestFlight | NF-01 | The iOS dev build is produced. On-device install waits until a phone is available |
-| [ ] | T04.10 | Claude Code | Business mode entry from Profile, restaurant login (no self sign-up, role check), terms acceptance (B-01, B-02) | BM-01 | A customer email cannot enter Business mode; first login forces the terms |
+| [x] | T04.10 | Claude Code | Business mode entry from Profile, restaurant login (no self sign-up, role check), terms acceptance (B-01, B-02) | BM-01 | A customer email cannot enter Business mode; first login forces the terms |
 
 ## Friday update to Miss Reid
 

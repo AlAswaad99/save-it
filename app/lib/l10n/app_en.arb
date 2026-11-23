@@ -245,5 +245,26 @@
   "editProfileTitle": "Edit profile",
   "emailLocked": "Your email is your login and can't be changed.",
   "actionSaveChanges": "Save changes",
-  "support": "Support"
+  "support": "Support",
+  "businessModeEntry": "Restaurant? Log in to Business mode.",
+  "businessModeBadge": "BUSINESS MODE",
+  "bizLoginTitle": "Restaurant log in",
+  "bizLoginBody": "Use your restaurant's login email. We'll send a 6-digit code.",
+  "fieldRestaurantEmail": "Restaurant email",
+  "bizAccountsNotePrefix": "Restaurant accounts are set up by Save It. Contact ",
+  "bizAccountsNoteSuffix": " to join.",
+  "bizAccountMissing": "No restaurant account uses that email.",
+  "actionBackToCustomerApp": "Back to the customer app",
+  "termsTitle": "Restaurant terms",
+  "termsIntro": "Please read and accept before using Business mode for {restaurant}.",
+  "@termsIntro": {
+    "placeholders": {"restaurant": {"type": "String"}}
+  },
+  "termsDocTitle": "Save It Restaurant Terms",
+  "termsPending": "Final legal text supplied by Arise Ltd.",
+  "termsAccept": "I have read and accept the Restaurant Terms on behalf of {restaurant}",
+  "@termsAccept": {
+    "placeholders": {"restaurant": {"type": "String"}}
+  },
+  "actionAcceptAndContinue": "Accept and continue"
 }

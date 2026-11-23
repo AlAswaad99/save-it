@@ -443,4 +443,55 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get support => 'Support';
+
+  @override
+  String get businessModeEntry => 'Restaurant? Log in to Business mode.';
+
+  @override
+  String get businessModeBadge => 'BUSINESS MODE';
+
+  @override
+  String get bizLoginTitle => 'Restaurant log in';
+
+  @override
+  String get bizLoginBody =>
+      'Use your restaurant\'s login email. We\'ll send a 6-digit code.';
+
+  @override
+  String get fieldRestaurantEmail => 'Restaurant email';
+
+  @override
+  String get bizAccountsNotePrefix =>
+      'Restaurant accounts are set up by Save It. Contact ';
+
+  @override
+  String get bizAccountsNoteSuffix => ' to join.';
+
+  @override
+  String get bizAccountMissing => 'No restaurant account uses that email.';
+
+  @override
+  String get actionBackToCustomerApp => 'Back to the customer app';
+
+  @override
+  String get termsTitle => 'Restaurant terms';
+
+  @override
+  String termsIntro(String restaurant) {
+    return 'Please read and accept before using Business mode for $restaurant.';
+  }
+
+  @override
+  String get termsDocTitle => 'Save It Restaurant Terms';
+
+  @override
+  String get termsPending => 'Final legal text supplied by Arise Ltd.';
+
+  @override
+  String termsAccept(String restaurant) {
+    return 'I have read and accept the Restaurant Terms on behalf of $restaurant';
+  }
+
+  @override
+  String get actionAcceptAndContinue => 'Accept and continue';
 }
