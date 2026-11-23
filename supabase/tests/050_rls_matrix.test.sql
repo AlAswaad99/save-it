@@ -1,10 +1,12 @@
 begin;
 select plan(81);
 
+-- Invoker, not security definer. Postgres refuses SET ROLE inside a
+-- security-definer function. The test runner is a superuser, so this
+-- function may switch to anon or authenticated and then back.
 create or replace function public.rls_exec(p_role text, p_uid uuid, p_sql text)
 returns text
 language plpgsql
-security definer
 set search_path = public
 as $$
 declare
@@ -26,7 +28,7 @@ begin
     when others then
       out := sqlstate;
   end;
-  execute 'reset role';
+  reset role;
   return out;
 end;
 $$;
