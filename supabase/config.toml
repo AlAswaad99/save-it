@@ -24,6 +24,11 @@ max_client_conn = 100
 [db.migrations]
 enabled = true
 
+# supabase/seed.sql is sample data for the hosted dev project. Run it by hand.
+# CI resets a temporary database, and loading the sample rows changes the RLS counts.
+[db.seed]
+enabled = false
+
 [realtime]
 enabled = true
 
