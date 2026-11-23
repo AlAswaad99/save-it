@@ -537,6 +537,84 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'An admin cannot reset or deactivate their own account.'**
   String get errorSi070;
+
+  /// C-29 first slide title.
+  ///
+  /// In en, this message translates to:
+  /// **'Save food, Save money!'**
+  String get walkthrough1Title;
+
+  /// C-29 first slide body.
+  ///
+  /// In en, this message translates to:
+  /// **'Join many others in reducing food waste as food venues around Abu Dhabi share their surplus food every evening at a discounted rate! Why let good food go to waste?'**
+  String get walkthrough1Body;
+
+  /// C-29 second slide title.
+  ///
+  /// In en, this message translates to:
+  /// **'Make your reservation'**
+  String get walkthrough2Title;
+
+  /// C-29 second slide body.
+  ///
+  /// In en, this message translates to:
+  /// **'Select what you want and get a unique pick up code, in just a few taps!'**
+  String get walkthrough2Body;
+
+  /// C-29 third slide title.
+  ///
+  /// In en, this message translates to:
+  /// **'Collect and pay at location'**
+  String get walkthrough3Title;
+
+  /// C-29 third slide body.
+  ///
+  /// In en, this message translates to:
+  /// **'Simply go to your selected food venue, show your unique code between the pick up time & collect your order!'**
+  String get walkthrough3Body;
+
+  /// No description provided for @actionSkip.
+  ///
+  /// In en, this message translates to:
+  /// **'Skip'**
+  String get actionSkip;
+
+  /// No description provided for @actionNext.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get actionNext;
+
+  /// No description provided for @actionGetStarted.
+  ///
+  /// In en, this message translates to:
+  /// **'Get started'**
+  String get actionGetStarted;
+
+  /// C-02 location sheet title.
+  ///
+  /// In en, this message translates to:
+  /// **'See food venues near you.'**
+  String get locationSheetTitle;
+
+  /// C-02 location sheet body.
+  ///
+  /// In en, this message translates to:
+  /// **'Allow location to see all the food venues with discounts available today!'**
+  String get locationSheetBody;
+
+  /// No description provided for @actionAllowLocation.
+  ///
+  /// In en, this message translates to:
+  /// **'Allow location'**
+  String get actionAllowLocation;
+
+  /// No description provided for @actionChooseAreaInstead.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose area instead'**
+  String get actionChooseAreaInstead;
 }
 
 class _AppLocalizationsDelegate

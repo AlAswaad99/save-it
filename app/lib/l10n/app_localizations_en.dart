@@ -254,4 +254,47 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get errorSi070 =>
       'An admin cannot reset or deactivate their own account.';
+
+  @override
+  String get walkthrough1Title => 'Save food, Save money!';
+
+  @override
+  String get walkthrough1Body =>
+      'Join many others in reducing food waste as food venues around Abu Dhabi share their surplus food every evening at a discounted rate! Why let good food go to waste?';
+
+  @override
+  String get walkthrough2Title => 'Make your reservation';
+
+  @override
+  String get walkthrough2Body =>
+      'Select what you want and get a unique pick up code, in just a few taps!';
+
+  @override
+  String get walkthrough3Title => 'Collect and pay at location';
+
+  @override
+  String get walkthrough3Body =>
+      'Simply go to your selected food venue, show your unique code between the pick up time & collect your order!';
+
+  @override
+  String get actionSkip => 'Skip';
+
+  @override
+  String get actionNext => 'Next';
+
+  @override
+  String get actionGetStarted => 'Get started';
+
+  @override
+  String get locationSheetTitle => 'See food venues near you.';
+
+  @override
+  String get locationSheetBody =>
+      'Allow location to see all the food venues with discounts available today!';
+
+  @override
+  String get actionAllowLocation => 'Allow location';
+
+  @override
+  String get actionChooseAreaInstead => 'Choose area instead';
 }

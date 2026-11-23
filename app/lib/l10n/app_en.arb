@@ -156,5 +156,42 @@
   },
   "errorSi051": "Add your name, phone, and acceptance of the terms to continue.",
   "errorSi060": "This account cannot be deleted while an order is still reserved.",
-  "errorSi070": "An admin cannot reset or deactivate their own account."
+  "errorSi070": "An admin cannot reset or deactivate their own account.",
+  "walkthrough1Title": "Save food, Save money!",
+  "@walkthrough1Title": {
+    "description": "C-29 first slide title."
+  },
+  "walkthrough1Body": "Join many others in reducing food waste as food venues around Abu Dhabi share their surplus food every evening at a discounted rate! Why let good food go to waste?",
+  "@walkthrough1Body": {
+    "description": "C-29 first slide body."
+  },
+  "walkthrough2Title": "Make your reservation",
+  "@walkthrough2Title": {
+    "description": "C-29 second slide title."
+  },
+  "walkthrough2Body": "Select what you want and get a unique pick up code, in just a few taps!",
+  "@walkthrough2Body": {
+    "description": "C-29 second slide body."
+  },
+  "walkthrough3Title": "Collect and pay at location",
+  "@walkthrough3Title": {
+    "description": "C-29 third slide title."
+  },
+  "walkthrough3Body": "Simply go to your selected food venue, show your unique code between the pick up time & collect your order!",
+  "@walkthrough3Body": {
+    "description": "C-29 third slide body."
+  },
+  "actionSkip": "Skip",
+  "actionNext": "Next",
+  "actionGetStarted": "Get started",
+  "locationSheetTitle": "See food venues near you.",
+  "@locationSheetTitle": {
+    "description": "C-02 location sheet title."
+  },
+  "locationSheetBody": "Allow location to see all the food venues with discounts available today!",
+  "@locationSheetBody": {
+    "description": "C-02 location sheet body."
+  },
+  "actionAllowLocation": "Allow location",
+  "actionChooseAreaInstead": "Choose area instead"
 }

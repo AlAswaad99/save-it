@@ -3,14 +3,18 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:save_it/core/session/app_session.dart';
 import 'package:save_it/core/session/app_session_controller.dart';
+import 'package:save_it/features/onboarding/data/walkthrough_store.dart';
 import 'package:save_it/features/onboarding/presentation/splash_screen.dart';
 import 'package:save_it/main.dart';
 
 void main() {
   testWidgets('guest shell opens on Explore after the splash', (tester) async {
-    await tester.pumpWidget(const ProviderScope(child: SaveItApp()));
+    await tester.pumpWidget(
+      ProviderScope(overrides: [_seenWalkthrough], child: const SaveItApp()),
+    );
     expect(find.byKey(SplashScreen.screenKey), findsOneWidget);
 
+    await tester.pump();
     await tester.pump(SplashScreen.hold);
     await tester.pump();
 
@@ -26,6 +30,7 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
+          _seenWalkthrough,
           appSessionProvider.overrideWith(
             () => _FixedSession(
               const AppSession.restaurant(restaurantTermsAccepted: false),
@@ -36,6 +41,7 @@ void main() {
       ),
     );
 
+    await tester.pump();
     await tester.pump(SplashScreen.hold);
     await tester.pump();
 
@@ -43,6 +49,10 @@ void main() {
     expect(find.text('Explore'), findsNothing);
   });
 }
+
+final _seenWalkthrough = walkthroughStoreProvider.overrideWithValue(
+  MemoryWalkthroughStore(seen: true),
+);
 
 class _FixedSession extends AppSessionController {
   _FixedSession(this.initial);

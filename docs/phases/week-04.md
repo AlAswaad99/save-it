@@ -11,7 +11,7 @@
 | Done | ID | Who | Task | SRS | Done when |
 |---|---|---|---|---|---|
 | [x] | T04.1 | Claude Code | App shell: bottom tabs, router with guest/customer/restaurant redirects, splash (C-01) | CA-01 | Redirect rules from `04-mobile-app.md` §4 covered by router tests |
-| [ ] | T04.2 | Claude Code | Welcome walkthrough, 3 slides, first launch only, Skip and Get started (C-29), using the copy and the three illustrations in `04-mobile-app.md` | CA-19 | Shown once; the three supplied sentences and images are on the slides; Skip or Get started opens the location sheet |
+| [x] | T04.2 | Claude Code | Welcome walkthrough, 3 slides, first launch only, Skip and Get started (C-29), using the copy and the three illustrations in `04-mobile-app.md` | CA-19 | Shown once; the three supplied sentences and images are on the slides; Skip or Get started opens the location sheet |
 | [ ] | T04.3 | Claude Code | Location sheet over Explore, GPS with timeout, area picker, saved origin (C-02, C-03) | CA-02 | Denying location leads to the area picker; the origin is kept after restart |
 | [ ] | T04.4 | Claude Code | Email-first sign-in: sign-in gate (C-12), Continue with email (C-14), code entry with auto-submit and resend limit (C-15), Complete your profile for new emails (C-13) using `complete_profile`; return to where the customer started | CA-01, CA-03, CA-04 | New and returning emails follow the right path; wrong, expired and rate-limited codes show the right message |
 | [ ] | T04.5 | Claude Code | Session persistence, logout (clears device token), guest prompts on Orders and Profile (C-20 guest, C-22 guest) | CA-01, CA-04 | After logout the app is in the guest state and the basket is kept |
