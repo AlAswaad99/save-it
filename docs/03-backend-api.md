@@ -95,7 +95,7 @@ Every admin RPC starts with `if not is_admin() then raise 'SI001'` and writes to
 
 | Function | Called by | Purpose | Req |
 |---|---|---|---|
-| `auth-send-email` | Supabase Auth (Send Email Hook) | Sends the login-code email through Resend. Enforces 3 codes per email per hour (SI050). Verifies the hook signature. | CA-04, BM-01 |
+| `auth-send-email` | Supabase Auth (Send Email Hook) | Sends the login-code email through Resend. Enforces 3 codes per email per hour (SI050). Verifies the hook signature. A limit or failure is returned as HTTP 200 with `{error: {http_code, message}}`, which is the only shape Auth will pass on to the app. | CA-04, BM-01 |
 | `dispatch` | pg_cron through pg_net | Drains `outbox`: FCM HTTP v1 for push (removes invalid tokens), Resend for email. Retries with backoff, up to 5 attempts. | CA-15, CA-16, BM-07 |
 | `admin-create-restaurant` | Admin web | Creates the auth user (email, role `restaurant`), the profile, the restaurant row and its opening hours, all or nothing | AD-02 |
 | `admin-create-admin` | Admin web | Creates an admin user with a temporary password. Deactivating an admin bans the auth user and sets `profiles.is_active = false`. | AD-01 |
