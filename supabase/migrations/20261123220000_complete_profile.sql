@@ -72,5 +72,5 @@ $$;
 comment on function public.complete_profile(text, text, boolean) is
   'Fills name, phone, and terms for the signed-in customer and queues welcome once.';
 
-revoke all on function public.complete_profile(text, text, boolean) from public;
+revoke all on function public.complete_profile(text, text, boolean) from public, anon;
 grant execute on function public.complete_profile(text, text, boolean) to authenticated;
