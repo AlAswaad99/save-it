@@ -7,8 +7,8 @@ These pipelines are the developer's own tooling. They let a Windows PC with an A
 | Checks (app, admin, database tests) | GitHub Actions `ci.yml` | Every PR, and every push to `dev`, `prod`, or `main` | — |
 | Promotion source | GitHub Actions `branch-flow.yml` | Every PR into `dev`, `prod`, or `main` | `dev` accepts a phase branch. `prod` accepts `dev`. `main` accepts `prod` |
 | Database migrations and Edge Functions | GitHub Actions `deploy-backend.yml` | Merge into `dev` (changes in `supabase/`) → dev Supabase. Manual run with confirmation → prod | Supabase dev / prod |
-| Android dev build | GitHub Actions `android.yml` | Merge to `main` (changes in `app/`) | Firebase App Distribution |
-| Android release build | GitHub Actions `android.yml` | Tag `v*` | Google Play internal testing |
+| Android dev build | GitHub Actions `android.yml` | Merge to `dev` or `main` (changes in `app/` or `android.yml`) | Firebase App Distribution |
+| Android release build | GitHub Actions `android.yml` | Merge to `prod` builds the signed app bundle. Tag `v*` also uploads it | Google Play internal testing on the tag |
 | iOS dev build | Codemagic `ios-dev` | Manual start | TestFlight "Save It Dev" |
 | iOS release build | Codemagic `ios-release` | Tag `v*` | TestFlight on the real app |
 | Admin web | Vercel GitHub integration | PR → preview; `dev` → dev admin; `main` → production | Vercel |
@@ -182,8 +182,8 @@ So the iOS project stays as Flutter creates it, with these rules:
 name: Android
 on:
   push:
-    branches: [main]
-    paths: ['app/**']
+    branches: [dev, prod, main]
+    paths: ['app/**', '.github/workflows/android.yml']
     tags: ['v*']
   workflow_dispatch:
 
@@ -215,17 +215,17 @@ jobs:
           keyAlias=${{ secrets.ANDROID_KEY_ALIAS }}
           keyPassword=${{ secrets.ANDROID_KEY_PASSWORD }}
           EOF
-      - name: Require the upload key for a release tag
-        if: github.ref_type == 'tag' && env.KEYSTORE_B64 == ''
+      - name: Require the upload key for a prod build
+        if: (github.ref == 'refs/heads/prod' || github.ref_type == 'tag') && env.KEYSTORE_B64 == ''
         run: echo "ANDROID_KEYSTORE_BASE64 is required to sign a prod app bundle" && exit 1
       - run: flutter pub get && dart run build_runner build --delete-conflicting-outputs
 
-      # Dev build on every merge to main. Without a keystore this APK is debug-signed.
+      # Dev APK on dev and main. Without a keystore this APK is debug-signed.
       - name: Build dev APK
-        if: github.ref_type != 'tag'
+        if: github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/main'
         run: flutter build apk --flavor dev --dart-define-from-file=env/dev.json --build-number=${{ github.run_number }}
       - name: Send to Firebase App Distribution
-        if: github.ref_type != 'tag'
+        if: github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/main'
         uses: wzieba/Firebase-Distribution-Github-Action@v1
         with:
           appId: ${{ secrets.FIREBASE_ANDROID_DEV_APP_ID }}
@@ -233,9 +233,9 @@ jobs:
           groups: testers
           file: app/build/app/outputs/flutter-apk/app-dev-release.apk
 
-      # Release build on tags, signed with the upload key.
+      # Signed prod bundle on prod. Play internal testing stays on a version tag.
       - name: Build prod app bundle
-        if: github.ref_type == 'tag'
+        if: github.ref == 'refs/heads/prod' || github.ref_type == 'tag'
         run: flutter build appbundle --flavor prod --dart-define-from-file=env/prod.json
       - name: Upload to Play internal testing
         if: github.ref_type == 'tag'
@@ -248,7 +248,7 @@ jobs:
           status: completed
 ```
 
-- **Signing setup:** `app/android/app/build.gradle.kts` reads `app/android/key.properties` for the release signing config. `key.properties` and `*.jks` are git-ignored. The prod application id is `org.arisehub.saveit` (dev is `org.arisehub.saveit.dev`). A dev APK built before the upload keystore secret exists is signed with the debug key. A tag build stops if `ANDROID_KEYSTORE_BASE64` is empty.
+- **Signing setup:** `app/android/app/build.gradle.kts` reads `app/android/key.properties` for the release signing config. `key.properties` and `*.jks` are git-ignored. The prod application id is `org.arisehub.saveit` (dev is `org.arisehub.saveit.dev`). A dev APK built before the upload keystore secret exists is signed with the debug key. A prod-branch build or a tag stops if `ANDROID_KEYSTORE_BASE64` is empty. Play internal testing is uploaded only from a `v*` tag.
 - **First upload:** the very first prod AAB is uploaded by hand in Play Console (T04.8). After that the pipeline can publish.
 - **Version numbers:** dev builds use the run number as the build number. Release builds use `pubspec.yaml`.
 
