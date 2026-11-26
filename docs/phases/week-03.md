@@ -19,6 +19,8 @@
 | [x] | T03.7 | Claude Code | Seed script for dev (`supabase/seed.sql`, run manually): areas, 8 sample restaurants with hours and listings, test users for every role | — | Dev has a usable dataset; script can be re-run safely |
 | [x] | T03.8 | Claude Code | Flutter data layer: Supabase client per flavor, RPC helper, SIxxx error mapping, base repository, freezed models for the core tables | — | Unit tests for the error mapping and model JSON pass |
 
+T03.2 is closed for this week. The indexes and the structural checks are in place. The minimum-discount trigger (SI020, SI021, and a listing date of today) is T05.6. The pickup-window rules (today, inside opening hours, and inside 16:00–23:30, SI010–SI012) are T05.1. Week 4 does not add them.
+
 ## Friday update to Miss Reid
 
 Backend foundation built: database, security rules and login emails working.
