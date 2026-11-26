@@ -15,6 +15,7 @@ import 'package:save_it/core/widgets/save_it_loading_state.dart';
 import 'package:save_it/core/widgets/save_it_logo.dart';
 import 'package:save_it/core/widgets/save_it_offline_banner.dart';
 import 'package:save_it/core/widgets/save_it_text_field.dart';
+import 'package:save_it/features/onboarding/presentation/splash_screen.dart';
 import 'package:save_it/l10n/app_localizations.dart';
 import 'package:save_it/main.dart';
 
@@ -84,6 +85,7 @@ void main() {
 
   testWidgets('dev profile opens the gallery', (tester) async {
     await tester.pumpWidget(const ProviderScope(child: SaveItApp()));
+    await _leaveSplash(tester);
     await tester.tap(find.text('Profile'));
     await tester.pumpAndSettle();
     await tester.tap(find.text('Widget gallery'));
@@ -104,6 +106,7 @@ void main() {
         child: const SaveItApp(),
       ),
     );
+    await _leaveSplash(tester);
     await tester.tap(find.text('Profile'));
     await tester.pumpAndSettle();
     expect(find.text('Widget gallery'), findsNothing);
@@ -130,6 +133,11 @@ Future<void> _pumpGallery(WidgetTester tester, {double textScale = 1}) async {
       home: const WidgetGalleryScreen(),
     ),
   );
+}
+
+Future<void> _leaveSplash(WidgetTester tester) async {
+  await tester.pump(SplashScreen.hold);
+  await tester.pumpAndSettle();
 }
 
 bool _hasGallery(GoRouter router) {
