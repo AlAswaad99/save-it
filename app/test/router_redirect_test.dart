@@ -9,17 +9,26 @@ void main() {
   const restaurant = AppSession.restaurant(restaurantTermsAccepted: true);
   const pendingTerms = AppSession.restaurant(restaurantTermsAccepted: false);
 
-  String? go(String location, AppSession session) {
-    return resolveAppRedirect(Uri.parse(location), session);
+  String? go(
+    String location,
+    AppSession session, {
+    bool walkthroughSeen = true,
+  }) {
+    return resolveAppRedirect(
+      Uri.parse(location),
+      session,
+      walkthroughSeen: walkthroughSeen,
+    );
   }
 
   test('splash stays so C-01 can show, then home follows the role', () {
     expect(go('/splash', guest), isNull);
-    expect(homeFor(guest), '/explore');
-    expect(homeFor(customer), '/explore');
-    expect(homeFor(incomplete), '/explore');
-    expect(homeFor(restaurant), '/business/today');
-    expect(homeFor(pendingTerms), '/business/terms');
+    expect(homeFor(guest, walkthroughSeen: true), '/explore');
+    expect(homeFor(customer, walkthroughSeen: true), '/explore');
+    expect(homeFor(incomplete, walkthroughSeen: true), '/explore');
+    expect(homeFor(restaurant, walkthroughSeen: false), '/business/today');
+    expect(homeFor(pendingTerms, walkthroughSeen: false), '/business/terms');
+    expect(homeFor(guest, walkthroughSeen: false), '/welcome');
   });
 
   test('a restaurant is kept inside business mode', () {
@@ -95,6 +104,13 @@ void main() {
   test('a guest who opens a business screen is sent to restaurant login', () {
     expect(go('/business/today', guest), '/business/login');
     expect(go('/business/terms', guest), '/business/login');
+  });
+
+  test('the walkthrough is first launch only', () {
+    expect(go('/explore', guest, walkthroughSeen: false), '/welcome');
+    expect(go('/welcome', guest, walkthroughSeen: false), isNull);
+    expect(go('/welcome', guest), '/explore');
+    expect(go('/explore', restaurant, walkthroughSeen: false), '/business/today');
   });
 
   test('an external return path is ignored', () {

@@ -8,6 +8,10 @@
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
 	<string>Save It</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>mailto</string>
+	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Save It uses your location to show surplus food near you.</string>
 	<key>NSCameraUsageDescription</key>

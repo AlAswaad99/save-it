@@ -1,11 +1,14 @@
 import 'package:save_it/core/session/app_session.dart';
 
 /// Where the splash screen goes once it has been seen.
-String homeFor(AppSession session) {
+String homeFor(AppSession session, {required bool walkthroughSeen}) {
   if (session.role == AppRole.restaurant) {
     return session.restaurantTermsAccepted
         ? '/business/today'
         : '/business/terms';
+  }
+  if (!walkthroughSeen) {
+    return '/welcome';
   }
   return '/explore';
 }
@@ -16,7 +19,11 @@ String homeFor(AppSession session) {
 /// entry screen, not Business mode. A customer session is sent away from
 /// every other `/business` route. A restaurant session is sent into
 /// `/business`, and to `/business/terms` until the terms are accepted.
-String? resolveAppRedirect(Uri uri, AppSession session) {
+String? resolveAppRedirect(
+  Uri uri,
+  AppSession session, {
+  required bool walkthroughSeen,
+}) {
   final path = _path(uri);
   if (path == '/splash') {
     return null;
@@ -24,6 +31,13 @@ String? resolveAppRedirect(Uri uri, AppSession session) {
 
   if (session.role == AppRole.restaurant) {
     return _restaurantRedirect(path, session.restaurantTermsAccepted);
+  }
+
+  if (!walkthroughSeen && path != '/welcome') {
+    return '/welcome';
+  }
+  if (walkthroughSeen && path == '/welcome') {
+    return '/explore';
   }
 
   if (_isBusinessMode(path)) {

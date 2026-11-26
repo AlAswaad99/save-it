@@ -49,7 +49,7 @@ RPCs raise errors with `raise exception using errcode = 'P0001', message = 'SIxx
 
 | Function | Arguments | Returns | Req |
 |---|---|---|---|
-| `complete_profile` | `full_name, phone, accept_terms boolean` | Fills the profile for a new customer (C-13) and queues the `welcome` email. Fails unless `accept_terms` is true. | CA-03 |
+| `complete_profile` | `full_name, phone, accept_terms boolean` | Fills the profile for a new customer (C-13) and queues the `welcome` email. Fails with SI051 unless `accept_terms` is true and the name and E.164 phone are present. A later call updates the name and phone and does not queue the email again. | CA-03 |
 | `reserve_order` | `restaurant_id, items jsonb [{listing_id, quantity}]` | `{order_id, code, total, window_start, window_end}`. All or nothing. Errors SI002–SI007. | CA-11, SR-06, SR-07 |
 | `my_orders` | `scope text ('active'\|'past')` | Orders with the restaurant name, address, lat/lng, window, items, status, cancel reason | CA-14 |
 | `my_status` | — | `{status, noshow_count, warn_at, suspend_at}`, used for the C-25 and C-26 banners | CA-17, SR-04 |

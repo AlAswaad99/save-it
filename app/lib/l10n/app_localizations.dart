@@ -537,6 +537,360 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'An admin cannot reset or deactivate their own account.'**
   String get errorSi070;
+
+  /// C-29 first slide title.
+  ///
+  /// In en, this message translates to:
+  /// **'Save food, Save money!'**
+  String get walkthrough1Title;
+
+  /// C-29 first slide body.
+  ///
+  /// In en, this message translates to:
+  /// **'Join many others in reducing food waste as food venues around Abu Dhabi share their surplus food every evening at a discounted rate! Why let good food go to waste?'**
+  String get walkthrough1Body;
+
+  /// C-29 second slide title.
+  ///
+  /// In en, this message translates to:
+  /// **'Make your reservation'**
+  String get walkthrough2Title;
+
+  /// C-29 second slide body.
+  ///
+  /// In en, this message translates to:
+  /// **'Select what you want and get a unique pick up code, in just a few taps!'**
+  String get walkthrough2Body;
+
+  /// C-29 third slide title.
+  ///
+  /// In en, this message translates to:
+  /// **'Collect and pay at location'**
+  String get walkthrough3Title;
+
+  /// C-29 third slide body.
+  ///
+  /// In en, this message translates to:
+  /// **'Simply go to your selected food venue, show your unique code between the pick up time & collect your order!'**
+  String get walkthrough3Body;
+
+  /// No description provided for @actionSkip.
+  ///
+  /// In en, this message translates to:
+  /// **'Skip'**
+  String get actionSkip;
+
+  /// No description provided for @actionNext.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get actionNext;
+
+  /// No description provided for @actionGetStarted.
+  ///
+  /// In en, this message translates to:
+  /// **'Get started'**
+  String get actionGetStarted;
+
+  /// C-02 location sheet title.
+  ///
+  /// In en, this message translates to:
+  /// **'See food venues near you.'**
+  String get locationSheetTitle;
+
+  /// C-02 location sheet body.
+  ///
+  /// In en, this message translates to:
+  /// **'Allow location to see all the food venues with discounts available today!'**
+  String get locationSheetBody;
+
+  /// No description provided for @actionAllowLocation.
+  ///
+  /// In en, this message translates to:
+  /// **'Allow location'**
+  String get actionAllowLocation;
+
+  /// No description provided for @actionChooseAreaInstead.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose area instead'**
+  String get actionChooseAreaInstead;
+
+  /// No description provided for @chooseAreaTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose your area'**
+  String get chooseAreaTitle;
+
+  /// No description provided for @searchAreasHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Search areas'**
+  String get searchAreasHint;
+
+  /// No description provided for @areasHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Abu Dhabi areas'**
+  String get areasHeader;
+
+  /// No description provided for @actionShowRestaurants.
+  ///
+  /// In en, this message translates to:
+  /// **'Show restaurants'**
+  String get actionShowRestaurants;
+
+  /// No description provided for @currentLocation.
+  ///
+  /// In en, this message translates to:
+  /// **'Current location'**
+  String get currentLocation;
+
+  /// No description provided for @areasLoadError.
+  ///
+  /// In en, this message translates to:
+  /// **'The area list could not be loaded.'**
+  String get areasLoadError;
+
+  /// No description provided for @actionContinue.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue'**
+  String get actionContinue;
+
+  /// No description provided for @actionContinueWithEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue with email'**
+  String get actionContinueWithEmail;
+
+  /// No description provided for @actionSendCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Send code'**
+  String get actionSendCode;
+
+  /// No description provided for @actionResendCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Resend code'**
+  String get actionResendCode;
+
+  /// No description provided for @signUpGateTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Log in or sign up to reserve.'**
+  String get signUpGateTitle;
+
+  /// No description provided for @signUpGateBody.
+  ///
+  /// In en, this message translates to:
+  /// **'You can keep browsing as a guest. Enter your email to reserve; there\'s no password.'**
+  String get signUpGateBody;
+
+  /// No description provided for @emailAppBar.
+  ///
+  /// In en, this message translates to:
+  /// **'Log in or sign up'**
+  String get emailAppBar;
+
+  /// No description provided for @emailHeading.
+  ///
+  /// In en, this message translates to:
+  /// **'What\'s your email?'**
+  String get emailHeading;
+
+  /// No description provided for @emailBody.
+  ///
+  /// In en, this message translates to:
+  /// **'We\'ll send a 6-digit code. New to Save It? You\'ll add your details next.'**
+  String get emailBody;
+
+  /// No description provided for @fieldEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get fieldEmail;
+
+  /// No description provided for @codeAppBar.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter code'**
+  String get codeAppBar;
+
+  /// No description provided for @codeHeading.
+  ///
+  /// In en, this message translates to:
+  /// **'Check your email.'**
+  String get codeHeading;
+
+  /// No description provided for @codeSentTo.
+  ///
+  /// In en, this message translates to:
+  /// **'Code sent to {maskedEmail}.'**
+  String codeSentTo(String maskedEmail);
+
+  /// No description provided for @codeDidntGetIt.
+  ///
+  /// In en, this message translates to:
+  /// **'Didn\'t get it?'**
+  String get codeDidntGetIt;
+
+  /// No description provided for @codeErrorTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Incorrect or expired code'**
+  String get codeErrorTitle;
+
+  /// No description provided for @codeErrorBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Check the code or request a new one.'**
+  String get codeErrorBody;
+
+  /// No description provided for @codeResendWait.
+  ///
+  /// In en, this message translates to:
+  /// **'Try again in {minutes} min'**
+  String codeResendWait(int minutes);
+
+  /// No description provided for @codeResendLimit.
+  ///
+  /// In en, this message translates to:
+  /// **'You can request up to 3 codes per hour.'**
+  String get codeResendLimit;
+
+  /// No description provided for @profileSetupAppBar.
+  ///
+  /// In en, this message translates to:
+  /// **'Create your account'**
+  String get profileSetupAppBar;
+
+  /// No description provided for @profileSetupHeading.
+  ///
+  /// In en, this message translates to:
+  /// **'Almost done.'**
+  String get profileSetupHeading;
+
+  /// No description provided for @profileSetupBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Tell us who\'s collecting the food.'**
+  String get profileSetupBody;
+
+  /// No description provided for @verified.
+  ///
+  /// In en, this message translates to:
+  /// **'Verified'**
+  String get verified;
+
+  /// No description provided for @fieldFullName.
+  ///
+  /// In en, this message translates to:
+  /// **'Full name'**
+  String get fieldFullName;
+
+  /// No description provided for @fieldPhone.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone'**
+  String get fieldPhone;
+
+  /// No description provided for @phonePrefix.
+  ///
+  /// In en, this message translates to:
+  /// **'+971'**
+  String get phonePrefix;
+
+  /// No description provided for @phoneInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a valid phone number.'**
+  String get phoneInvalid;
+
+  /// No description provided for @termsAgreePrefix.
+  ///
+  /// In en, this message translates to:
+  /// **'I agree to the'**
+  String get termsAgreePrefix;
+
+  /// No description provided for @termsAgreeJoin.
+  ///
+  /// In en, this message translates to:
+  /// **'and'**
+  String get termsAgreeJoin;
+
+  /// No description provided for @termsLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Terms and Conditions'**
+  String get termsLink;
+
+  /// No description provided for @privacyLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy Policy'**
+  String get privacyLink;
+
+  /// No description provided for @guestTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'You\'re browsing as a guest.'**
+  String get guestTitle;
+
+  /// No description provided for @guestBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Log in or sign up to reserve food and see your orders.'**
+  String get guestBody;
+
+  /// No description provided for @guestOrdersTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Log in or sign up to see your orders'**
+  String get guestOrdersTitle;
+
+  /// No description provided for @guestOrdersBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Your reservations and pickup passes appear here.'**
+  String get guestOrdersBody;
+
+  /// No description provided for @actionLogOut.
+  ///
+  /// In en, this message translates to:
+  /// **'Log out'**
+  String get actionLogOut;
+
+  /// No description provided for @actionEdit.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit'**
+  String get actionEdit;
+
+  /// No description provided for @editProfileTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit profile'**
+  String get editProfileTitle;
+
+  /// No description provided for @emailLocked.
+  ///
+  /// In en, this message translates to:
+  /// **'Your email is your login and can\'t be changed.'**
+  String get emailLocked;
+
+  /// No description provided for @actionSaveChanges.
+  ///
+  /// In en, this message translates to:
+  /// **'Save changes'**
+  String get actionSaveChanges;
+
+  /// No description provided for @support.
+  ///
+  /// In en, this message translates to:
+  /// **'Support'**
+  String get support;
 }
 
 class _AppLocalizationsDelegate

@@ -156,5 +156,94 @@
   },
   "errorSi051": "Add your name, phone, and acceptance of the terms to continue.",
   "errorSi060": "This account cannot be deleted while an order is still reserved.",
-  "errorSi070": "An admin cannot reset or deactivate their own account."
+  "errorSi070": "An admin cannot reset or deactivate their own account.",
+  "walkthrough1Title": "Save food, Save money!",
+  "@walkthrough1Title": {
+    "description": "C-29 first slide title."
+  },
+  "walkthrough1Body": "Join many others in reducing food waste as food venues around Abu Dhabi share their surplus food every evening at a discounted rate! Why let good food go to waste?",
+  "@walkthrough1Body": {
+    "description": "C-29 first slide body."
+  },
+  "walkthrough2Title": "Make your reservation",
+  "@walkthrough2Title": {
+    "description": "C-29 second slide title."
+  },
+  "walkthrough2Body": "Select what you want and get a unique pick up code, in just a few taps!",
+  "@walkthrough2Body": {
+    "description": "C-29 second slide body."
+  },
+  "walkthrough3Title": "Collect and pay at location",
+  "@walkthrough3Title": {
+    "description": "C-29 third slide title."
+  },
+  "walkthrough3Body": "Simply go to your selected food venue, show your unique code between the pick up time & collect your order!",
+  "@walkthrough3Body": {
+    "description": "C-29 third slide body."
+  },
+  "actionSkip": "Skip",
+  "actionNext": "Next",
+  "actionGetStarted": "Get started",
+  "locationSheetTitle": "See food venues near you.",
+  "@locationSheetTitle": {
+    "description": "C-02 location sheet title."
+  },
+  "locationSheetBody": "Allow location to see all the food venues with discounts available today!",
+  "@locationSheetBody": {
+    "description": "C-02 location sheet body."
+  },
+  "actionAllowLocation": "Allow location",
+  "actionChooseAreaInstead": "Choose area instead",
+  "chooseAreaTitle": "Choose your area",
+  "searchAreasHint": "Search areas",
+  "areasHeader": "Abu Dhabi areas",
+  "actionShowRestaurants": "Show restaurants",
+  "currentLocation": "Current location",
+  "areasLoadError": "The area list could not be loaded.",
+  "actionContinue": "Continue",
+  "actionContinueWithEmail": "Continue with email",
+  "actionSendCode": "Send code",
+  "actionResendCode": "Resend code",
+  "signUpGateTitle": "Log in or sign up to reserve.",
+  "signUpGateBody": "You can keep browsing as a guest. Enter your email to reserve; there's no password.",
+  "emailAppBar": "Log in or sign up",
+  "emailHeading": "What's your email?",
+  "emailBody": "We'll send a 6-digit code. New to Save It? You'll add your details next.",
+  "fieldEmail": "Email",
+  "codeAppBar": "Enter code",
+  "codeHeading": "Check your email.",
+  "codeSentTo": "Code sent to {maskedEmail}.",
+  "@codeSentTo": {
+    "placeholders": {"maskedEmail": {"type": "String"}}
+  },
+  "codeDidntGetIt": "Didn't get it?",
+  "codeErrorTitle": "Incorrect or expired code",
+  "codeErrorBody": "Check the code or request a new one.",
+  "codeResendWait": "Try again in {minutes} min",
+  "@codeResendWait": {
+    "placeholders": {"minutes": {"type": "int"}}
+  },
+  "codeResendLimit": "You can request up to 3 codes per hour.",
+  "profileSetupAppBar": "Create your account",
+  "profileSetupHeading": "Almost done.",
+  "profileSetupBody": "Tell us who's collecting the food.",
+  "verified": "Verified",
+  "fieldFullName": "Full name",
+  "fieldPhone": "Phone",
+  "phonePrefix": "+971",
+  "phoneInvalid": "Enter a valid phone number.",
+  "termsAgreePrefix": "I agree to the",
+  "termsAgreeJoin": "and",
+  "termsLink": "Terms and Conditions",
+  "privacyLink": "Privacy Policy",
+  "guestTitle": "You're browsing as a guest.",
+  "guestBody": "Log in or sign up to reserve food and see your orders.",
+  "guestOrdersTitle": "Log in or sign up to see your orders",
+  "guestOrdersBody": "Your reservations and pickup passes appear here.",
+  "actionLogOut": "Log out",
+  "actionEdit": "Edit",
+  "editProfileTitle": "Edit profile",
+  "emailLocked": "Your email is your login and can't be changed.",
+  "actionSaveChanges": "Save changes",
+  "support": "Support"
 }
