@@ -7,7 +7,7 @@ These pipelines are the developer's own tooling. They let a Windows PC with an A
 | Checks (app, admin, database tests) | GitHub Actions `ci.yml` | Every PR, and every push to `dev`, `prod`, or `main` | — |
 | Promotion source | GitHub Actions `branch-flow.yml` | Every PR into `dev`, `prod`, or `main` | `dev` accepts a phase branch. `prod` accepts `dev`. `main` accepts `prod` |
 | Database migrations and Edge Functions | GitHub Actions `deploy-backend.yml` | Merge into `dev` (changes in `supabase/`) → dev Supabase. Manual run with confirmation → prod | Supabase dev / prod |
-| Android dev build | GitHub Actions `android.yml` | Merge to `dev` or `main` (changes in `app/` or `android.yml`) | Firebase App Distribution |
+| Android dev build | GitHub Actions `android.yml` | Merge to `dev` or `main` whose commit message contains `[android]`, or a manual run (changes in `app/` or `android.yml`) | Firebase App Distribution |
 | Android release build | GitHub Actions `android.yml` | Merge to `prod` builds the signed app bundle. Tag `v*` also uploads it | Google Play internal testing on the tag |
 | iOS dev build | Codemagic `ios-dev` | Manual start | TestFlight "Save It Dev" |
 | iOS release build | Codemagic `ios-release` | Tag `v*` | TestFlight on the real app |
@@ -189,6 +189,15 @@ on:
 
 jobs:
   build:
+    # Dev and main build only for a manual run or a commit message containing [android].
+    # Prod and version tags always build.
+    if: >
+      github.ref == 'refs/heads/prod' ||
+      github.ref_type == 'tag' ||
+      (
+        (github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/main') &&
+        (github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[android]'))
+      )
     runs-on: ubuntu-latest
     defaults: { run: { working-directory: app } }
     env:
@@ -220,18 +229,32 @@ jobs:
         run: echo "ANDROID_KEYSTORE_BASE64 is required to sign a prod app bundle" && exit 1
       - run: flutter pub get && dart run build_runner build --delete-conflicting-outputs
 
-      # Dev APK on dev and main. Without a keystore this APK is debug-signed.
+      # Dev APK on dev and main only when the commit message contains [android],
+      # or when the workflow is started by hand. Without a keystore this APK is debug-signed.
+      # The version name and code come from pubspec.yaml (1.0.0+4). A lower code will not install.
       - name: Build dev APK
-        if: github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/main'
-        run: flutter build apk --flavor dev --dart-define-from-file=env/dev.json --build-number=${{ github.run_number }}
+        if: (github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/main') && (github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[android]'))
+        run: |
+          current="$(awk '/^version: / { print $2; exit }' pubspec.yaml)"
+          if [[ ! "$current" =~ ^([0-9]+\.[0-9]+\.[0-9]+)\+([0-9]+)$ ]]; then
+            echo "Could not read version from pubspec.yaml. Expected 1.0.0+1." >&2
+            exit 1
+          fi
+          name="${BASH_REMATCH[1]}"
+          code="${BASH_REMATCH[2]}"
+          echo "APP_VERSION=${current}" >> "$GITHUB_ENV"
+          echo "Building save-it-dev-${current}.apk (versionName ${name}, versionCode ${code})"
+          flutter build apk --flavor dev --dart-define-from-file=env/dev.json --build-name "$name" --build-number "$code"
+          cp "build/app/outputs/flutter-apk/app-dev-release.apk" "build/app/outputs/flutter-apk/save-it-dev-${current}.apk"
       - name: Send to Firebase App Distribution
-        if: github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/main'
+        if: (github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/main') && (github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[android]'))
         uses: wzieba/Firebase-Distribution-Github-Action@v1
         with:
           appId: ${{ secrets.FIREBASE_ANDROID_DEV_APP_ID }}
           serviceCredentialsFileContent: ${{ secrets.FIREBASE_DIST_SA }}
           groups: testers
-          file: app/build/app/outputs/flutter-apk/app-dev-release.apk
+          releaseNotes: save-it-dev-${{ env.APP_VERSION }}
+          file: app/build/app/outputs/flutter-apk/save-it-dev-${{ env.APP_VERSION }}.apk
 
       # Signed prod bundle on prod. Play internal testing stays on a version tag.
       - name: Build prod app bundle
@@ -250,7 +273,7 @@ jobs:
 
 - **Signing setup:** `app/android/app/build.gradle.kts` reads `app/android/key.properties` for the release signing config. `key.properties` and `*.jks` are git-ignored. The prod application id is `org.arisehub.saveit` (dev is `org.arisehub.saveit.dev`). A dev APK built before the upload keystore secret exists is signed with the debug key. A prod-branch build or a tag stops if `ANDROID_KEYSTORE_BASE64` is empty. Play internal testing is uploaded only from a `v*` tag.
 - **First upload:** the very first prod AAB is uploaded by hand in Play Console (T04.8). After that the pipeline can publish.
-- **Version numbers:** dev builds use the run number as the build number. Release builds use `pubspec.yaml`.
+- **Version numbers:** dev and release builds use the `version` in `pubspec.yaml`. `1.0.0+4` is version name `1.0.0` and version code `4`. The dev APK uploaded to Firebase is named `save-it-dev-1.0.0+4.apk`. Android installs it over an older build only when that code is higher. The workflow does not increment the number.
 
 ## 6. `codemagic.yaml`: iOS builds
 

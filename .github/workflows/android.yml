@@ -8,6 +8,15 @@ on:
 
 jobs:
   build:
+    # Dev and main build only for a manual run or a commit message containing [android].
+    # Prod and version tags always build.
+    if: >
+      github.ref == 'refs/heads/prod' ||
+      github.ref_type == 'tag' ||
+      (
+        (github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/main') &&
+        (github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[android]'))
+      )
     runs-on: ubuntu-latest
     defaults: { run: { working-directory: app } }
     env:
@@ -39,18 +48,32 @@ jobs:
         run: echo "ANDROID_KEYSTORE_BASE64 is required to sign a prod app bundle" && exit 1
       - run: flutter pub get && dart run build_runner build --delete-conflicting-outputs
 
-      # Dev APK on dev and main. Without a keystore this APK is debug-signed.
+      # Dev APK on dev and main only when the commit message contains [android],
+      # or when the workflow is started by hand. Without a keystore this APK is debug-signed.
+      # The version name and code come from pubspec.yaml (1.0.0+4). A lower code will not install.
       - name: Build dev APK
-        if: github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/main'
-        run: flutter build apk --flavor dev --dart-define-from-file=env/dev.json --build-number=${{ github.run_number }}
+        if: (github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/main') && (github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[android]'))
+        run: |
+          current="$(awk '/^version: / { print $2; exit }' pubspec.yaml)"
+          if [[ ! "$current" =~ ^([0-9]+\.[0-9]+\.[0-9]+)\+([0-9]+)$ ]]; then
+            echo "Could not read version from pubspec.yaml. Expected 1.0.0+1." >&2
+            exit 1
+          fi
+          name="${BASH_REMATCH[1]}"
+          code="${BASH_REMATCH[2]}"
+          echo "APP_VERSION=${current}" >> "$GITHUB_ENV"
+          echo "Building save-it-dev-${current}.apk (versionName ${name}, versionCode ${code})"
+          flutter build apk --flavor dev --dart-define-from-file=env/dev.json --build-name "$name" --build-number "$code"
+          cp "build/app/outputs/flutter-apk/app-dev-release.apk" "build/app/outputs/flutter-apk/save-it-dev-${current}.apk"
       - name: Send to Firebase App Distribution
-        if: github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/main'
+        if: (github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/main') && (github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[android]'))
         uses: wzieba/Firebase-Distribution-Github-Action@v1
         with:
           appId: ${{ secrets.FIREBASE_ANDROID_DEV_APP_ID }}
           serviceCredentialsFileContent: ${{ secrets.FIREBASE_DIST_SA }}
           groups: testers
-          file: app/build/app/outputs/flutter-apk/app-dev-release.apk
+          releaseNotes: save-it-dev-${{ env.APP_VERSION }}
+          file: app/build/app/outputs/flutter-apk/save-it-dev-${{ env.APP_VERSION }}.apk
 
       # Signed prod bundle on prod. Play internal testing stays on a version tag.
       - name: Build prod app bundle
